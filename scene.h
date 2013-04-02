@@ -7,6 +7,7 @@
 #include <QLine>
 
 #include "bat.h"
+#include "arena.h"
 #include "jobcannotbedone.h"
 
 /*!
@@ -116,6 +117,17 @@ private:
      * \brief Vecteur contenant les objets graphiques représentant les raquettes.
      */
     QVector<QLine> _graphicsBatVector;
+
+    /*!
+     * \brief Objet representant l'arenne de jeu.
+     */
+    Arena _arena;
+
+    /*!
+     * \brief Difference entre la position actuelle de la raquette et la derniere
+     *  position envoyee au serveur.
+     */
+    float _dx;
 
     /*!
      * \brief Methode auxilere qui permet de generer les objets graphiques representant les raquettes.

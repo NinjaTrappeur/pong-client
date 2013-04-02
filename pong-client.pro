@@ -17,12 +17,20 @@ SOURCES += main.cpp\
     renderlabel.cpp \
     scene.cpp \
     bat.cpp \
-    jobcannotbedone.cpp
+    jobcannotbedone.cpp \
+    arena.cpp \
+    mathutils.cpp \
+    serveurcommunicator.cpp \
+    clientcommunicator.cpp
 
 HEADERS  += mainwindow.h \
     renderlabel.h \
     scene.h \
     bat.h \
-    jobcannotbedone.h
+    jobcannotbedone.h \
+    arena.h \
+    mathutils.h \
+    serveurcommunicator.h \
+    clientcommunicator.h
 
 FORMS    += mainwindow.ui

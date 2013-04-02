@@ -5,15 +5,18 @@
 #include <QColor>
 
 
-Scene::Scene():_whitePen(QColor(255,255,255)), _playerBat(QPointF(10,20),QPointF(40,20),0)
+Scene::Scene():_whitePen(QColor(255,255,255)), _dx(0), _arena(8)
 {
+    _playerBat=_arena.playerBat();
+
     _ball.setX(50);
     _ball.setY(50);
 
-    _whitePen.setWidth(8);
+    _whitePen.setWidth(4);
     _whitePen.setStyle(Qt::SolidLine);
     _whitePen.setCapStyle(Qt::SquareCap);
     _drawBats();
+
 }
 
 void Scene::paint(QPainter *painter)
@@ -24,6 +27,7 @@ void Scene::paint(QPainter *painter)
         painter->drawLine(_graphicsBatVector[i]);
     }
     painter->drawPoint(_ball);
+    _arena.paint(painter);
 }
 
 void Scene::addBat(Bat& bat) throw(JobCannotBeDone)
@@ -108,18 +112,28 @@ void Scene::movePlayerBatToLeft(float pos)
 {
     QVector<QPointF> actualPosition;
     actualPosition= _playerBat.getPoints();
-    actualPosition[0].setX(actualPosition[0].x()-pos);
-    actualPosition[1].setX(actualPosition[1].x()-pos);
-    _playerBat.moveBat(actualPosition[0], actualPosition[1]);
-    _drawBats();
+    if((actualPosition[0].x()-pos)>_arena.leftBatLimit() &&
+            (actualPosition[1].x()-pos)>_arena.leftBatLimit())
+    {
+        actualPosition[0].setX(actualPosition[0].x()-pos);
+        actualPosition[1].setX(actualPosition[1].x()-pos);
+        _playerBat.moveBat(actualPosition[0], actualPosition[1]);
+        _dx-=pos;
+        _drawBats();
+    }
 }
 
 void Scene::movePlayerBatToRight(float pos)
 {
     QVector<QPointF> actualPosition;
     actualPosition= _playerBat.getPoints();
-    actualPosition[0].setX(actualPosition[0].x()+pos);
-    actualPosition[1].setX(actualPosition[1].x()+pos);
-    _playerBat.moveBat(actualPosition[0], actualPosition[1]);
-    _drawBats();
+    if((actualPosition[0].x()+pos)<_arena.rightBatLimit() &&
+            (actualPosition[1].x()+pos)<_arena.rightBatLimit())
+    {
+        actualPosition[0].setX(actualPosition[0].x()+pos);
+        actualPosition[1].setX(actualPosition[1].x()+pos);
+        _playerBat.moveBat(actualPosition[0], actualPosition[1]);
+        _dx+=pos;
+        _drawBats();
+    }
 }
