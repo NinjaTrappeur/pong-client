@@ -1,0 +1,5 @@
+<map id="Scene::movePlayerBatToRight" name="Scene::movePlayerBatToRight">
+<area shape="rect" id="node2" href="$class_bat.html#a342c17de57ed3d4e9f150cab3b536cf2" title="Accesseur des extremites." alt="" coords="273,5,378,32"/>
+<area shape="rect" id="node3" href="$class_arena.html#a4db47777f555438a174e2b1f48da3e81" title="Arena::rightBatLimit" alt="" coords="257,56,394,83"/>
+<area shape="rect" id="node4" href="$class_bat.html#a56df005cb71165fac854b840c9fcd1fe" title="Met a jour la position de la raquette." alt="" coords="274,107,377,133"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="RenderLabel::keyPressEvent" name="RenderLabel::keyPressEvent">
+<area shape="rect" id="node2" href="$class_scene.html#aa041279e61d6436d56d7bff14ae5086a" title="Deplace la raquette du joueur local vers la droite." alt="" coords="245,107,448,133"/>
+<area shape="rect" id="node6" href="$class_scene.html#a7b8dda8b2ce2cfd1ad288e32e3768983" title="Deplace la raquette du joueur local vers la gauche." alt="" coords="250,56,443,83"/>
+<area shape="rect" id="node3" href="$class_bat.html#a342c17de57ed3d4e9f150cab3b536cf2" title="Accesseur des extremites." alt="" coords="513,56,618,83"/>
+<area shape="rect" id="node4" href="$class_arena.html#a4db47777f555438a174e2b1f48da3e81" title="Arena::rightBatLimit" alt="" coords="497,157,634,184"/>
+<area shape="rect" id="node5" href="$class_bat.html#a56df005cb71165fac854b840c9fcd1fe" title="Met a jour la position de la raquette." alt="" coords="514,107,617,133"/>
+<area shape="rect" id="node7" href="$class_arena.html#aa29bc761f4801ae768052ed33d345d6b" title="Arena::leftBatLimit" alt="" coords="500,5,631,32"/>
+</map>
