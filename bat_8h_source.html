@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Client jeu de pong:  Fichier source de bat.h</title>
+<title>Client pong:  Fichier source de bat.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Client jeu de pong
+   <div id="projectname">Client pong
    </div>
   </td>
  </tr>
@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Amis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -90,33 +90,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QPointF&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QVector&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="class_bat.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_bat.html" title="Classe représentant les raquettes.">Bat</a></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{   </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_bat.html#ac231b3a270f82b72dace8be983a6ee6c" title="Constructeur.">Bat</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_bat.html#ac231b3a270f82b72dace8be983a6ee6c" title="Constructeur.">Bat</a>(<span class="keyword">const</span> QVector&lt;QPointF&gt;&amp; points, <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_bat.html#ac231b3a270f82b72dace8be983a6ee6c" title="Constructeur.">Bat</a>(<span class="keyword">const</span> QPointF&amp; point1, <span class="keyword">const</span> QPointF&amp; point2, <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_bat.html#aee775783427016e3fc9d2cfc7ffa964a" title="Accesseur de ID.">getId</a>();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_bat.html#a56df005cb71165fac854b840c9fcd1fe" title="Met a jour la position de la raquette.">moveBat</a>(QPointF&amp; pos1, QPointF&amp; pos2);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    QVector&lt;QPointF&gt; <a class="code" href="class_bat.html#a342c17de57ed3d4e9f150cab3b536cf2" title="Accesseur des extremites.">getPoints</a>();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QDataStream&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="class_bat.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_bat.html" title="Classe représentant les raquettes.">Bat</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{   </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_bat.html#ac231b3a270f82b72dace8be983a6ee6c" title="Constructeur.">Bat</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_bat.html#ac231b3a270f82b72dace8be983a6ee6c" title="Constructeur.">Bat</a>(<span class="keyword">const</span> QVector&lt;QPointF&gt;&amp; points, <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="class_bat.html#ac231b3a270f82b72dace8be983a6ee6c" title="Constructeur.">Bat</a>(<span class="keyword">const</span> QPointF&amp; point1, <span class="keyword">const</span> QPointF&amp; point2, <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_bat.html#aee775783427016e3fc9d2cfc7ffa964a" title="Accesseur de ID.">getId</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_bat.html#a56df005cb71165fac854b840c9fcd1fe" title="Met a jour la position de la raquette.">moveBat</a>(QPointF&amp; pos1, QPointF&amp; pos2);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    QVector&lt;QPointF&gt; <a class="code" href="class_bat.html#a342c17de57ed3d4e9f150cab3b536cf2" title="Accesseur des extremites.">getPoints</a>();</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    QVector&lt;QPointF&gt; _point;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">int</span> _id;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif // BAT_H</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="class_bat.html#a73302fa8d6879b52d105b4a35bb62a47" title="Definition du flux sortant pour cette classe. Permet d&#39;envoyer la classe dans une socket de maniere a...">operator&gt;&gt;</a>(QDataStream &amp; out)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="class_bat.html#ac5d0b3c4e930a36b4559516365bf7d0f" title="Definition du flux sortant pour cette classe. Permet de lire la classe depuis une socket de maniere a...">operator&lt;&lt;</a>(QDataStream &amp; in);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;   <span class="keyword">friend</span> QDataStream &amp; <a class="code" href="class_bat.html#a73302fa8d6879b52d105b4a35bb62a47" title="Definition du flux sortant pour cette classe. Permet d&#39;envoyer la classe dans une socket de maniere a...">operator&gt;&gt;</a>(QDataStream &amp; in, <a class="code" href="class_bat.html" title="Classe représentant les raquettes.">Bat</a> &amp; bat);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;   <span class="keyword">friend</span> QDataStream &amp; <a class="code" href="class_bat.html#ac5d0b3c4e930a36b4559516365bf7d0f" title="Definition du flux sortant pour cette classe. Permet de lire la classe depuis une socket de maniere a...">operator&lt;&lt;</a>(QDataStream &amp; out, <span class="keyword">const</span> <a class="code" href="class_bat.html" title="Classe représentant les raquettes.">Bat</a> &amp; bat);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    QVector&lt;QPointF&gt; _point;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">int</span> _id;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif // BAT_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mardi Avril 2 2013 22:16:34 pour Client jeu de pong par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Vendredi Avril 5 2013 22:42:05 pour Client pong par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

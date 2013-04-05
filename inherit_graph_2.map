@@ -1,4 +1,5 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node2" href="$class_client_communicator.html" title="ClientCommunicator" alt="" coords="131,5,272,32"/>
-<area shape="rect" id="node3" href="$class_serveur_communicator.html" title="ServeurCommunicator" alt="" coords="125,56,277,83"/>
+<area shape="rect" id="node2" href="$class_client_communicator.html" title="Classe envoyee dans le reseau par le client." alt="" coords="131,5,269,32"/>
+<area shape="rect" id="node3" href="$class_server_sync.html" title="Classe gerant la liaison avec le serveur sur un reseau. Permet d&#39;envoyer la position de la raquette d..." alt="" coords="156,56,244,83"/>
+<area shape="rect" id="node4" href="$class_serveur_communicator.html" title="Classe envoyee dans le reseau par le serveur vers le client." alt="" coords="125,107,275,133"/>
 </map>

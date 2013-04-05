@@ -1,3 +1,6 @@
 <map id="serveurcommunicator.cpp" name="serveurcommunicator.cpp">
-<area shape="rect" id="node2" href="$serveurcommunicator_8h.html" title="serveurcommunicator.h" alt="" coords="55,80,213,107"/>
+<area shape="rect" id="node2" href="$serveurcommunicator_8h.html" title="serveurcommunicator.h" alt="" coords="148,80,301,107"/>
+<area shape="rect" id="node7" href="$_game_state_8hpp.html" title="GameState.hpp" alt="" coords="407,155,520,181"/>
+<area shape="rect" id="node8" href="$_pong_types_8hpp.html" title="PongTypes.hpp" alt="" coords="343,229,453,256"/>
+<area shape="rect" id="node9" href="$_lockable_8hpp.html" title="Lockable.hpp" alt="" coords="479,229,577,256"/>
 </map>

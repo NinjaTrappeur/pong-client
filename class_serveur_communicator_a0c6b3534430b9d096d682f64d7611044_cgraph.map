@@ -1,0 +1,5 @@
+<map id="ServeurCommunicator::operator&lt;&lt;" name="ServeurCommunicator::operator&lt;&lt;">
+<area shape="rect" id="node2" href="$class_serveur_communicator.html#aa67a9a0ecdaba580e2059759bf61bff4" title="ServeurCommunicator\l::nbPlayers" alt="" coords="203,5,352,46"/>
+<area shape="rect" id="node3" href="$class_serveur_communicator.html#a74d11da45fff09a365fda483126f22ba" title="ServeurCommunicator\l::loserIndex" alt="" coords="203,70,352,111"/>
+<area shape="rect" id="node4" href="$class_serveur_communicator.html#a75c44fb41affb5656ca3dad3ee65c8df" title="ServeurCommunicator\l::gameState" alt="" coords="203,135,352,177"/>
+</map>

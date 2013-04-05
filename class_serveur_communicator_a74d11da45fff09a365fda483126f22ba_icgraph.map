@@ -1,0 +1,4 @@
+<map id="ServeurCommunicator::loserIndex" name="ServeurCommunicator::loserIndex">
+<area shape="rect" id="node2" href="$class_serveur_communicator.html#a0c6b3534430b9d096d682f64d7611044" title="Definition du flux sortant pour cette classe. Permet de lire la classe depuis une socket de maniere a..." alt="" coords="203,5,352,46"/>
+<area shape="rect" id="node3" href="$class_serveur_communicator.html#a48b1890bfe3b544e46232a03dbf3fb00" title="ServeurCommunicator\l::setLoserIndex" alt="" coords="203,70,352,111"/>
+</map>

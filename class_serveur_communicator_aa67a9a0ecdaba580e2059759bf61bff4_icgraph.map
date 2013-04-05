@@ -1,0 +1,4 @@
+<map id="ServeurCommunicator::nbPlayers" name="ServeurCommunicator::nbPlayers">
+<area shape="rect" id="node2" href="$class_serveur_communicator.html#a0c6b3534430b9d096d682f64d7611044" title="Definition du flux sortant pour cette classe. Permet de lire la classe depuis une socket de maniere a..." alt="" coords="203,5,352,46"/>
+<area shape="rect" id="node3" href="$class_serveur_communicator.html#ab696edd6750e6ca4fcdf138f67c01192" title="ServeurCommunicator\l::setNbPlayers" alt="" coords="203,70,352,111"/>
+</map>

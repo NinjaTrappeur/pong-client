@@ -1,6 +1,6 @@
 <map id="renderlabel.h" name="renderlabel.h">
-<area shape="rect" id="node2" href="$scene_8h.html" title="scene.h" alt="" coords="198,80,265,107"/>
-<area shape="rect" id="node7" href="$bat_8h.html" title="Fichier de la classe représentant les raquettes." alt="" coords="45,229,96,256"/>
-<area shape="rect" id="node8" href="$arena_8h.html" title="arena.h" alt="" coords="199,155,264,181"/>
-<area shape="rect" id="node10" href="$jobcannotbedone_8h.html" title="Fichier contenant l&#39;exception JobCannotBeDone." alt="" coords="480,155,609,181"/>
+<area shape="rect" id="node2" href="$scene_8h.html" title="scene.h" alt="" coords="243,80,311,107"/>
+<area shape="rect" id="node8" href="$bat_8h.html" title="Fichier de la classe représentant les raquettes." alt="" coords="77,229,128,256"/>
+<area shape="rect" id="node10" href="$arena_8h.html" title="arena.h" alt="" coords="189,155,253,181"/>
+<area shape="rect" id="node12" href="$jobcannotbedone_8h.html" title="Fichier contenant l&#39;exception JobCannotBeDone." alt="" coords="517,155,647,181"/>
 </map>

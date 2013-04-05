@@ -1,10 +1,12 @@
 <map id="bat.h" name="bat.h">
-<area shape="rect" id="node2" href="$arena_8h.html" title="arena.h" alt="" coords="35,80,100,107"/>
-<area shape="rect" id="node9" href="$bat_8cpp.html" title="bat.cpp" alt="" coords="125,80,189,107"/>
-<area shape="rect" id="node4" href="$scene_8h.html" title="scene.h" alt="" coords="162,155,229,181"/>
-<area shape="rect" id="node3" href="$arena_8cpp.html" title="arena.cpp" alt="" coords="29,155,107,181"/>
-<area shape="rect" id="node5" href="$mainwindow_8cpp.html" title="mainwindow.cpp" alt="" coords="5,229,123,256"/>
-<area shape="rect" id="node6" href="$renderlabel_8h.html" title="renderlabel.h" alt="" coords="148,229,244,256"/>
-<area shape="rect" id="node8" href="$scene_8cpp.html" title="scene.cpp" alt="" coords="268,229,349,256"/>
-<area shape="rect" id="node7" href="$renderlabel_8cpp.html" title="renderlabel.cpp" alt="" coords="141,304,251,331"/>
+<area shape="rect" id="node2" href="$arena_8h.html" title="arena.h" alt="" coords="46,80,111,107"/>
+<area shape="rect" id="node9" href="$bat_8cpp.html" title="bat.cpp" alt="" coords="135,80,200,107"/>
+<area shape="rect" id="node4" href="$scene_8h.html" title="scene.h" alt="" coords="159,155,227,181"/>
+<area shape="rect" id="node10" href="$serversync_8h.html" title="serversync.h" alt="" coords="277,80,371,107"/>
+<area shape="rect" id="node3" href="$arena_8cpp.html" title="arena.cpp" alt="" coords="39,155,117,181"/>
+<area shape="rect" id="node5" href="$mainwindow_8cpp.html" title="mainwindow.cpp" alt="" coords="5,229,120,256"/>
+<area shape="rect" id="node6" href="$renderlabel_8h.html" title="renderlabel.h" alt="" coords="145,229,241,256"/>
+<area shape="rect" id="node8" href="$scene_8cpp.html" title="scene.cpp" alt="" coords="265,229,347,256"/>
+<area shape="rect" id="node7" href="$renderlabel_8cpp.html" title="renderlabel.cpp" alt="" coords="138,304,248,331"/>
+<area shape="rect" id="node11" href="$serversync_8cpp.html" title="serversync.cpp" alt="" coords="269,155,379,181"/>
 </map>

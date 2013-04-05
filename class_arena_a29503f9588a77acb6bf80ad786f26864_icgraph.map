@@ -1,4 +1,4 @@
 <map id="Arena::paint" name="Arena::paint">
 <area shape="rect" id="node2" href="$class_scene.html#ac9b5b406cdc8a8e139d6b34d7144b2ff" title="Methode appellee par le renderlabel qui est associe a cette scene. Le but principal de cette methode ..." alt="" coords="147,5,242,32"/>
-<area shape="rect" id="node3" href="$class_render_label.html#ad295301c336b50a8d9928e68e4ebe1d3" title="Methode appelee chaque fois que le widget sera dessine. Cette methode contiendra toutes les actions q..." alt="" coords="291,5,456,32"/>
+<area shape="rect" id="node3" href="$class_render_label.html#ad295301c336b50a8d9928e68e4ebe1d3" title="Methode appelee chaque fois que le widget sera dessine. Cette methode contiendra toutes les actions q..." alt="" coords="291,5,453,32"/>
 </map>

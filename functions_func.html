@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Client jeu de pong: Membres de classe - Fonctions</title>
+<title>Client pong: Membres de classe - Fonctions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Client jeu de pong
+   <div id="projectname">Client pong
    </div>
   </td>
  </tr>
@@ -72,6 +72,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
       <li><a href="functions.html"><span>Tout</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Fonctions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_enum.html"><span>Énumérations</span></a></li>
+      <li><a href="functions_eval.html"><span>Valeurs&#160;énumérées</span></a></li>
+      <li><a href="functions_rela.html"><span>Fonctions&#160;associées</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -81,14 +84,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
       <li><a href="#index_b"><span>b</span></a></li>
       <li><a href="#index_c"><span>c</span></a></li>
       <li><a href="#index_d"><span>d</span></a></li>
+      <li><a href="#index_e"><span>e</span></a></li>
       <li><a href="#index_g"><span>g</span></a></li>
+      <li><a href="#index_h"><span>h</span></a></li>
       <li><a href="#index_j"><span>j</span></a></li>
       <li><a href="#index_k"><span>k</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_n"><span>n</span></a></li>
+      <li><a href="#index_o"><span>o</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
+      <li><a href="#index_u"><span>u</span></a></li>
       <li><a href="#index_0x7e"><span>~</span></a></li>
     </ul>
   </div>
@@ -98,7 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Amis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -134,8 +142,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 
 <h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
+<li>ball()
+: <a class="el" href="class_serveur_communicator.html#a37732e75524ae08a919ab90583a4c72c">ServeurCommunicator</a>
+</li>
 <li>Bat()
 : <a class="el" href="class_bat.html#ac231b3a270f82b72dace8be983a6ee6c">Bat</a>
+</li>
+<li>batVector()
+: <a class="el" href="class_serveur_communicator.html#a7b6a1171270884a7e1b7d0ca4ab16e1a">ServeurCommunicator</a>
 </li>
 </ul>
 
@@ -151,15 +165,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>degreeToRadian()
 : <a class="el" href="class_math_utils.html#ab23e0083b4f08cec721ea34f8ad5a949">MathUtils</a>
 </li>
+<li>dx()
+: <a class="el" href="class_client_communicator.html#a4b7b655bc06416afeefacafacda0d6f7">ClientCommunicator</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
+<li>error()
+: <a class="el" href="class_server_sync.html#ac2f8be821778b52080d28e1ec5dad374">ServerSync</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>GameState()
+: <a class="el" href="class_game_state.html#a4fa0a2bf50315c4a35a3890a0adcee5c">GameState</a>
+</li>
+<li>gameState()
+: <a class="el" href="class_serveur_communicator.html#a75c44fb41affb5656ca3dad3ee65c8df">ServeurCommunicator</a>
+</li>
 <li>getId()
 : <a class="el" href="class_bat.html#aee775783427016e3fc9d2cfc7ffa964a">Bat</a>
 </li>
 <li>getPoints()
 : <a class="el" href="class_bat.html#a342c17de57ed3d4e9f150cab3b536cf2">Bat</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
+<li>handleSocketError()
+: <a class="el" href="class_server_sync.html#a9896da75a78af004066c986573a961bb">ServerSync</a>
 </li>
 </ul>
 
@@ -181,6 +218,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
 <li>leftBatLimit()
 : <a class="el" href="class_arena.html#aa29bc761f4801ae768052ed33d345d6b">Arena</a>
+</li>
+<li>lock()
+: <a class="el" href="class_lockable.html#a141549f6fcc5b02ff61632c8894b8429">Lockable</a>
+</li>
+<li>loserIndex()
+: <a class="el" href="class_game_state.html#a039f0e6f48b1846320f0d966123d4a2c">GameState</a>
+, <a class="el" href="class_serveur_communicator.html#a74d11da45fff09a365fda483126f22ba">ServeurCommunicator</a>
 </li>
 </ul>
 
@@ -204,6 +248,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </li>
 <li>movePlayerBatToRight()
 : <a class="el" href="class_scene.html#aa041279e61d6436d56d7bff14ae5086a">Scene</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>nbPlayers()
+: <a class="el" href="class_serveur_communicator.html#aa67a9a0ecdaba580e2059759bf61bff4">ServeurCommunicator</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
+<li>operator&lt;&lt;()
+: <a class="el" href="class_bat.html#ac5d0b3c4e930a36b4559516365bf7d0f">Bat</a>
+, <a class="el" href="class_client_communicator.html#a15fa6b5b20ecfbf6160724f32bebb1c1">ClientCommunicator</a>
+, <a class="el" href="class_serveur_communicator.html#a0c6b3534430b9d096d682f64d7611044">ServeurCommunicator</a>
+</li>
+<li>operator&gt;&gt;()
+: <a class="el" href="class_bat.html#a73302fa8d6879b52d105b4a35bb62a47">Bat</a>
+, <a class="el" href="class_client_communicator.html#aa51585a841402f536a75bfdf579d1fbe">ClientCommunicator</a>
+, <a class="el" href="class_serveur_communicator.html#a3168e18ceb6e6c9ce65e72d354ccd342">ServeurCommunicator</a>
 </li>
 </ul>
 
@@ -239,18 +304,70 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>Scene()
 : <a class="el" href="class_scene.html#ad10176d75a9cc0da56626f682d083507">Scene</a>
 </li>
+<li>ServerSync()
+: <a class="el" href="class_server_sync.html#ab11e5acb611152198c3e21adedd0f02c">ServerSync</a>
+</li>
 <li>ServeurCommunicator()
-: <a class="el" href="class_serveur_communicator.html#a2760cdc0f2f5bad11d2be6455aaede1c">ServeurCommunicator</a>
+: <a class="el" href="class_serveur_communicator.html#a7318fd286189b790a1bea2810a6e7698">ServeurCommunicator</a>
+</li>
+<li>setBall()
+: <a class="el" href="class_serveur_communicator.html#a77be17876c0111c3701cebc6e25289a7">ServeurCommunicator</a>
+</li>
+<li>setBatVector()
+: <a class="el" href="class_serveur_communicator.html#a03431f51e5ce968e1c52d8362fdc2e85">ServeurCommunicator</a>
+</li>
+<li>setDx()
+: <a class="el" href="class_client_communicator.html#ae61480358f5f1d377e2dfcca505b2193">ClientCommunicator</a>
+</li>
+<li>setExited()
+: <a class="el" href="class_game_state.html#a9765791d2f702bba02647a006d2f5075">GameState</a>
+</li>
+<li>setGameOver()
+: <a class="el" href="class_game_state.html#a74fb5606dcc7dc7b62584be5256176fa">GameState</a>
+</li>
+<li>setGameState()
+: <a class="el" href="class_serveur_communicator.html#a2218db0d8fb84d49c5893f0a5705f9e0">ServeurCommunicator</a>
+</li>
+<li>setInitializing()
+: <a class="el" href="class_game_state.html#a9129fe3c4c42dbf6d2671cd857eb1d70">GameState</a>
 </li>
 <li>setLeftBatLimit()
 : <a class="el" href="class_arena.html#a731abff665066b6d637289da8c68c504">Arena</a>
 </li>
+<li>setLoserIndex()
+: <a class="el" href="class_serveur_communicator.html#a48b1890bfe3b544e46232a03dbf3fb00">ServeurCommunicator</a>
+</li>
+<li>setNbPlayers()
+: <a class="el" href="class_serveur_communicator.html#ab696edd6750e6ca4fcdf138f67c01192">ServeurCommunicator</a>
+</li>
+<li>setNoParty()
+: <a class="el" href="class_game_state.html#a15f22cd5667901a074b8226244e841d4">GameState</a>
+</li>
+<li>setPaused()
+: <a class="el" href="class_game_state.html#ac815962176486fa33f691c6a4cf4535c">GameState</a>
+</li>
 <li>setPlayerBat()
-: <a class="el" href="class_arena.html#af93c40a5fe8b12505420c8c1534db3dd">Arena</a>
-, <a class="el" href="class_scene.html#affdf0a4ea7826069d9f2848954257f5b">Scene</a>
+: <a class="el" href="class_scene.html#affdf0a4ea7826069d9f2848954257f5b">Scene</a>
+, <a class="el" href="class_arena.html#af93c40a5fe8b12505420c8c1534db3dd">Arena</a>
 </li>
 <li>setRightBatLimit()
 : <a class="el" href="class_arena.html#ada7aa4b43f29a4fc76a353ca3e61b8a9">Arena</a>
+</li>
+<li>setRunning()
+: <a class="el" href="class_game_state.html#a47449d285d38d7bf3db4127193a0c51a">GameState</a>
+</li>
+<li>startSync()
+: <a class="el" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50">ServerSync</a>
+</li>
+<li>state()
+: <a class="el" href="class_game_state.html#ade3c6a6ca26649a850c523db14f62666">GameState</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
+<li>unlock()
+: <a class="el" href="class_lockable.html#afbc569f27fac854a3df510158e544b9b">Lockable</a>
 </li>
 </ul>
 
@@ -265,11 +382,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>~RenderLabel()
 : <a class="el" href="class_render_label.html#af42de1d01a36143cc20216b5f238ad70">RenderLabel</a>
 </li>
+<li>~Scene()
+: <a class="el" href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">Scene</a>
+</li>
+<li>~ServerSync()
+: <a class="el" href="class_server_sync.html#a67e799811cd50a22a8cc2253927fe36d">ServerSync</a>
+</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mardi Avril 2 2013 22:16:34 pour Client jeu de pong par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Vendredi Avril 5 2013 22:42:05 pour Client pong par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

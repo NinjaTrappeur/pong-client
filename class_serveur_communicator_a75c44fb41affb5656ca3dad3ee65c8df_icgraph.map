@@ -1,0 +1,4 @@
+<map id="ServeurCommunicator::gameState" name="ServeurCommunicator::gameState">
+<area shape="rect" id="node2" href="$class_serveur_communicator.html#a0c6b3534430b9d096d682f64d7611044" title="Definition du flux sortant pour cette classe. Permet de lire la classe depuis une socket de maniere a..." alt="" coords="203,5,352,46"/>
+<area shape="rect" id="node3" href="$class_serveur_communicator.html#a2218db0d8fb84d49c5893f0a5705f9e0" title="ServeurCommunicator\l::setGameState" alt="" coords="203,70,352,111"/>
+</map>

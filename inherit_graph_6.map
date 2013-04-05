@@ -1,3 +1,3 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node2" href="$class_render_label.html" title="RenderLabel: classe derivant de qlabel dans laquelle la methode paintEvent est redefinie. Cette classe represente le widget dans lequel le jeu sera dessine a l&#39;aide de qpainter." alt="" coords="118,5,213,32"/>
+<area shape="rect" id="node1" href="$class_math_utils.html" title="Ensemble de methodes statique permettant de faciliter les calculs." alt="" coords="5,5,83,32"/>
 </map>

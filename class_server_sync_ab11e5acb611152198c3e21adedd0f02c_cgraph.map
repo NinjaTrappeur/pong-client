@@ -1,0 +1,5 @@
+<map id="ServerSync::ServerSync" name="ServerSync::ServerSync">
+<area shape="rect" id="node2" href="$class_server_sync.html#ac2f8be821778b52080d28e1ec5dad374" title="ServerSync::error" alt="" coords="243,5,365,32"/>
+<area shape="rect" id="node3" href="$class_server_sync.html#a9896da75a78af004066c986573a961bb" title="Slot permettant de recuperer les erreurs generes par le socket." alt="" coords="217,57,391,98"/>
+<area shape="rect" id="node4" href="$class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot a lancer dans un thread." alt="" coords="228,123,380,149"/>
+</map>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Client jeu de pong: Référence du fichier serveurcommunicator.h</title>
+<title>Client pong: Référence du fichier serveurcommunicator.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Client jeu de pong
+   <div id="projectname">Client pong
    </div>
   </td>
  </tr>
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Amis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -90,19 +90,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="textblock"><code>#include &lt;QObject&gt;</code><br/>
 <code>#include &lt;QVector&gt;</code><br/>
 <code>#include &lt;QLineF&gt;</code><br/>
+<code>#include &lt;QDataStream&gt;</code><br/>
+<code>#include &quot;<a class="el" href="_game_state_8hpp_source.html">GameState.hpp</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de serveurcommunicator.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="serveurcommunicator_8h__incl.png" border="0" usemap="#serveurcommunicator_8h" alt=""/></div>
 <map name="serveurcommunicator_8h" id="serveurcommunicator_8h">
-</map>
+<area shape="rect" id="node6" href="_game_state_8hpp.html" title="GameState.hpp" alt="" coords="407,80,520,107"/><area shape="rect" id="node7" href="_pong_types_8hpp.html" title="PongTypes.hpp" alt="" coords="343,155,453,181"/><area shape="rect" id="node8" href="_lockable_8hpp.html" title="Lockable.hpp" alt="" coords="479,155,577,181"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
 <div class="dyncontent">
 <div class="center"><img src="serveurcommunicator_8h__dep__incl.png" border="0" usemap="#serveurcommunicator_8hdep" alt=""/></div>
 <map name="serveurcommunicator_8hdep" id="serveurcommunicator_8hdep">
-<area shape="rect" id="node2" href="serveurcommunicator_8cpp.html" title="serveurcommunicator.cpp" alt="" coords="5,80,176,107"/></map>
+<area shape="rect" id="node2" href="serversync_8cpp.html" title="serversync.cpp" alt="" coords="5,80,115,107"/><area shape="rect" id="node3" href="serveurcommunicator_8cpp.html" title="serveurcommunicator.cpp" alt="" coords="139,80,308,107"/></map>
 </div>
 </div>
 <p><a href="serveurcommunicator_8h_source.html">Aller au code source de ce fichier.</a></p>
@@ -110,12 +112,13 @@ Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serveur_communicator.html">ServeurCommunicator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe envoyee dans le reseau par le serveur vers le client.  <a href="class_serveur_communicator.html#details">Plus de détails...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mardi Avril 2 2013 22:16:34 pour Client jeu de pong par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Vendredi Avril 5 2013 22:42:05 pour Client pong par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
