@@ -3,6 +3,8 @@
 
 #include <QPointF>
 #include <QVector>
+#include <QDataStream>
+
 /*!
  * \file bat.h
  * \brief Fichier de la classe représentant les raquettes
@@ -63,6 +65,23 @@ public:
      * \return Vecteur compose de deux points, chaque point representant une extremite de la raquette.
      */
     QVector<QPointF> getPoints();
+
+    /*!
+    * \brief Definition du flux sortant pour cette classe. Permet d'envoyer la classe dans une socket de maniere
+    *  aisee
+    * \param out Flux sortant
+    */
+   void operator>>(QDataStream & out)const;
+
+   /*!
+    * \brief Definition du flux sortant pour cette classe. Permet de lire la classe depuis une socket de maniere
+    *  aisee.
+    * \param in Flux entrant
+    */
+   void operator<<(QDataStream & in);
+
+   friend QDataStream & operator>>(QDataStream & in, Bat & bat);
+   friend QDataStream & operator<<(QDataStream & out, const Bat & bat);
 
 private:
 

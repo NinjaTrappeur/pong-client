@@ -28,3 +28,27 @@ QVector<QPointF> Bat::getPoints()
 {
     return(_point);
 }
+
+void Bat::operator>>(QDataStream& out)const
+{
+    out << quint32(_id) << _point[0]<<_point[1];
+}
+
+
+void Bat::operator<<(QDataStream& in)
+{
+    in >> _id >> point[0] >> _point[1];
+}
+
+
+QDataStream & operator>>(QDataStream & in, Bat & bat)
+{
+    bat<<in;
+    return in;
+}
+
+QDataStream & operator<<(QDataStream & out, const Bat & bat)
+{
+    bat>>out;
+    return out;
+}
