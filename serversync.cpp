@@ -32,11 +32,11 @@ void ServerSync::handleSocketError(QAbstractSocket::SocketError)
 void ServerSync::startSync()
 {
     ServeurCommunicator serveurCommunicator;
-
-    *_socket>>serveurCommunicator;
+    QDataStream stream(_socket);
+    stream>>serveurCommunicator;
     _otherPlayersVector = serveurCommunicator.batVector();
     _ball = serveurCommunicator.ball();
 
     ClientCommunicator clientCommunicator(_dx);
-    *_socket<<clientCommunicator;
+    stream<<clientCommunicator;
 }
