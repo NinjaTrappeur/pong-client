@@ -5,6 +5,7 @@
 #include <QPointF>
 #include <QPainter>
 #include <QLine>
+#include <QErrorMessage>
 
 #include "bat.h"
 #include "arena.h"
@@ -24,6 +25,8 @@ public:
      * \brief Constructeur de la scene.
      */
     Scene();
+
+    ~Scene();
 
     /*!
      * \brief Methode appellee par le renderlabel qui est associe a cette scene.
@@ -124,6 +127,11 @@ private:
     Arena _arena;
 
     /*!
+     * \brief Message d'erreur, utilise pour afficher les erreurs.
+     */
+    QErrorMessage* _errorMessage;
+
+    /*!
      * \brief Difference entre la position actuelle de la raquette et la derniere
      *  position envoyee au serveur.
      */
@@ -133,6 +141,8 @@ private:
      * \brief Methode auxilere qui permet de generer les objets graphiques representant les raquettes.
      */
     void _drawBats();
+
+
 };
 
 #endif // SCENE_H

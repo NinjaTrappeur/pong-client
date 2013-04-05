@@ -7,6 +7,8 @@
 
 Scene::Scene():_whitePen(QColor(255,255,255)), _dx(0), _arena(8)
 {
+    _errorMessage = new QErrorMessage();
+
     _playerBat=_arena.playerBat();
 
     _ball.setX(50);
@@ -16,7 +18,11 @@ Scene::Scene():_whitePen(QColor(255,255,255)), _dx(0), _arena(8)
     _whitePen.setStyle(Qt::SolidLine);
     _whitePen.setCapStyle(Qt::SquareCap);
     _drawBats();
+}
 
+Scene::~Scene()
+{
+    _errorMessage->deleteLater();
 }
 
 void Scene::paint(QPainter *painter)

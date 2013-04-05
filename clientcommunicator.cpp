@@ -5,6 +5,9 @@ ClientCommunicator::ClientCommunicator(QObject *parent) :
 {
 }
 
+ClientCommunicator::ClientCommunicator(float dx): _dx(dx)
+{
+}
 
 void ClientCommunicator::operator>>(QDataStream& out)const
 {
@@ -28,4 +31,14 @@ QDataStream & operator<<(QDataStream & out, const ClientCommunicator & client)
 {
     client>>out;
     return out;
+}
+
+int ClientCommunicator::dx() const
+{
+    return _dx;
+}
+
+void ClientCommunicator::setDx(int dx)
+{
+    _dx = dx;
 }

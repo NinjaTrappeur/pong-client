@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -23,7 +23,8 @@ SOURCES += main.cpp\
     serveurcommunicator.cpp \
     clientcommunicator.cpp \
     GameState.cpp \
-    Lockable.cpp
+    Lockable.cpp \
+    serversync.cpp
 
 HEADERS  += mainwindow.h \
     renderlabel.h \
@@ -36,6 +37,7 @@ HEADERS  += mainwindow.h \
     clientcommunicator.h \
     GameState.hpp \
     PongTypes.hpp \
-    Lockable.hpp
+    Lockable.hpp \
+    serversync.h
 
 FORMS    += mainwindow.ui
