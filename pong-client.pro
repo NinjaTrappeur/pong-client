@@ -21,7 +21,8 @@ SOURCES += main.cpp\
     arena.cpp \
     mathutils.cpp \
     serveurcommunicator.cpp \
-    clientcommunicator.cpp
+    clientcommunicator.cpp \
+    GameState.cpp
 
 HEADERS  += mainwindow.h \
     renderlabel.h \
@@ -31,6 +32,7 @@ HEADERS  += mainwindow.h \
     arena.h \
     mathutils.h \
     serveurcommunicator.h \
-    clientcommunicator.h
+    clientcommunicator.h \
+    GameState.hpp
 
 FORMS    += mainwindow.ui
