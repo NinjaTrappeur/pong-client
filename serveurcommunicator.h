@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QVector>
 #include <QLineF>
+#include <QDataStream>
 #include "GameState.hpp"
 
 class ServeurCommunicator : public QObject

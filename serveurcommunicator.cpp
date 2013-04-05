@@ -7,17 +7,22 @@ ServeurCommunicator::ServeurCommunicator(QObject *parent) :
 
 void ServeurCommunicator::operator>>(QDataStream& out)const
 {
-    out << _batVector.size()<< _nbPlayers << _loserIndex << _gameState<< _batVector;
+    out << quint16(_batVector.size())<< quint16(_nbPlayers) << quint16(_loserIndex) << quint16(_gameState);
+    for(int i=0;i<_batVector.size();++i)
+        out<<_batVector[i];
 }
 
 
 void ServeurCommunicator::operator<<(QDataStream& in)
 {
-    int vectorSize;
+    qint32 vectorSize, nbPlayers, loserIndex, gameState;
     in >> vectorSize;
-    in >> _nbPlayers >> _loserIndex >> _gameState;
+    in >> nbPlayers >> loserIndex >> gameState;
     for(int i=0;i<vectorSize;++i)
         in >> _batVector[i];
+    _nbPlayers=nbPlayers;
+    _loserIndex=loserIndex;
+    _gameState= (PongTypes::E_GameState)gameState;
 }
 
 

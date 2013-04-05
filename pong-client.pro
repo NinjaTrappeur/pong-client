@@ -22,7 +22,8 @@ SOURCES += main.cpp\
     mathutils.cpp \
     serveurcommunicator.cpp \
     clientcommunicator.cpp \
-    GameState.cpp
+    GameState.cpp \
+    Lockable.cpp
 
 HEADERS  += mainwindow.h \
     renderlabel.h \
@@ -33,6 +34,8 @@ HEADERS  += mainwindow.h \
     mathutils.h \
     serveurcommunicator.h \
     clientcommunicator.h \
-    GameState.hpp
+    GameState.hpp \
+    PongTypes.hpp \
+    Lockable.hpp
 
 FORMS    += mainwindow.ui

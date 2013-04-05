@@ -57,8 +57,8 @@ void Arena::_drawSide()
 
     //Calcul de la position initiale de la raquette du joueur local
     const double batLength = x/6;
-    QPointF leftPoint(-(batLength/2)+radius,radius+h);
-    QPointF rightPoint((batLength/2)+radius,radius+h);
+    QPointF leftPoint(-(batLength/2)+radius,(radius+h)-20);
+    QPointF rightPoint((batLength/2)+radius,(radius+h)-20);
     _playerBat=Bat(leftPoint,rightPoint,0);
 }
 
