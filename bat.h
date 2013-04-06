@@ -33,7 +33,7 @@ public:
      * \param points Vecteur de deux points representant les extremites des raquettes.
      * \param id Id de la raquette.
      */
-    Bat(const QVector<QPointF>& points, int id);
+    Bat(const QVector<QPointF>& points, quint32 id);
 
     /*!
      * \brief Constructeur
@@ -42,7 +42,7 @@ public:
      * \param point2 Point representant l'extremite droite de la raquette.
      * \param id Id de la raquette.
      */
-    Bat(const QPointF& point1, const QPointF& point2, int id);
+    Bat(const QPointF& point1, const QPointF& point2, quint32 id);
 
     /*!
      * \brief Accesseur de ID
@@ -93,7 +93,7 @@ private:
     /*!
      * \brief Identifiant de la raquette.
      */
-    int _id;
+    quint32 _id;
 };
 
 #endif // BAT_H

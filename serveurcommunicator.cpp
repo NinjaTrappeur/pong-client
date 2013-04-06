@@ -5,19 +5,19 @@ ServeurCommunicator::ServeurCommunicator(QObject *parent) :
 {
 }
 
-ServeurCommunicator::ServeurCommunicator(int nbPlayers, QVector<QLineF> batVector, QPointF ball, PongTypes::E_GameState gameState, int loserIndex , QObject *parent):
-    _nbPlayers(nbPlayers),
+ServeurCommunicator::ServeurCommunicator(QVector<Bat> batVector, QPointF ball, PongTypes::E_GameState gameState, quint32 loserIndex , quint32 playerId, QObject *parent):
     _batVector(batVector),
     _ball(ball),
     _gameState(gameState),
     _loserIndex(loserIndex),
+    _playerId(playerId),
     QObject(parent)
 {
 }
 
 void ServeurCommunicator::operator>>(QDataStream& out)const
 {
-    out << quint16(_batVector.size())<< quint16(_nbPlayers) << quint16(_loserIndex) << quint16(_gameState);
+    out << quint16(_batVector.size())<< quint16(_loserIndex) << quint16(_gameState);
     for(int i=0;i<_batVector.size();++i)
         out<<_batVector[i];
 }
@@ -30,7 +30,6 @@ void ServeurCommunicator::operator<<(QDataStream& in)
     in >> nbPlayers >> loserIndex >> gameState;
     for(int i=0;i<vectorSize;++i)
         in >> _batVector[i];
-    _nbPlayers=nbPlayers;
     _loserIndex=loserIndex;
     _gameState= (PongTypes::E_GameState)gameState;
 }
@@ -68,24 +67,14 @@ void ServeurCommunicator::setGameState(const PongTypes::E_GameState &gameState)
     _gameState = gameState;
 }
 
-QVector<QLineF> ServeurCommunicator::batVector() const
+QVector<Bat> ServeurCommunicator::batVector() const
 {
     return _batVector;
 }
 
-void ServeurCommunicator::setBatVector(const QVector<QLineF> &batVector)
+void ServeurCommunicator::setBatVector(const QVector<Bat> &batVector)
 {
     _batVector = batVector;
-}
-
-int ServeurCommunicator::nbPlayers() const
-{
-    return _nbPlayers;
-}
-
-void ServeurCommunicator::setNbPlayers(int nbPlayers)
-{
-    _nbPlayers = nbPlayers;
 }
 
 QPointF ServeurCommunicator::ball() const

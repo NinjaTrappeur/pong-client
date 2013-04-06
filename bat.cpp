@@ -3,13 +3,13 @@ Bat::Bat()
 {
 }
 
-Bat::Bat(const QPointF &point1, const QPointF &point2, int id): _id(id)
+Bat::Bat(const QPointF &point1, const QPointF &point2, quint32 id): _id(id)
 {
     _point.push_back(point1);
     _point.push_back(point2);
 }
 
-Bat::Bat(const QVector<QPointF> &points, int id): _point(points), _id(id)
+Bat::Bat(const QVector<QPointF> &points, quint32 id): _point(points), _id(id)
 {
 }
 
@@ -37,7 +37,7 @@ void Bat::operator>>(QDataStream& out)const
 
 void Bat::operator<<(QDataStream& in)
 {
-    in >> _id >> point[0] >> _point[1];
+    in >> _id >> _point[0] >> _point[1];
 }
 
 

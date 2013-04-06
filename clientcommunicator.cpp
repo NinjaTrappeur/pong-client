@@ -5,7 +5,7 @@ ClientCommunicator::ClientCommunicator(QObject *parent) :
 {
 }
 
-ClientCommunicator::ClientCommunicator(float dx): _dx(dx)
+ClientCommunicator::ClientCommunicator(quint32 dx): _dx(dx)
 {
 }
 

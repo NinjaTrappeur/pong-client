@@ -5,7 +5,9 @@
 #include <QVector>
 #include <QLineF>
 #include <QDataStream>
+
 #include "GameState.hpp"
+#include "bat.h"
 
 /*!
  * \brief Classe envoyee dans le reseau par le serveur vers le client
@@ -15,7 +17,7 @@ class ServeurCommunicator : public QObject
     Q_OBJECT
 public:
     explicit ServeurCommunicator(QObject *parent = 0);
-    ServeurCommunicator(int nbPlayers, QVector<QLineF> batVector, QPointF ball, PongTypes::E_GameState gameState, int loserIndex ,QObject *parent = 0);
+    ServeurCommunicator(QVector<Bat> batVector, QPointF ball, PongTypes::E_GameState gameState, quint32 loserIndex, quint32 playerId, QObject *parent = 0);
     /*!
      * \brief Definition du flux sortant pour cette classe. Permet d'envoyer la classe dans une socket de maniere
      *  aisee
@@ -36,8 +38,8 @@ public:
     int nbPlayers() const;
     void setNbPlayers(int nbPlayers);
 
-    QVector<QLineF> batVector() const;
-    void setBatVector(const QVector<QLineF> &batVector);
+    QVector<Bat> batVector() const;
+    void setBatVector(const QVector<Bat> &batVector);
 
     PongTypes::E_GameState gameState() const;
     void setGameState(const PongTypes::E_GameState &gameState);
@@ -49,15 +51,11 @@ public:
     void setBall(const QPointF &ball);
 
 private:
-    /*!
-     * \brief Nombre de joueurs dans la partie
-     */
-    int _nbPlayers;
 
     /*!
      * \brief Raquettes des differents joueurs
      */
-    QVector<QLineF> _batVector;
+    QVector<Bat> _batVector;
 
     /*!
      * \brief Position de la balle.
@@ -72,7 +70,12 @@ private:
     /*!
      * \brief Joueurs ayant deja perdu
      */
-    int _loserIndex;    
+    quint32 _loserIndex;
+
+    /*!
+     * \brief Numero du joueur local
+     */
+    quint32 _playerId;
 };
 
 #endif // SERVEURCOMMUNICATOR_H
