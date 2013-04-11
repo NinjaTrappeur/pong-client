@@ -10,7 +10,6 @@ ServerSync::ServerSync(qreal &dx, QMutex& dxMutex, QVector<Bat> &bats, QPointF &
     _dxMutex(dxMutex),
     _otherPlayersVector(bats),
     _ball(ball),
-    _socket(new QTcpSocket()),
     _errorMessage(errorMessage),
     _timer()
 {
@@ -27,7 +26,6 @@ ServerSync::ServerSync(qreal &dx, QMutex& dxMutex, QVector<Bat> &bats, QPointF &
     }
 
     //Connectiond des signaux
-    connect(_socket, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(handleSocketError(QAbstractSocket::SocketError)));
     connect(this, SIGNAL(error(QString)), _errorMessage, SLOT(showMessage(QString)));
     connect(&_timer, SIGNAL(timeout()), this, SLOT(startSync()));
 }
@@ -64,6 +62,8 @@ void ServerSync::launchTimer()
 
 void ServerSync::connectToHost()
 {
+    _socket=new QTcpSocket();
+    connect(_socket, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(handleSocketError(QAbstractSocket::SocketError)));
 
 
     if(_host=="")
