@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _ui(new Ui::MainWindow)
 {
     _ui->setupUi(this);
-
+    _ui->LabelEtat->setText("En attente du serveur...");
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), _ui->label, SLOT(animate()));

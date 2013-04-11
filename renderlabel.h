@@ -39,10 +39,6 @@ public:
     void keyPressEvent(QKeyEvent *ev);
 
 private:
-    /*!
-     * \brief Pointeur vers le widget parent (ici MainWindow)
-     */
-    QWidget* _parent;
 
     /*!
      * \brief Pointeur vers la scene associee a ce renderlabel.

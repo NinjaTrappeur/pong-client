@@ -42,8 +42,8 @@ void Arena::_drawSide()
     //QPoint c(0,h);
     QPoint f1(-(x/4),h);
     QPoint f2((x/4),h);
-    _leftBatLimit = radius-(x/4);
-    _rightBatLimit = radius+(x/4);
+    _leftBatLimit = radius-(x/2);
+    _rightBatLimit = radius+(x/2);
 
     //Generation des droites
     QLine l1(a,f1);

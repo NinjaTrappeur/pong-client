@@ -1,32 +1,39 @@
 #ifndef SCENE_H
 #define SCENE_H
 
+#include <QWidget>
 #include <QVector>
+#include <QtWidgets>
 #include <QPointF>
 #include <QPainter>
 #include <QLine>
 #include <QErrorMessage>
+#include <QMutex>
+#include <QThread>
 
 #include "bat.h"
 #include "arena.h"
 #include "jobcannotbedone.h"
+#include "serversync.h"
 
 /*!
  * \brief Classe Scene. Classe contenant les objets (la balle et les raquettes)
  *  qu'il faudra afficher a l'ecran.
  */
-
-class Scene
+class Scene : public QWidget
 {
-
+    Q_OBJECT
 public:
 
     /*!
      * \brief Constructeur de la scene.
      */
-    Scene();
+    Scene(QWidget *parent);
 
-    ~Scene();
+    /*!
+     * \brief Destructeur.
+     */
+    virtual ~Scene();
 
     /*!
      * \brief Methode appellee par le renderlabel qui est associe a cette scene.
@@ -135,14 +142,27 @@ private:
      * \brief Difference entre la position actuelle de la raquette et la derniere
      *  position envoyee au serveur.
      */
-    float _dx;
+    qreal _dx;
+
+    /*!
+     * \brief Mutex permettant de verouiller _dx.
+     */
+    QMutex _dxMutex;
+
+    /*!
+     * \brief Fil d'exécution dans lequel seront executees les actions reseau
+     */
+    QThread _networkThread;
+
+    /*!
+     * \brief Objet realisant les operations reseau. Sera lance dans un fil d'execution different.
+     */
+    ServerSync _serverSync;
 
     /*!
      * \brief Methode auxilere qui permet de generer les objets graphiques representant les raquettes.
      */
     void _drawBats();
-
-
 };
 
 #endif // SCENE_H

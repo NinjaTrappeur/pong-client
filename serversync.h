@@ -5,6 +5,9 @@
 #include <QPointF>
 #include <QErrorMessage>
 #include <QString>
+#include <QMutex>
+#include <QTimer>
+
 #include <QtNetwork/QHostAddress>
 #include <QtNetwork/QTcpSocket>
 
@@ -20,7 +23,7 @@ class ServerSync : public QObject
 {
     Q_OBJECT
 public:
-    explicit ServerSync(float& dx, QVector<Bat>& bats, QPointF& ball, QHostAddress serverAdress, quint16 port, QErrorMessage* errorMessage , QObject *parent = 0);
+    explicit ServerSync(qreal& dx, QMutex &dxMutex,  QVector<Bat>& bats, QPointF& ball, QErrorMessage* errorMessage);
     virtual ~ServerSync();
 
 private:
@@ -28,8 +31,12 @@ private:
      * \brief Difference entre la derniere position de la raquette du joueur envoyee au serveur et
      *  la position actuelle de la raquette du joueur.
      */
-    float& _dx;
+    qreal& _dx;
 
+    /*!
+     * \brief Mutex permettant de verouiller _dx.
+     */
+    QMutex& _dxMutex;
     /*!
      * \brief Vecteur contenant les positions des raquettes des autres joueurs.
      */
@@ -50,19 +57,50 @@ private:
      */
     QErrorMessage* _errorMessage;
 
+    /*!
+     * \brief Timer permettant de rafraichir la scrutation.
+     */
+    QTimer _timer;
+
+    /*!
+     * \brief Port d'ecoute du serveur
+     */
+    quint16 _port;
+
+    /*!
+     * \brief Adresse ipv4 du serveur
+     */
+    QHostAddress _adress;
+
+    /*!
+     * \brief Nom du serveur
+     */
+    QString _host;
 signals:
     void error(QString error);
     
 public slots:
+
+
     /*!
-     * \brief Slot a lancer dans un thread.
+     * \brief Slot qui lance la scrutation de la socket
      */
     void startSync();
+
+    /*!
+     * \brief Connecte la socket au serveur.
+     */
+    void connectToHost();
 
     /*!
      * \brief Slot permettant de recuperer les erreurs generes par le socket.
      */
     void handleSocketError(QAbstractSocket::SocketError);
+
+    /*!
+     * \brief Slot permettant de lancer le timer.
+     */
+    void launchTimer();
 };
 
 #endif // SERVERSYNC_H

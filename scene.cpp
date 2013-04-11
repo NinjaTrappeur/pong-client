@@ -5,10 +5,14 @@
 #include <QColor>
 
 
-Scene::Scene():_whitePen(QColor(255,255,255)), _dx(0), _arena(8)
+Scene::Scene(QWidget *parent):_whitePen(QColor(255,255,255)), _arena(8),
+    _dx(0),
+    _errorMessage( new QErrorMessage() ),
+    _networkThread(parent),
+    _serverSync(_dx, _dxMutex, _otherPlayersBatVector, _ball, _errorMessage),
+    QWidget(parent)
 {
-    _errorMessage = new QErrorMessage();
-
+    //Initialisation GUI
     _playerBat=_arena.playerBat();
 
     _ball.setX(50);
@@ -18,6 +22,12 @@ Scene::Scene():_whitePen(QColor(255,255,255)), _dx(0), _arena(8)
     _whitePen.setStyle(Qt::SolidLine);
     _whitePen.setCapStyle(Qt::SquareCap);
     _drawBats();
+
+    //Initialisation reseau
+    connect(&_networkThread,SIGNAL(started()),&_serverSync,SLOT(connectToHost()));
+    connect(&_networkThread, SIGNAL(finished()), &_networkThread, SLOT(deleteLater()));
+    _serverSync.moveToThread(&_networkThread);
+    _networkThread.start();
 }
 
 Scene::~Scene()
@@ -124,7 +134,9 @@ void Scene::movePlayerBatToLeft(float pos)
         actualPosition[0].setX(actualPosition[0].x()-pos);
         actualPosition[1].setX(actualPosition[1].x()-pos);
         _playerBat.moveBat(actualPosition[0], actualPosition[1]);
+        _dxMutex.lock();
         _dx-=pos;
+        _dxMutex.unlock();
         _drawBats();
     }
 }
@@ -139,7 +151,9 @@ void Scene::movePlayerBatToRight(float pos)
         actualPosition[0].setX(actualPosition[0].x()+pos);
         actualPosition[1].setX(actualPosition[1].x()+pos);
         _playerBat.moveBat(actualPosition[0], actualPosition[1]);
+        _dxMutex.lock();
         _dx+=pos;
+        _dxMutex.unlock();
         _drawBats();
     }
 }

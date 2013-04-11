@@ -76,6 +76,11 @@ private:
      * \brief Numero du joueur local
      */
     quint32 _playerId;
+
+    /*!
+     * \brief Decompte avant la partie.
+     */
+    quint32 _downCounter;
 };
 
 #endif // SERVEURCOMMUNICATOR_H

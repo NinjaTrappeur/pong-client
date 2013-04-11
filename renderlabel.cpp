@@ -1,10 +1,9 @@
 #include "renderlabel.h"
 
 RenderLabel::RenderLabel(QWidget *parent):
-    _parent(parent),
     QLabel(parent)
 {
-    _scene= new Scene;
+    _scene= new Scene(this);
     setFocusPolicy(Qt::StrongFocus);
 }
 
