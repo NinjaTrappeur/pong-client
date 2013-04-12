@@ -3,7 +3,6 @@
 
 #include <QWidget>
 #include <QVector>
-#include <QtWidgets>
 #include <QPointF>
 #include <QPainter>
 #include <QLine>
