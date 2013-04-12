@@ -50,6 +50,9 @@ public:
     QPointF ball() const;
     void setBall(const QPointF &ball);
 
+    quint32 downCounter() const;
+    void setDownCounter(const quint32 &downCounter);
+
 private:
 
     /*!

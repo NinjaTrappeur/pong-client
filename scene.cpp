@@ -5,15 +5,16 @@
 #include <QColor>
 
 
-Scene::Scene(QWidget *parent):_whitePen(QColor(255,255,255)), _arena(8),
+Scene::Scene(QWidget *parent):_whitePen(QColor(255,255,255)),
+    _arena(NULL),
     _dx(0),
     _errorMessage( new QErrorMessage() ),
     _networkThread(parent),
-    _serverSync(_dx, _dxMutex, _otherPlayersBatVector, _ball, _errorMessage),
+    _serverSync(_dx, _dxMutex, _otherPlayersBatVector, _ball, _errorMessage, _gameState, _centralText),
+    _centralText("En attente du serveur..."),
     QWidget(parent)
 {
     //Initialisation GUI
-    _playerBat=_arena.playerBat();
 
     _ball.setX(50);
     _ball.setY(50);
@@ -26,6 +27,7 @@ Scene::Scene(QWidget *parent):_whitePen(QColor(255,255,255)), _arena(8),
     //Initialisation reseau
     connect(&_networkThread,SIGNAL(started()),&_serverSync,SLOT(connectToHost()));
     connect(&_networkThread, SIGNAL(finished()), &_networkThread, SLOT(deleteLater()));
+    connect(&_serverSync,SIGNAL(readyToBuildArena()), this, SLOT(initializeArena()));
     _serverSync.moveToThread(&_networkThread);
     _networkThread.start();
 }
@@ -33,17 +35,25 @@ Scene::Scene(QWidget *parent):_whitePen(QColor(255,255,255)), _arena(8),
 Scene::~Scene()
 {
     _errorMessage->deleteLater();
+    if(_arena!=NULL)
+        delete _arena;
 }
 
 void Scene::paint(QPainter *painter)
 {
     painter->setPen(_whitePen);
-    for(int i=0;i<_graphicsBatVector.size();++i)
+
+    if(_arena!=NULL)
     {
-        painter->drawLine(_graphicsBatVector[i]);
+        painter->setPen(_whitePen);
+        for(int i=0;i<_graphicsBatVector.size();++i)
+        {
+            painter->drawLine(_graphicsBatVector[i]);
+        }
+        painter->drawPoint(_ball);
+        _arena->paint(painter);
     }
-    painter->drawPoint(_ball);
-    _arena.paint(painter);
+    painter->drawText(QRect(QPoint(200,200), QPoint(400,400)),_centralText);
 }
 
 void Scene::addBat(Bat& bat) throw(JobCannotBeDone)
@@ -128,8 +138,8 @@ void Scene::movePlayerBatToLeft(float pos)
 {
     QVector<QPointF> actualPosition;
     actualPosition= _playerBat.getPoints();
-    if((actualPosition[0].x()-pos)>_arena.leftBatLimit() &&
-            (actualPosition[1].x()-pos)>_arena.leftBatLimit())
+    if((actualPosition[0].x()-pos)>_arena->leftBatLimit() &&
+            (actualPosition[1].x()-pos)>_arena->leftBatLimit())
     {
         actualPosition[0].setX(actualPosition[0].x()-pos);
         actualPosition[1].setX(actualPosition[1].x()-pos);
@@ -145,8 +155,8 @@ void Scene::movePlayerBatToRight(float pos)
 {
     QVector<QPointF> actualPosition;
     actualPosition= _playerBat.getPoints();
-    if((actualPosition[0].x()+pos)<_arena.rightBatLimit() &&
-            (actualPosition[1].x()+pos)<_arena.rightBatLimit())
+    if((actualPosition[0].x()+pos)<_arena->rightBatLimit() &&
+            (actualPosition[1].x()+pos)<_arena->rightBatLimit())
     {
         actualPosition[0].setX(actualPosition[0].x()+pos);
         actualPosition[1].setX(actualPosition[1].x()+pos);
@@ -156,4 +166,10 @@ void Scene::movePlayerBatToRight(float pos)
         _dxMutex.unlock();
         _drawBats();
     }
+}
+
+void Scene::initializeArena()
+{
+    _arena = new Arena(_otherPlayersBatVector.size()+1);
+    _playerBat=_arena->playerBat();
 }

@@ -85,3 +85,13 @@ void ServeurCommunicator::setBall(const QPointF &ball)
 {
     _ball = ball;
 }
+
+quint32 ServeurCommunicator::downCounter() const
+{
+    return _downCounter;
+}
+
+void ServeurCommunicator::setDownCounter(const quint32 &downCounter)
+{
+    _downCounter = downCounter;
+}

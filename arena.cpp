@@ -10,27 +10,48 @@ const double Arena::_renderLenght = 600;
 
 Arena::Arena(int nbPlayers): _nbPlayers(nbPlayers)
 {
+    if(_nbPlayers==2)
+        _nbPlayers=4;
     _drawSide();
 }
 
 void Arena::paint(QPainter *painter)
 {
     painter->translate(_renderWidth/2,_renderLenght/2);
-    for(int i=0; i<_nbPlayers; ++i)
+
+    if(_nbPlayers==2)
     {
-        painter->drawLine(_arenaLines[0]);
-        painter->drawLine(_arenaLines[1]);
-        //painter->drawLine(_arenaLines[2]);
-        painter->rotate(360/_nbPlayers);
+        for(int i=0; i<4; ++i)
+        {
+            painter->drawLine(_arenaLines[0]);
+            painter->drawLine(_arenaLines[1]);
+            //painter->drawLine(_arenaLines[2]);
+            painter->rotate(360/4);
+        }
     }
+
+    else
+    {
+        for(int i=0; i<_nbPlayers; ++i)
+        {
+            painter->drawLine(_arenaLines[0]);
+            painter->drawLine(_arenaLines[1]);
+            //painter->drawLine(_arenaLines[2]);
+            painter->rotate(360/_nbPlayers);
+        }
+    }
+
     painter->translate(-_renderWidth/2,_renderLenght/2);
 }
 
 void Arena::_drawSide()
 {
-
+    double alphaAngle;
     //Calcul des constantes;
-    const double alphaAngle = 360/_nbPlayers;
+    if(_nbPlayers==2)
+        alphaAngle = 360/4;
+    else
+        alphaAngle = 360/_nbPlayers;
     const double betaAngle = (180-alphaAngle)/2;
     const double radius = _renderWidth/2;
     const double x = radius*(::sin( MathUtils::degreeToRadian(alphaAngle) )/::sin( MathUtils::degreeToRadian(betaAngle) ));

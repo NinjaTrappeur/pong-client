@@ -11,7 +11,8 @@
 #include <QtNetwork/QHostAddress>
 #include <QtNetwork/QTcpSocket>
 
-#include <bat.h>
+#include "bat.h"
+#include "PongTypes.hpp"
 
 
 /*!
@@ -23,7 +24,7 @@ class ServerSync : public QObject
 {
     Q_OBJECT
 public:
-    explicit ServerSync(qreal& dx, QMutex &dxMutex,  QVector<Bat>& bats, QPointF& ball, QErrorMessage* errorMessage);
+    explicit ServerSync(qreal& dx, QMutex &dxMutex,  QVector<Bat>& bats, QPointF& ball, QErrorMessage* errorMessage, PongTypes::E_GameState& gamestate, QString& _centralText);
     virtual ~ServerSync();
 
 private:
@@ -76,8 +77,20 @@ private:
      * \brief Nom du serveur
      */
     QString _host;
+
+    /*!
+     * \brief Etat de la partie
+     */
+    PongTypes::E_GameState& _gameState;
+
+    /*!
+     * \brief Texte affiché au centre de la fenetre
+     */
+    QString& _centralText;
+
 signals:
     void error(QString error);
+    void readyToBuildArena();
     
 public slots:
 

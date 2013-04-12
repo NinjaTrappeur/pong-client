@@ -10,7 +10,6 @@ MainWindow::MainWindow(QWidget *parent) :
     _ui(new Ui::MainWindow)
 {
     _ui->setupUi(this);
-    _ui->LabelEtat->setText("En attente du serveur...");
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), _ui->label, SLOT(animate()));
@@ -20,4 +19,14 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete _ui;
+}
+
+Ui::MainWindow *MainWindow::ui() const
+{
+    return _ui;
+}
+
+void MainWindow::setUi(Ui::MainWindow *ui)
+{
+    _ui = ui;
 }

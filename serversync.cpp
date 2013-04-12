@@ -5,13 +5,15 @@
 #include "serveurcommunicator.h"
 #include "clientcommunicator.h"
 
-ServerSync::ServerSync(qreal &dx, QMutex& dxMutex, QVector<Bat> &bats, QPointF &ball, QErrorMessage *errorMessage) :
+ServerSync::ServerSync(qreal &dx, QMutex& dxMutex, QVector<Bat> &bats, QPointF &ball, QErrorMessage *errorMessage, PongTypes::E_GameState& gameState, QString& centraltext) :
     _dx(dx),
     _dxMutex(dxMutex),
     _otherPlayersVector(bats),
     _ball(ball),
     _errorMessage(errorMessage),
-    _timer()
+    _timer(),
+    _gameState(gameState),
+    _centralText(centraltext)
 {
     //Recuperation des parametres de connection
 
@@ -48,6 +50,11 @@ void ServerSync::startSync()
     stream>>serveurCommunicator;
     _otherPlayersVector = serveurCommunicator.batVector();
     _ball = serveurCommunicator.ball();
+    _gameState = serveurCommunicator.gameState();
+    if(_gameState == PongTypes::INITIALIZING)
+        emit(readyToBuildArena());
+    if(serveurCommunicator.downCounter()<0)
+        _centralText= QString::number(serveurCommunicator.downCounter());
     _dxMutex.lock();
     ClientCommunicator clientCommunicator(_dx);
     stream<<clientCommunicator;

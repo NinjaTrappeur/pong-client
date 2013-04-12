@@ -1,5 +1,5 @@
-#ifndef SCENE_H
-#define SCENE_H
+#ifndef _SCENE_H
+#define _SCENE_H
 
 #include <QWidget>
 #include <QVector>
@@ -7,6 +7,7 @@
 #include <QPointF>
 #include <QPainter>
 #include <QLine>
+#include <QString>
 #include <QErrorMessage>
 #include <QMutex>
 #include <QThread>
@@ -15,6 +16,7 @@
 #include "arena.h"
 #include "jobcannotbedone.h"
 #include "serversync.h"
+#include "PongTypes.hpp"
 
 /*!
  * \brief Classe Scene. Classe contenant les objets (la balle et les raquettes)
@@ -131,7 +133,7 @@ private:
     /*!
      * \brief Objet representant l'arenne de jeu.
      */
-    Arena _arena;
+    Arena* _arena;
 
     /*!
      * \brief Message d'erreur, utilise pour afficher les erreurs.
@@ -160,9 +162,25 @@ private:
     ServerSync _serverSync;
 
     /*!
+     * \brief Etat de la partie.
+     */
+    PongTypes::E_GameState _gameState;
+
+    /*!
+     * \brief Texte qui sera affiché au centre de l'aire de jeu
+     */
+    QString _centralText;
+    /*!
      * \brief Methode auxilere qui permet de generer les objets graphiques representant les raquettes.
      */
     void _drawBats();
+
+public slots:
+
+    /*!
+     * \brief Cree l'arene et place la raquette du joueur a sa position initiale.
+     */
+    void initializeArena();
 };
 
 #endif // SCENE_H

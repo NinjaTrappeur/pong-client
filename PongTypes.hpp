@@ -14,10 +14,10 @@ struct PongTypes
     };
 
     enum E_GameState{
-        NOPARTY,
-        WAITING_PLAYERS,
-        INITIALIZING,
-        RUNNING,
+        NOPARTY, //1
+        WAITING_PLAYERS, //3
+        INITIALIZING, //2
+        RUNNING, //4
         PAUSED,
         GAMEOVER,
         EXITED

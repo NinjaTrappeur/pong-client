@@ -21,6 +21,9 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     
+    Ui::MainWindow *ui() const;
+    void setUi(Ui::MainWindow *ui);
+
 private:
 
     /*!
