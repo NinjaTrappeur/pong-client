@@ -38,9 +38,9 @@ ServerSync::~ServerSync()
     _socket->deleteLater();
 }
 
-void ServerSync::handleSocketError(QAbstractSocket::SocketError)
+void ServerSync::handleSocketError(QAbstractSocket::SocketError errorCode)
 {
-    emit(error(QString("Problème avec la socket!")));
+    emit(error(QString("Problème avec la socket!: " + QString::number(errorCode))));
 }
 
 void ServerSync::startSync()

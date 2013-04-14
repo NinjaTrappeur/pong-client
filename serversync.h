@@ -108,7 +108,7 @@ public slots:
     /*!
      * \brief Slot permettant de recuperer les erreurs generes par le socket.
      */
-    void handleSocketError(QAbstractSocket::SocketError);
+    void handleSocketError(QAbstractSocket::SocketError errorCode);
 
     /*!
      * \brief Slot permettant de lancer le timer.
