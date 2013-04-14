@@ -22,7 +22,6 @@ Scene::Scene(QWidget *parent):_whitePen(QColor(255,255,255)),
     _whitePen.setWidth(4);
     _whitePen.setStyle(Qt::SolidLine);
     _whitePen.setCapStyle(Qt::SquareCap);
-    _drawBats();
 
     //Initialisation reseau
     connect(&_networkThread,SIGNAL(started()),&_serverSync,SLOT(connectToHost()));
@@ -172,4 +171,5 @@ void Scene::initializeArena()
 {
     _arena = new Arena(_otherPlayersBatVector.size()+1);
     _playerBat=_arena->playerBat();
+    _drawBats();
 }
