@@ -70,6 +70,7 @@ void ServerSync::launchTimer()
 void ServerSync::connectToHost()
 {
     _socket=new QTcpSocket();
+    connect(_socket, SIGNAL(stateChanged(QAbstractSocket::SocketState)), this, SLOT(changeSocketState(QAbstractSocket::SocketState)));
     connect(_socket, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(handleSocketError(QAbstractSocket::SocketError)));
 
 
@@ -78,4 +79,9 @@ void ServerSync::connectToHost()
     else
         _socket->connectToHost(_host, _port);
     connect(_socket, SIGNAL(connected()), this, SLOT(launchTimer()));
+}
+
+void ServerSync::changeSocketState(QAbstractSocket::SocketState state)
+{
+    _centralText= QString("En attente du serveur...\n") + QString("Etat de la socket: ") + QString::number(state);
 }

@@ -111,6 +111,11 @@ public slots:
     void handleSocketError(QAbstractSocket::SocketError errorCode);
 
     /*!
+     * \brief Slot permettant de donner l'état de la socket à l'utilisateur.
+     */
+    void changeSocketState(QAbstractSocket::SocketState state);
+
+    /*!
      * \brief Slot permettant de lancer le timer.
      */
     void launchTimer();
