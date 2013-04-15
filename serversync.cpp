@@ -35,7 +35,6 @@ ServerSync::ServerSync(qreal &dx, QMutex& dxMutex, QVector<Bat> &bats, QPointF &
     connect( this, SIGNAL(connectToHostSignal()), this, SLOT(connectToHost()));
     connect(this, SIGNAL(error(QString)), _errorMessage, SLOT(showMessage(QString)));
     connect(_socket, SIGNAL(readyRead()), this, SLOT(startSync()));
-    //connect(_socket, SIGNAL(stateChanged(QAbstractSocket::SocketState)), this, SLOT(changeSocketState(QAbstractSocket::SocketState)));
     connect(_socket, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(handleSocketError(QAbstractSocket::SocketError)));
 
     emit connectToHostSignal();
