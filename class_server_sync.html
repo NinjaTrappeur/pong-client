@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Client pong: Référence de la classe ServerSync</title>
+<title>Pong client: Référence de la classe ServerSync</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Client pong
+   <div id="projectname">Pong client
    </div>
   </td>
  </tr>
@@ -93,7 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div><!--header-->
 <div class="contents">
 
-<p>Classe gerant la liaison avec le serveur sur un reseau. Permet d'envoyer la position de la raquette du joueur local au serveur et de recuperer la position des autres raquettes et de la balle. Doit etre lance dans un thread a part a l'aide du slot <a class="el" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot a lancer dans un thread.">startSync()</a>.  
+<p>Classe gerant la liaison avec le serveur sur un reseau. Permet d'envoyer la position de la raquette du joueur local au serveur et de recuperer la position des autres raquettes et de la balle. Doit etre lance dans un thread a part a l'aide du slot <a class="el" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot qui lance la scrutation de la socket.">startSync()</a>.  
  <a href="class_server_sync.html#details">Plus de détails...</a></p>
 
 <p><code>#include &lt;<a class="el" href="serversync_8h_source.html">serversync.h</a>&gt;</code></p>
@@ -101,42 +101,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 Graphe d'héritage de ServerSync:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_server_sync__inherit__graph.png" border="0" usemap="#_server_sync_inherit__map" alt="Inheritance graph"/></div>
-<map name="_server_sync_inherit__map" id="_server_sync_inherit__map">
-</map>
 <center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 <div class="dynheader">
 Graphe de collaboration de ServerSync:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_server_sync__coll__graph.png" border="0" usemap="#_server_sync_coll__map" alt="Collaboration graph"/></div>
-<map name="_server_sync_coll__map" id="_server_sync_coll__map">
-</map>
 <center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Connecteurs publics</h2></td></tr>
 <tr class="memitem:ab07c5df26223ecb0debefda060293f50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50">startSync</a> ()</td></tr>
-<tr class="memdesc:ab07c5df26223ecb0debefda060293f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot a lancer dans un thread.  <a href="#ab07c5df26223ecb0debefda060293f50">Plus de détails...</a><br/></td></tr>
+<tr class="memdesc:ab07c5df26223ecb0debefda060293f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot qui lance la scrutation de la socket.  <a href="#ab07c5df26223ecb0debefda060293f50">Plus de détails...</a><br/></td></tr>
 <tr class="separator:ab07c5df26223ecb0debefda060293f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9896da75a78af004066c986573a961bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sync.html#a9896da75a78af004066c986573a961bb">handleSocketError</a> (QAbstractSocket::SocketError)</td></tr>
-<tr class="memdesc:a9896da75a78af004066c986573a961bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot permettant de recuperer les erreurs generes par le socket.  <a href="#a9896da75a78af004066c986573a961bb">Plus de détails...</a><br/></td></tr>
-<tr class="separator:a9896da75a78af004066c986573a961bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0328327983c266430f8bc8d912bf24d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sync.html#a0328327983c266430f8bc8d912bf24d4">connectToHost</a> ()</td></tr>
+<tr class="memdesc:a0328327983c266430f8bc8d912bf24d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connecte la socket au serveur.  <a href="#a0328327983c266430f8bc8d912bf24d4">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a0328327983c266430f8bc8d912bf24d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb929257b6b1e01d70332ae97980e8ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sync.html#adb929257b6b1e01d70332ae97980e8ce">handleSocketError</a> (QAbstractSocket::SocketError errorCode)</td></tr>
+<tr class="memdesc:adb929257b6b1e01d70332ae97980e8ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot permettant de recuperer les erreurs generes par le socket.  <a href="#adb929257b6b1e01d70332ae97980e8ce">Plus de détails...</a><br/></td></tr>
+<tr class="separator:adb929257b6b1e01d70332ae97980e8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a676d992c9bd4dd853a6009eb9b64e652"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sync.html#a676d992c9bd4dd853a6009eb9b64e652">changeSocketState</a> (QAbstractSocket::SocketState state)</td></tr>
+<tr class="memdesc:a676d992c9bd4dd853a6009eb9b64e652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot permettant de donner l'état de la socket à l'utilisateur.  <a href="#a676d992c9bd4dd853a6009eb9b64e652">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a676d992c9bd4dd853a6009eb9b64e652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signaux</h2></td></tr>
 <tr class="memitem:ac2f8be821778b52080d28e1ec5dad374"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sync.html#ac2f8be821778b52080d28e1ec5dad374">error</a> (QString error)</td></tr>
 <tr class="separator:ac2f8be821778b52080d28e1ec5dad374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02675a3a233c9611d398390c6324103d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sync.html#a02675a3a233c9611d398390c6324103d">readyToBuildArena</a> ()</td></tr>
+<tr class="separator:a02675a3a233c9611d398390c6324103d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a33a79dffdfae2b3996e7c02016c787"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sync.html#a9a33a79dffdfae2b3996e7c02016c787">connectToHostSignal</a> ()</td></tr>
+<tr class="separator:a9a33a79dffdfae2b3996e7c02016c787"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:ab11e5acb611152198c3e21adedd0f02c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sync.html#ab11e5acb611152198c3e21adedd0f02c">ServerSync</a> (float &amp;dx, QVector&lt; <a class="el" href="class_bat.html">Bat</a> &gt; &amp;bats, QPointF &amp;ball, QHostAddress serverAdress, quint16 port, QErrorMessage *errorMessage, QObject *parent=0)</td></tr>
-<tr class="separator:ab11e5acb611152198c3e21adedd0f02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a02788e49486d2fd16af2abfcd02a87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sync.html#a2a02788e49486d2fd16af2abfcd02a87">ServerSync</a> (qreal &amp;dx, QMutex &amp;dxMutex, QVector&lt; <a class="el" href="class_bat.html">Bat</a> &gt; &amp;bats, QPointF &amp;ball, QErrorMessage *errorMessage, <a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058">PongTypes::E_GameState</a> &amp;gamestate, QString &amp;_centralText)</td></tr>
+<tr class="separator:a2a02788e49486d2fd16af2abfcd02a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67e799811cd50a22a8cc2253927fe36d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sync.html#a67e799811cd50a22a8cc2253927fe36d">~ServerSync</a> ()</td></tr>
 <tr class="separator:a67e799811cd50a22a8cc2253927fe36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p>Classe gerant la liaison avec le serveur sur un reseau. Permet d'envoyer la position de la raquette du joueur local au serveur et de recuperer la position des autres raquettes et de la balle. Doit etre lance dans un thread a part a l'aide du slot <a class="el" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot a lancer dans un thread.">startSync()</a>. </p>
+<div class="textblock"><p>Classe gerant la liaison avec le serveur sur un reseau. Permet d'envoyer la position de la raquette du joueur local au serveur et de recuperer la position des autres raquettes et de la balle. Doit etre lance dans un thread a part a l'aide du slot <a class="el" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot qui lance la scrutation de la socket.">startSync()</a>. </p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
-<a class="anchor" id="ab11e5acb611152198c3e21adedd0f02c"></a>
+<a class="anchor" id="a2a02788e49486d2fd16af2abfcd02a87"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -146,8 +152,14 @@ Fonctions membres publiques</h2></td></tr>
         <tr>
           <td class="memname">ServerSync::ServerSync </td>
           <td>(</td>
-          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramtype">qreal &amp;&#160;</td>
           <td class="paramname"><em>dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QMutex &amp;&#160;</td>
+          <td class="paramname"><em>dxMutex</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -164,26 +176,20 @@ Fonctions membres publiques</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QHostAddress&#160;</td>
-          <td class="paramname"><em>serverAdress</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">quint16&#160;</td>
-          <td class="paramname"><em>port</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">QErrorMessage *&#160;</td>
           <td class="paramname"><em>errorMessage</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QObject *&#160;</td>
-          <td class="paramname"><em>parent</em> = <code>0</code>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058">PongTypes::E_GameState</a> &amp;&#160;</td>
+          <td class="paramname"><em>gamestate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramname"><em>_centralText</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -201,9 +207,9 @@ Fonctions membres publiques</h2></td></tr>
 <p><div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="class_server_sync_ab11e5acb611152198c3e21adedd0f02c_cgraph.png" border="0" usemap="#class_server_sync_ab11e5acb611152198c3e21adedd0f02c_cgraph" alt=""/></div>
-<map name="class_server_sync_ab11e5acb611152198c3e21adedd0f02c_cgraph" id="class_server_sync_ab11e5acb611152198c3e21adedd0f02c_cgraph">
-<area shape="rect" id="node2" href="class_server_sync.html#ac2f8be821778b52080d28e1ec5dad374" title="ServerSync::error" alt="" coords="243,5,365,32"/><area shape="rect" id="node3" href="class_server_sync.html#a9896da75a78af004066c986573a961bb" title="Slot permettant de recuperer les erreurs generes par le socket." alt="" coords="217,57,391,98"/><area shape="rect" id="node4" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot a lancer dans un thread." alt="" coords="228,123,380,149"/></map>
+<div class="center"><img src="class_server_sync_a2a02788e49486d2fd16af2abfcd02a87_cgraph.png" border="0" usemap="#class_server_sync_a2a02788e49486d2fd16af2abfcd02a87_cgraph" alt=""/></div>
+<map name="class_server_sync_a2a02788e49486d2fd16af2abfcd02a87_cgraph" id="class_server_sync_a2a02788e49486d2fd16af2abfcd02a87_cgraph">
+<area shape="rect" id="node2" href="class_server_sync.html#a9a33a79dffdfae2b3996e7c02016c787" title="ServerSync::connectToHost\lSignal" alt="" coords="216,5,397,46"/><area shape="rect" id="node3" href="class_server_sync.html#a0328327983c266430f8bc8d912bf24d4" title="Connecte la socket au serveur." alt="" coords="216,71,397,97"/><area shape="rect" id="node4" href="class_server_sync.html#ac2f8be821778b52080d28e1ec5dad374" title="ServerSync::error" alt="" coords="469,151,592,177"/><area shape="rect" id="node5" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot qui lance la scrutation de la socket." alt="" coords="231,239,383,265"/><area shape="rect" id="node7" href="class_server_sync.html#adb929257b6b1e01d70332ae97980e8ce" title="Slot permettant de recuperer les erreurs generes par le socket." alt="" coords="219,173,394,214"/><area shape="rect" id="node6" href="class_server_sync.html#a02675a3a233c9611d398390c6324103d" title="ServerSync::readyToBuild\lArena" alt="" coords="446,231,615,273"/></map>
 </div>
 </p>
 
@@ -233,6 +239,98 @@ Voici le graphe d'appel pour cette fonction :</div>
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
+<a class="anchor" id="a676d992c9bd4dd853a6009eb9b64e652"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ServerSync::changeSocketState </td>
+          <td>(</td>
+          <td class="paramtype">QAbstractSocket::SocketState&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Slot permettant de donner l'état de la socket à l'utilisateur. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0328327983c266430f8bc8d912bf24d4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ServerSync::connectToHost </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Connecte la socket au serveur. </p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_server_sync_a0328327983c266430f8bc8d912bf24d4_icgraph.png" border="0" usemap="#class_server_sync_a0328327983c266430f8bc8d912bf24d4_icgraph" alt=""/></div>
+<map name="class_server_sync_a0328327983c266430f8bc8d912bf24d4_icgraph" id="class_server_sync_a0328327983c266430f8bc8d912bf24d4_icgraph">
+<area shape="rect" id="node2" href="class_server_sync.html#a2a02788e49486d2fd16af2abfcd02a87" title="ServerSync::ServerSync" alt="" coords="235,5,397,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9a33a79dffdfae2b3996e7c02016c787"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ServerSync::connectToHostSignal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_server_sync_a9a33a79dffdfae2b3996e7c02016c787_icgraph.png" border="0" usemap="#class_server_sync_a9a33a79dffdfae2b3996e7c02016c787_icgraph" alt=""/></div>
+<map name="class_server_sync_a9a33a79dffdfae2b3996e7c02016c787_icgraph" id="class_server_sync_a9a33a79dffdfae2b3996e7c02016c787_icgraph">
+<area shape="rect" id="node2" href="class_server_sync.html#a2a02788e49486d2fd16af2abfcd02a87" title="ServerSync::ServerSync" alt="" coords="235,12,397,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="ac2f8be821778b52080d28e1ec5dad374"></a>
 <div class="memitem">
 <div class="memproto">
@@ -260,13 +358,13 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="class_server_sync_ac2f8be821778b52080d28e1ec5dad374_icgraph.png" border="0" usemap="#class_server_sync_ac2f8be821778b52080d28e1ec5dad374_icgraph" alt=""/></div>
 <map name="class_server_sync_ac2f8be821778b52080d28e1ec5dad374_icgraph" id="class_server_sync_ac2f8be821778b52080d28e1ec5dad374_icgraph">
-<area shape="rect" id="node2" href="class_server_sync.html#ab11e5acb611152198c3e21adedd0f02c" title="ServerSync::ServerSync" alt="" coords="176,5,339,32"/></map>
+<area shape="rect" id="node2" href="class_server_sync.html#a2a02788e49486d2fd16af2abfcd02a87" title="ServerSync::ServerSync" alt="" coords="400,5,563,32"/><area shape="rect" id="node3" href="class_server_sync.html#adb929257b6b1e01d70332ae97980e8ce" title="Slot permettant de recuperer les erreurs generes par le socket." alt="" coords="177,27,351,69"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a9896da75a78af004066c986573a961bb"></a>
+<a class="anchor" id="adb929257b6b1e01d70332ae97980e8ce"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -277,7 +375,7 @@ Voici le graphe des appelants de cette fonction :</div>
           <td class="memname">void ServerSync::handleSocketError </td>
           <td>(</td>
           <td class="paramtype">QAbstractSocket::SocketError&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>errorCode</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -291,11 +389,52 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Slot permettant de recuperer les erreurs generes par le socket. </p>
 
 <p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_server_sync_adb929257b6b1e01d70332ae97980e8ce_cgraph.png" border="0" usemap="#class_server_sync_adb929257b6b1e01d70332ae97980e8ce_cgraph" alt=""/></div>
+<map name="class_server_sync_adb929257b6b1e01d70332ae97980e8ce_cgraph" id="class_server_sync_adb929257b6b1e01d70332ae97980e8ce_cgraph">
+<area shape="rect" id="node2" href="class_server_sync.html#ac2f8be821778b52080d28e1ec5dad374" title="ServerSync::error" alt="" coords="229,12,352,39"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="class_server_sync_a9896da75a78af004066c986573a961bb_icgraph.png" border="0" usemap="#class_server_sync_a9896da75a78af004066c986573a961bb_icgraph" alt=""/></div>
-<map name="class_server_sync_a9896da75a78af004066c986573a961bb_icgraph" id="class_server_sync_a9896da75a78af004066c986573a961bb_icgraph">
-<area shape="rect" id="node2" href="class_server_sync.html#ab11e5acb611152198c3e21adedd0f02c" title="ServerSync::ServerSync" alt="" coords="229,12,392,39"/></map>
+<div class="center"><img src="class_server_sync_adb929257b6b1e01d70332ae97980e8ce_icgraph.png" border="0" usemap="#class_server_sync_adb929257b6b1e01d70332ae97980e8ce_icgraph" alt=""/></div>
+<map name="class_server_sync_adb929257b6b1e01d70332ae97980e8ce_icgraph" id="class_server_sync_adb929257b6b1e01d70332ae97980e8ce_icgraph">
+<area shape="rect" id="node2" href="class_server_sync.html#a2a02788e49486d2fd16af2abfcd02a87" title="ServerSync::ServerSync" alt="" coords="229,12,392,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a02675a3a233c9611d398390c6324103d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ServerSync::readyToBuildArena </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_server_sync_a02675a3a233c9611d398390c6324103d_icgraph.png" border="0" usemap="#class_server_sync_a02675a3a233c9611d398390c6324103d_icgraph" alt=""/></div>
+<map name="class_server_sync_a02675a3a233c9611d398390c6324103d_icgraph" id="class_server_sync_a02675a3a233c9611d398390c6324103d_icgraph">
+<area shape="rect" id="node2" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot qui lance la scrutation de la socket." alt="" coords="224,12,376,39"/><area shape="rect" id="node3" href="class_server_sync.html#a2a02788e49486d2fd16af2abfcd02a87" title="ServerSync::ServerSync" alt="" coords="424,12,587,39"/></map>
 </div>
 </p>
 
@@ -322,14 +461,23 @@ Voici le graphe des appelants de cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
-<p>Slot a lancer dans un thread. </p>
+<p>Slot qui lance la scrutation de la socket. </p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_server_sync_ab07c5df26223ecb0debefda060293f50_cgraph.png" border="0" usemap="#class_server_sync_ab07c5df26223ecb0debefda060293f50_cgraph" alt=""/></div>
+<map name="class_server_sync_ab07c5df26223ecb0debefda060293f50_cgraph" id="class_server_sync_ab07c5df26223ecb0debefda060293f50_cgraph">
+<area shape="rect" id="node2" href="class_server_sync.html#a02675a3a233c9611d398390c6324103d" title="ServerSync::readyToBuild\lArena" alt="" coords="206,5,375,46"/></map>
+</div>
+</p>
 
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="class_server_sync_ab07c5df26223ecb0debefda060293f50_icgraph.png" border="0" usemap="#class_server_sync_ab07c5df26223ecb0debefda060293f50_icgraph" alt=""/></div>
 <map name="class_server_sync_ab07c5df26223ecb0debefda060293f50_icgraph" id="class_server_sync_ab07c5df26223ecb0debefda060293f50_icgraph">
-<area shape="rect" id="node2" href="class_server_sync.html#ab11e5acb611152198c3e21adedd0f02c" title="ServerSync::ServerSync" alt="" coords="205,5,368,32"/></map>
+<area shape="rect" id="node2" href="class_server_sync.html#a2a02788e49486d2fd16af2abfcd02a87" title="ServerSync::ServerSync" alt="" coords="205,5,368,32"/></map>
 </div>
 </p>
 
@@ -342,7 +490,7 @@ Voici le graphe des appelants de cette fonction :</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Vendredi Avril 5 2013 22:42:05 pour Client pong par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Lundi Avril 15 2013 18:09:41 pour Pong client par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

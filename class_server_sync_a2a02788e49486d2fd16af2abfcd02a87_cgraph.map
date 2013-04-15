@@ -1,0 +1,8 @@
+<map id="ServerSync::ServerSync" name="ServerSync::ServerSync">
+<area shape="rect" id="node2" href="$class_server_sync.html#a9a33a79dffdfae2b3996e7c02016c787" title="ServerSync::connectToHost\lSignal" alt="" coords="216,5,397,46"/>
+<area shape="rect" id="node3" href="$class_server_sync.html#a0328327983c266430f8bc8d912bf24d4" title="Connecte la socket au serveur." alt="" coords="216,71,397,97"/>
+<area shape="rect" id="node4" href="$class_server_sync.html#ac2f8be821778b52080d28e1ec5dad374" title="ServerSync::error" alt="" coords="469,151,592,177"/>
+<area shape="rect" id="node5" href="$class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot qui lance la scrutation de la socket." alt="" coords="231,239,383,265"/>
+<area shape="rect" id="node7" href="$class_server_sync.html#adb929257b6b1e01d70332ae97980e8ce" title="Slot permettant de recuperer les erreurs generes par le socket." alt="" coords="219,173,394,214"/>
+<area shape="rect" id="node6" href="$class_server_sync.html#a02675a3a233c9611d398390c6324103d" title="ServerSync::readyToBuild\lArena" alt="" coords="446,231,615,273"/>
+</map>

@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['scene',['Scene',['../class_scene.html#ad10176d75a9cc0da56626f682d083507',1,'Scene']]],
-  ['serversync',['ServerSync',['../class_server_sync.html#ab11e5acb611152198c3e21adedd0f02c',1,'ServerSync']]],
-  ['serveurcommunicator',['ServeurCommunicator',['../class_serveur_communicator.html#a2760cdc0f2f5bad11d2be6455aaede1c',1,'ServeurCommunicator::ServeurCommunicator(QObject *parent=0)'],['../class_serveur_communicator.html#a7318fd286189b790a1bea2810a6e7698',1,'ServeurCommunicator::ServeurCommunicator(int nbPlayers, QVector&lt; QLineF &gt; batVector, QPointF ball, PongTypes::E_GameState gameState, int loserIndex, QObject *parent=0)']]],
+  ['scene',['Scene',['../class_scene.html#a9d64fe204705958fb184a7bf80adad6a',1,'Scene']]],
+  ['serversync',['ServerSync',['../class_server_sync.html#a2a02788e49486d2fd16af2abfcd02a87',1,'ServerSync']]],
+  ['serveurcommunicator',['ServeurCommunicator',['../class_serveur_communicator.html#a2760cdc0f2f5bad11d2be6455aaede1c',1,'ServeurCommunicator::ServeurCommunicator(QObject *parent=0)'],['../class_serveur_communicator.html#a57517a60dd1f1b353a3076857a61a616',1,'ServeurCommunicator::ServeurCommunicator(QVector&lt; Bat &gt; batVector, QPointF ball, PongTypes::E_GameState gameState, qint32 loserIndex, qint32 playerId, QObject *parent=0)']]],
   ['setball',['setBall',['../class_serveur_communicator.html#a77be17876c0111c3701cebc6e25289a7',1,'ServeurCommunicator']]],
-  ['setbatvector',['setBatVector',['../class_serveur_communicator.html#a03431f51e5ce968e1c52d8362fdc2e85',1,'ServeurCommunicator']]],
+  ['setbatvector',['setBatVector',['../class_serveur_communicator.html#aba178625d18a2a740220afe312732e0d',1,'ServeurCommunicator']]],
+  ['setdowncounter',['setDownCounter',['../class_serveur_communicator.html#a2b520cb169688e622adf9f18b5fea66d',1,'ServeurCommunicator']]],
   ['setdx',['setDx',['../class_client_communicator.html#ae61480358f5f1d377e2dfcca505b2193',1,'ClientCommunicator']]],
   ['setexited',['setExited',['../class_game_state.html#a9765791d2f702bba02647a006d2f5075',1,'GameState']]],
   ['setgameover',['setGameOver',['../class_game_state.html#a74fb5606dcc7dc7b62584be5256176fa',1,'GameState']]],
@@ -18,6 +19,7 @@ var searchData=
   ['setplayerbat',['setPlayerBat',['../class_arena.html#af93c40a5fe8b12505420c8c1534db3dd',1,'Arena::setPlayerBat()'],['../class_scene.html#affdf0a4ea7826069d9f2848954257f5b',1,'Scene::setPlayerBat()']]],
   ['setrightbatlimit',['setRightBatLimit',['../class_arena.html#ada7aa4b43f29a4fc76a353ca3e61b8a9',1,'Arena']]],
   ['setrunning',['setRunning',['../class_game_state.html#a47449d285d38d7bf3db4127193a0c51a',1,'GameState']]],
+  ['setui',['setUi',['../class_main_window.html#a43012ac20a828f72ce258d05782f936e',1,'MainWindow']]],
   ['startsync',['startSync',['../class_server_sync.html#ab07c5df26223ecb0debefda060293f50',1,'ServerSync']]],
   ['state',['state',['../class_game_state.html#ade3c6a6ca26649a850c523db14f62666',1,'GameState']]]
 ];

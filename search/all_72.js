@@ -3,6 +3,7 @@ var searchData=
   ['radiantodegree',['radianToDegree',['../class_math_utils.html#ade3fda53154652c3ed4d460afcc111fa',1,'MathUtils']]],
   ['readme_2emd',['readme.md',['../readme_8md.html',1,'']]],
   ['ready',['READY',['../struct_pong_types.html#af1faca08111e25b181ebf427348d4461a1772c809f188234c60a528be3fd9165b',1,'PongTypes']]],
+  ['readytobuildarena',['readyToBuildArena',['../class_server_sync.html#a02675a3a233c9611d398390c6324103d',1,'ServerSync']]],
   ['renderlabel',['RenderLabel',['../class_render_label.html',1,'RenderLabel'],['../class_render_label.html#a8952fafe7d6a9b9e855fad26ddd8fb0b',1,'RenderLabel::RenderLabel()']]],
   ['renderlabel_2ecpp',['renderlabel.cpp',['../renderlabel_8cpp.html',1,'']]],
   ['renderlabel_2eh',['renderlabel.h',['../renderlabel_8h.html',1,'']]],

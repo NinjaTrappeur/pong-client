@@ -1,5 +1,7 @@
 <map id="scene.h" name="scene.h">
-<area shape="rect" id="node7" href="$bat_8h.html" title="Fichier de la classe représentant les raquettes." alt="" coords="77,155,128,181"/>
-<area shape="rect" id="node9" href="$arena_8h.html" title="arena.h" alt="" coords="189,80,253,107"/>
-<area shape="rect" id="node11" href="$jobcannotbedone_8h.html" title="Fichier contenant l&#39;exception JobCannotBeDone." alt="" coords="517,80,647,107"/>
+<area shape="rect" id="node11" href="$bat_8h.html" title="Fichier de la classe représentant les raquettes." alt="" coords="1299,155,1349,181"/>
+<area shape="rect" id="node13" href="$arena_8h.html" title="arena.h" alt="" coords="1401,80,1465,107"/>
+<area shape="rect" id="node15" href="$jobcannotbedone_8h.html" title="Fichier contenant l&#39;exception JobCannotBeDone." alt="" coords="103,80,232,107"/>
+<area shape="rect" id="node17" href="$serversync_8h.html" title="serversync.h" alt="" coords="805,80,899,107"/>
+<area shape="rect" id="node21" href="$_pong_types_8hpp.html" title="PongTypes.hpp" alt="" coords="1163,155,1273,181"/>
 </map>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Client pong: Référence du fichier serversync.h</title>
+<title>Pong client: Référence du fichier serversync.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Client pong
+   <div id="projectname">Pong client
    </div>
   </td>
  </tr>
@@ -91,22 +91,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <code>#include &lt;QPointF&gt;</code><br/>
 <code>#include &lt;QErrorMessage&gt;</code><br/>
 <code>#include &lt;QString&gt;</code><br/>
+<code>#include &lt;QMutex&gt;</code><br/>
+<code>#include &lt;QDataStream&gt;</code><br/>
 <code>#include &lt;QtNetwork/QHostAddress&gt;</code><br/>
 <code>#include &lt;QtNetwork/QTcpSocket&gt;</code><br/>
-<code>#include &lt;<a class="el" href="bat_8h_source.html">bat.h</a>&gt;</code><br/>
+<code>#include &quot;<a class="el" href="bat_8h_source.html">bat.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_pong_types_8hpp_source.html">PongTypes.hpp</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de serversync.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="serversync_8h__incl.png" border="0" usemap="#serversync_8h" alt=""/></div>
 <map name="serversync_8h" id="serversync_8h">
-<area shape="rect" id="node8" href="bat_8h.html" title="Fichier de la classe représentant les raquettes." alt="" coords="759,80,809,107"/></map>
+<area shape="rect" id="node10" href="bat_8h.html" title="Fichier de la classe représentant les raquettes." alt="" coords="151,80,201,107"/><area shape="rect" id="node12" href="_pong_types_8hpp.html" title="PongTypes.hpp" alt="" coords="977,80,1087,107"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
 <div class="dyncontent">
 <div class="center"><img src="serversync_8h__dep__incl.png" border="0" usemap="#serversync_8hdep" alt=""/></div>
 <map name="serversync_8hdep" id="serversync_8hdep">
-<area shape="rect" id="node2" href="serversync_8cpp.html" title="serversync.cpp" alt="" coords="5,80,115,107"/></map>
+<area shape="rect" id="node2" href="scene_8h.html" title="scene.h" alt="" coords="159,80,227,107"/><area shape="rect" id="node7" href="serversync_8cpp.html" title="serversync.cpp" alt="" coords="252,80,361,107"/><area shape="rect" id="node3" href="mainwindow_8cpp.html" title="mainwindow.cpp" alt="" coords="5,155,120,181"/><area shape="rect" id="node4" href="renderlabel_8h.html" title="renderlabel.h" alt="" coords="145,155,241,181"/><area shape="rect" id="node6" href="scene_8cpp.html" title="scene.cpp" alt="" coords="265,155,347,181"/><area shape="rect" id="node5" href="renderlabel_8cpp.html" title="renderlabel.cpp" alt="" coords="138,229,248,256"/></map>
 </div>
 </div>
 <p><a href="serversync_8h_source.html">Aller au code source de ce fichier.</a></p>
@@ -114,13 +117,13 @@ Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sync.html">ServerSync</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe gerant la liaison avec le serveur sur un reseau. Permet d'envoyer la position de la raquette du joueur local au serveur et de recuperer la position des autres raquettes et de la balle. Doit etre lance dans un thread a part a l'aide du slot <a class="el" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot a lancer dans un thread.">startSync()</a>.  <a href="class_server_sync.html#details">Plus de détails...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe gerant la liaison avec le serveur sur un reseau. Permet d'envoyer la position de la raquette du joueur local au serveur et de recuperer la position des autres raquettes et de la balle. Doit etre lance dans un thread a part a l'aide du slot <a class="el" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot qui lance la scrutation de la socket.">startSync()</a>.  <a href="class_server_sync.html#details">Plus de détails...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Vendredi Avril 5 2013 22:42:05 pour Client pong par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Lundi Avril 15 2013 18:09:41 pour Pong client par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
