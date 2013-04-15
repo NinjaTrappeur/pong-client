@@ -16,9 +16,6 @@ Scene::Scene(QWidget *parent):
 {
     //Initialisation GUI
 
-    _ball.setX(50);
-    _ball.setY(50);
-
     _whitePen.setWidth(4);
     _whitePen.setStyle(Qt::SolidLine);
     _whitePen.setCapStyle(Qt::SquareCap);

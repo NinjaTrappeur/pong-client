@@ -2,6 +2,7 @@
 
 #include <QApplication>
 
+
 #include "serveurcommunicator.h"
 #include "clientcommunicator.h"
 
@@ -13,7 +14,8 @@ ServerSync::ServerSync(qreal &dx, QMutex& dxMutex, QVector<Bat> &bats, QPointF &
     _socket(new QTcpSocket),
     _errorMessage(errorMessage),
     _gameState(gameState),
-    _centralText(centraltext)
+    _centralText(centraltext),
+    _stream(_socket)
 {
     //Recuperation des parametres de connection
 
@@ -33,7 +35,7 @@ ServerSync::ServerSync(qreal &dx, QMutex& dxMutex, QVector<Bat> &bats, QPointF &
     connect( this, SIGNAL(connectToHostSignal()), this, SLOT(connectToHost()));
     connect(this, SIGNAL(error(QString)), _errorMessage, SLOT(showMessage(QString)));
     connect(_socket, SIGNAL(readyRead()), this, SLOT(startSync()));
-    connect(_socket, SIGNAL(stateChanged(QAbstractSocket::SocketState)), this, SLOT(changeSocketState(QAbstractSocket::SocketState)));
+    //connect(_socket, SIGNAL(stateChanged(QAbstractSocket::SocketState)), this, SLOT(changeSocketState(QAbstractSocket::SocketState)));
     connect(_socket, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(handleSocketError(QAbstractSocket::SocketError)));
 
     emit connectToHostSignal();
@@ -52,21 +54,22 @@ void ServerSync::handleSocketError(QAbstractSocket::SocketError errorCode)
 
 void ServerSync::startSync()
 {
+    _stream.resetStatus();
     ServeurCommunicator serveurCommunicator;
-    QDataStream stream(_socket);
-    stream>>serveurCommunicator;
+    _stream>>serveurCommunicator;
     _otherPlayersVector = serveurCommunicator.batVector();
     _ball = serveurCommunicator.ball();
     _gameState = serveurCommunicator.gameState();
     if(_gameState == PongTypes::INITIALIZING)
         emit(readyToBuildArena());
-    if(serveurCommunicator.downCounter()<0)
+    if(serveurCommunicator.downCounter()>=0)
         _centralText= QString::number(serveurCommunicator.downCounter());
 
 
+    _stream.resetStatus();
     _dxMutex.lock();
     ClientCommunicator clientCommunicator(_dx);
-    stream<<clientCommunicator;
+    _stream<<clientCommunicator;
     _dx=0;
     _dxMutex.unlock();
 }

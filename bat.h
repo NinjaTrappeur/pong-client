@@ -93,7 +93,7 @@ private:
     /*!
      * \brief Identifiant de la raquette.
      */
-    quint32 _id;
+    qint32 _id;
 };
 
 #endif // BAT_H

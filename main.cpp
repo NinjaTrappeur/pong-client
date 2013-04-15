@@ -5,7 +5,7 @@
 #include <cstring>
 
 int main(int argc, char *argv[])
-{   
+{
     //Verification des parametres
     int i=1;
     bool correctParameter=true;

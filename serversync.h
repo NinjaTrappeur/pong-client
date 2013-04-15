@@ -6,7 +6,7 @@
 #include <QErrorMessage>
 #include <QString>
 #include <QMutex>
-//#include <QTimer>
+#include <QDataStream>
 
 #include <QtNetwork/QHostAddress>
 #include <QtNetwork/QTcpSocket>
@@ -46,7 +46,7 @@ private:
     /*!
      * \brief Position de la balle.
      */
-    QPointF _ball;
+    QPointF& _ball;
 
     /*!
      * \brief Socket permettant de communiquer avec le serveur.
@@ -82,6 +82,8 @@ private:
      * \brief Texte affiché au centre de la fenetre
      */
     QString& _centralText;
+
+    QDataStream _stream;
 
 signals:
     void error(QString error);

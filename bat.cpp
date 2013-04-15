@@ -1,5 +1,5 @@
 #include "bat.h"
-Bat::Bat()
+Bat::Bat():_point(2),_id(0)
 {
 }
 
@@ -31,7 +31,7 @@ QVector<QPointF> Bat::getPoints()
 
 void Bat::operator>>(QDataStream& out)const
 {
-    out << quint32(_id) << _point[0]<<_point[1];
+    out << qint32(_id) << _point[0]<<_point[1];
 }
 
 
