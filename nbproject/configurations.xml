@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="88">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="pong-client">
+      <in>arena.h</in>
+      <in>bat.cpp</in>
+      <in>bat.h</in>
+      <in>jobcannotbedone.h</in>
+      <in>main.cpp</in>
+      <in>mainwindow.cpp</in>
+      <in>mainwindow.h</in>
+      <in>renderlabel.cpp</in>
+      <in>renderlabel.h</in>
+      <in>scene.cpp</in>
+      <in>scene.h</in>
+      <in>ui_mainwindow.h</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>pong-client.pro</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+          <ccTool>
+            <incDir>
+              <pElem>/usr/lib/qt/mkspecs/linux-g++-64</pElem>
+              <pElem>.</pElem>
+              <pElem>/usr/include/qt5</pElem>
+              <pElem>/usr/include/qt5/QtWidgets</pElem>
+              <pElem>/usr/include/qt5/QtNetwork</pElem>
+              <pElem>/usr/include/qt5/QtGui</pElem>
+              <pElem>/usr/include/qt5/QtCore</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>QT_CORE_LIB</Elem>
+              <Elem>QT_GUI_LIB</Elem>
+              <Elem>QT_NETWORK_LIB</Elem>
+              <Elem>QT_NO_DEBUG</Elem>
+              <Elem>QT_WIDGETS_LIB</Elem>
+              <Elem>_FORTIFY_SOURCE=2</Elem>
+              <Elem>_REENTRANT</Elem>
+              <Elem>__SSP__=1</Elem>
+            </preprocessorList>
+          </ccTool>
+        </makeTool>
+      </makefileType>
+      <item path="arena.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="bat.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="bat.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="jobcannotbedone.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="mainwindow.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="mainwindow.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="renderlabel.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="renderlabel.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="scene.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="scene.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ui_mainwindow.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
