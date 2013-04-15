@@ -151,9 +151,9 @@ private:
     QMutex _dxMutex;
 
     /*!
-     * \brief Fil d'exécution dans lequel seront executees les actions reseau
+     * \brief Texte qui sera affiché au centre de l'aire de jeu
      */
-    QThread _networkThread;
+    QString _centralText;
 
     /*!
      * \brief Objet realisant les operations reseau. Sera lance dans un fil d'execution different.
@@ -165,10 +165,6 @@ private:
      */
     PongTypes::E_GameState _gameState;
 
-    /*!
-     * \brief Texte qui sera affiché au centre de l'aire de jeu
-     */
-    QString _centralText;
     /*!
      * \brief Methode auxilere qui permet de generer les objets graphiques representant les raquettes.
      */

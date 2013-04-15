@@ -6,7 +6,7 @@
 #include <QErrorMessage>
 #include <QString>
 #include <QMutex>
-#include <QTimer>
+//#include <QTimer>
 
 #include <QtNetwork/QHostAddress>
 #include <QtNetwork/QTcpSocket>
@@ -59,11 +59,6 @@ private:
     QErrorMessage* _errorMessage;
 
     /*!
-     * \brief Timer permettant de rafraichir la scrutation.
-     */
-    QTimer _timer;
-
-    /*!
      * \brief Port d'ecoute du serveur
      */
     quint16 _port;
@@ -91,6 +86,7 @@ private:
 signals:
     void error(QString error);
     void readyToBuildArena();
+    void connectToHostSignal();
     
 public slots:
 
@@ -115,10 +111,6 @@ public slots:
      */
     void changeSocketState(QAbstractSocket::SocketState state);
 
-    /*!
-     * \brief Slot permettant de lancer le timer.
-     */
-    void launchTimer();
 };
 
 #endif // SERVERSYNC_H

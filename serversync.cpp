@@ -10,8 +10,8 @@ ServerSync::ServerSync(qreal &dx, QMutex& dxMutex, QVector<Bat> &bats, QPointF &
     _dxMutex(dxMutex),
     _otherPlayersVector(bats),
     _ball(ball),
+    _socket(new QTcpSocket),
     _errorMessage(errorMessage),
-    _timer(),
     _gameState(gameState),
     _centralText(centraltext)
 {
@@ -27,9 +27,16 @@ ServerSync::ServerSync(qreal &dx, QMutex& dxMutex, QVector<Bat> &bats, QPointF &
             _adress=QApplication::arguments().at(i+1);
     }
 
+    _errorMessage->accept();
+
     //Connectiond des signaux
+    connect( this, SIGNAL(connectToHostSignal()), this, SLOT(connectToHost()));
     connect(this, SIGNAL(error(QString)), _errorMessage, SLOT(showMessage(QString)));
-    connect(&_timer, SIGNAL(timeout()), this, SLOT(startSync()));
+    connect(_socket, SIGNAL(readyRead()), this, SLOT(startSync()));
+    connect(_socket, SIGNAL(stateChanged(QAbstractSocket::SocketState)), this, SLOT(changeSocketState(QAbstractSocket::SocketState)));
+    connect(_socket, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(handleSocketError(QAbstractSocket::SocketError)));
+
+    emit connectToHostSignal();
 }
 
 ServerSync::~ServerSync()
@@ -55,6 +62,8 @@ void ServerSync::startSync()
         emit(readyToBuildArena());
     if(serveurCommunicator.downCounter()<0)
         _centralText= QString::number(serveurCommunicator.downCounter());
+
+
     _dxMutex.lock();
     ClientCommunicator clientCommunicator(_dx);
     stream<<clientCommunicator;
@@ -62,24 +71,17 @@ void ServerSync::startSync()
     _dxMutex.unlock();
 }
 
-void ServerSync::launchTimer()
-{
-    _timer.start(50);
-}
-
 void ServerSync::connectToHost()
 {
-    _socket=new QTcpSocket();
-    connect(_socket, SIGNAL(stateChanged(QAbstractSocket::SocketState)), this, SLOT(changeSocketState(QAbstractSocket::SocketState)));
-    connect(_socket, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(handleSocketError(QAbstractSocket::SocketError)));
-
 
     if(_host=="")
         _socket->connectToHost(_adress, _port);
     else
         _socket->connectToHost(_host, _port);
-    connect(_socket, SIGNAL(connected()), this, SLOT(launchTimer()));
+
+
 }
+
 
 void ServerSync::changeSocketState(QAbstractSocket::SocketState state)
 {

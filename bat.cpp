@@ -3,7 +3,7 @@ Bat::Bat()
 {
 }
 
-Bat::Bat(const QPointF &point1, const QPointF &point2, quint32 id): _id(id)
+Bat::Bat(const QPointF &point1, const QPointF &point2, quint32 id): _point(2),_id(id)
 {
     _point.push_back(point1);
     _point.push_back(point2);

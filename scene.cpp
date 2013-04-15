@@ -5,14 +5,14 @@
 #include <QColor>
 
 
-Scene::Scene(QWidget *parent):_whitePen(QColor(255,255,255)),
+Scene::Scene(QWidget *parent):
+    QWidget(parent),
+    _whitePen(QColor(255,255,255)),
     _arena(NULL),
+    _errorMessage(new QErrorMessage()),
     _dx(0),
-    _errorMessage( new QErrorMessage() ),
-    _networkThread(parent),
-    _serverSync(_dx, _dxMutex, _otherPlayersBatVector, _ball, _errorMessage, _gameState, _centralText),
     _centralText("En attente du serveur..."),
-    QWidget(parent)
+    _serverSync(_dx, _dxMutex, _otherPlayersBatVector, _ball, _errorMessage, _gameState, _centralText)
 {
     //Initialisation GUI
 
@@ -24,11 +24,7 @@ Scene::Scene(QWidget *parent):_whitePen(QColor(255,255,255)),
     _whitePen.setCapStyle(Qt::SquareCap);
 
     //Initialisation reseau
-    connect(&_networkThread,SIGNAL(started()),&_serverSync,SLOT(connectToHost()));
-    connect(&_networkThread, SIGNAL(finished()), &_networkThread, SLOT(deleteLater()));
     connect(&_serverSync,SIGNAL(readyToBuildArena()), this, SLOT(initializeArena()));
-    _serverSync.moveToThread(&_networkThread);
-    _networkThread.start();
 }
 
 Scene::~Scene()

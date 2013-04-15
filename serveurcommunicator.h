@@ -17,7 +17,7 @@ class ServeurCommunicator : public QObject
     Q_OBJECT
 public:
     explicit ServeurCommunicator(QObject *parent = 0);
-    ServeurCommunicator(QVector<Bat> batVector, QPointF ball, PongTypes::E_GameState gameState, quint32 loserIndex, quint32 playerId, QObject *parent = 0);
+    ServeurCommunicator(QVector<Bat> batVector, QPointF ball, PongTypes::E_GameState gameState, qint32 loserIndex, qint32 playerId, QObject *parent = 0);
     /*!
      * \brief Definition du flux sortant pour cette classe. Permet d'envoyer la classe dans une socket de maniere
      *  aisee
@@ -50,8 +50,8 @@ public:
     QPointF ball() const;
     void setBall(const QPointF &ball);
 
-    quint32 downCounter() const;
-    void setDownCounter(const quint32 &downCounter);
+    qint32 downCounter() const;
+    void setDownCounter(const qint32 &downCounter);
 
 private:
 
@@ -73,17 +73,17 @@ private:
     /*!
      * \brief Joueurs ayant deja perdu
      */
-    quint32 _loserIndex;
+    qint32 _loserIndex;
 
     /*!
      * \brief Numero du joueur local
      */
-    quint32 _playerId;
+    qint32 _playerId;
 
     /*!
      * \brief Decompte avant la partie.
      */
-    quint32 _downCounter;
+    qint32 _downCounter;
 };
 
 #endif // SERVEURCOMMUNICATOR_H

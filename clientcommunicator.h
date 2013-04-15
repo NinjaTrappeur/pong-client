@@ -12,7 +12,7 @@ class ClientCommunicator : public QObject
     Q_OBJECT
 public:
     explicit ClientCommunicator(QObject *parent = 0);
-    ClientCommunicator(quint32 dx);
+    ClientCommunicator(qint32 dx);
 
     /*!
      * \brief Definition du flux sortant pour cette classe. Permet d'envoyer la classe dans une socket de maniere
@@ -38,7 +38,7 @@ private:
     /*!
      * \brief Deplacement de la raquette du joueur.
      */
-    quint32 _dx;
+    qint32 _dx;
 
 signals:
     
