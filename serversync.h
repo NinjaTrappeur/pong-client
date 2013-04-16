@@ -88,6 +88,8 @@ private:
      */
     QDataStream _stream;
 
+    bool _arenaDrawn;
+
 signals:
     void error(QString error);
     void readyToBuildArena();

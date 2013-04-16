@@ -15,7 +15,8 @@ ServerSync::ServerSync(qreal &dx, QMutex& dxMutex, QVector<Bat> &bats, QPointF &
     _errorMessage(errorMessage),
     _gameState(gameState),
     _centralText(centraltext),
-    _stream(_socket)
+    _stream(_socket),
+    _arenaDrawn(false)
 {
     //Recuperation des parametres de connection
 
@@ -59,8 +60,11 @@ void ServerSync::startSync()
     _otherPlayersVector = serveurCommunicator.batVector();
     _ball = serveurCommunicator.ball();
     _gameState = serveurCommunicator.gameState();
-    if(_gameState == PongTypes::INITIALIZING)
+    if(_gameState == PongTypes::INITIALIZING && !_arenaDrawn)
+    {
+        _arenaDrawn=true;
         emit(readyToBuildArena());
+    }
     if(serveurCommunicator.downCounter()>=0)
         _centralText= QString::number(serveurCommunicator.downCounter());
 
