@@ -99,3 +99,13 @@ void ServeurCommunicator::setDownCounter(const qint32 &downCounter)
 {
     _downCounter = downCounter;
 }
+
+qint32 ServeurCommunicator::playerId() const
+{
+    return _playerId;
+}
+
+void ServeurCommunicator::setPlayerId(const qint32 &playerId)
+{
+    _playerId = playerId;
+}

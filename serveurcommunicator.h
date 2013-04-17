@@ -53,6 +53,9 @@ public:
     qint32 downCounter() const;
     void setDownCounter(const qint32 &downCounter);
 
+    qint32 playerId() const;
+    void setPlayerId(const qint32 &playerId);
+
 private:
 
     /*!

@@ -4,7 +4,6 @@
 #include <QPen>
 #include <QColor>
 
-
 Scene::Scene(QWidget *parent):
     QWidget(parent),
     _whitePen(QColor(255,255,255)),
@@ -34,7 +33,7 @@ Scene::~Scene()
 void Scene::paint(QPainter *painter)
 {
     painter->setPen(_whitePen);
-
+    painter->drawText(QRect(QPoint(250,250), QPoint(350,350)),_centralText);
     if(_arena!=NULL)
     {
         painter->setPen(_whitePen);
@@ -45,7 +44,6 @@ void Scene::paint(QPainter *painter)
         painter->drawPoint(_ball);
         _arena->paint(painter);
     }
-    painter->drawText(QRect(QPoint(200,200), QPoint(400,400)),_centralText);
 }
 
 void Scene::addBat(Bat& bat) throw(JobCannotBeDone)
@@ -128,35 +126,41 @@ void Scene::setPlayerBat(QPointF &pos1, QPointF &pos2)
 
 void Scene::movePlayerBatToLeft(float pos)
 {
-    QVector<QPointF> actualPosition;
-    actualPosition= _playerBat.getPoints();
-    if((actualPosition[0].x()-pos)>_arena->leftBatLimit() &&
-            (actualPosition[1].x()-pos)>_arena->leftBatLimit())
+    if(_arena!=NULL)
     {
-        actualPosition[0].setX(actualPosition[0].x()-pos);
-        actualPosition[1].setX(actualPosition[1].x()-pos);
-        _playerBat.moveBat(actualPosition[0], actualPosition[1]);
-        _dxMutex.lock();
-        _dx-=pos;
-        _dxMutex.unlock();
-        _drawBats();
+        QVector<QPointF> actualPosition;
+        actualPosition= _playerBat.getPoints();
+        if((actualPosition[0].x()-pos)>_arena->leftBatLimit() &&
+                (actualPosition[1].x()-pos)>_arena->leftBatLimit())
+        {
+            actualPosition[0].setX(actualPosition[0].x()-pos);
+            actualPosition[1].setX(actualPosition[1].x()-pos);
+            _playerBat.moveBat(actualPosition[0], actualPosition[1]);
+            _dxMutex.lock();
+            _dx-=pos;
+            _dxMutex.unlock();
+            _drawBats();
+        }
     }
 }
 
 void Scene::movePlayerBatToRight(float pos)
 {
-    QVector<QPointF> actualPosition;
-    actualPosition= _playerBat.getPoints();
-    if((actualPosition[0].x()+pos)<_arena->rightBatLimit() &&
-            (actualPosition[1].x()+pos)<_arena->rightBatLimit())
+    if(_arena!=NULL)
     {
-        actualPosition[0].setX(actualPosition[0].x()+pos);
-        actualPosition[1].setX(actualPosition[1].x()+pos);
-        _playerBat.moveBat(actualPosition[0], actualPosition[1]);
-        _dxMutex.lock();
-        _dx+=pos;
-        _dxMutex.unlock();
-        _drawBats();
+        QVector<QPointF> actualPosition;
+        actualPosition= _playerBat.getPoints();
+        if((actualPosition[0].x()+pos)<_arena->rightBatLimit() &&
+                (actualPosition[1].x()+pos)<_arena->rightBatLimit())
+        {
+            actualPosition[0].setX(actualPosition[0].x()+pos);
+            actualPosition[1].setX(actualPosition[1].x()+pos);
+            _playerBat.moveBat(actualPosition[0], actualPosition[1]);
+            _dxMutex.lock();
+            _dx+=pos;
+            _dxMutex.unlock();
+            _drawBats();
+        }
     }
 }
 

@@ -19,7 +19,7 @@ void GameState::setPaused()
 
 void GameState::setExited()
 {
-    _state = PongTypes::EXITED;
+    _state = PongTypes::EXIT_REQUESTED;
 }
 
 void GameState::setInitializing()

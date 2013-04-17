@@ -3,9 +3,11 @@
 #include <QApplication>
 #include <iostream>
 #include <cstring>
+#include <QTextCodec>
 
 int main(int argc, char *argv[])
 {
+    QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
     //Verification des parametres
     int i=1;
     bool correctParameter=true;

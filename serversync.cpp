@@ -65,14 +65,15 @@ void ServerSync::startSync()
         _arenaDrawn=true;
         emit(readyToBuildArena());
     }
-    if(serveurCommunicator.downCounter()>=0)
+    if(serveurCommunicator.downCounter()>0 && _gameState!=PongTypes::RUNNING)
         _centralText= QString::number(serveurCommunicator.downCounter());
+    else
+        _centralText="";
 
 
     _stream.resetStatus();
     _dxMutex.lock();
-    ClientCommunicator clientCommunicator(_dx);
-    _stream<<clientCommunicator;
+    _stream<<_dx;
     _dx=0;
     _dxMutex.unlock();
 }

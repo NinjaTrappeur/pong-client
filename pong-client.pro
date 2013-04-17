@@ -21,7 +21,6 @@ SOURCES += main.cpp\
     arena.cpp \
     mathutils.cpp \
     serveurcommunicator.cpp \
-    clientcommunicator.cpp \
     GameState.cpp \
     Lockable.cpp \
     serversync.cpp
@@ -34,7 +33,6 @@ HEADERS  += mainwindow.h \
     arena.h \
     mathutils.h \
     serveurcommunicator.h \
-    clientcommunicator.h \
     GameState.hpp \
     PongTypes.hpp \
     Lockable.hpp \
