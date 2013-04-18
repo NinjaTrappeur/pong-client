@@ -7,7 +7,7 @@
 #include "serveurcommunicator.h"
 #include "clientcommunicator.h"
 
-ServerSync::ServerSync(qreal &dx, QMutex& dxMutex, QVector<Bat> &bats, QPointF &ball, QErrorMessage *errorMessage, PongTypes::E_GameState& gameState, QString& centraltext) :
+ServerSync::ServerSync(qreal &dx, QMutex& dxMutex, QVector<Bat> &bats, QPointF &ball, QErrorMessage *errorMessage, PongTypes::E_GameState& gameState, QString& centraltext, qint32 &playerId) :
     _dx(dx),
     _dxMutex(dxMutex),
     _otherPlayersVector(bats),
@@ -17,7 +17,8 @@ ServerSync::ServerSync(qreal &dx, QMutex& dxMutex, QVector<Bat> &bats, QPointF &
     _gameState(gameState),
     _centralText(centraltext),
     _stream(_socket),
-    _arenaDrawn(false)
+    _arenaDrawn(false),
+    _playerId(playerId)
 {
     //Recuperation des parametres de connection
 
@@ -61,6 +62,7 @@ void ServerSync::startSync()
     _otherPlayersVector = serveurCommunicator.batVector();
     _ball = serveurCommunicator.ball();
     _gameState = serveurCommunicator.gameState();
+    _playerId = serveurCommunicator.playerId();
     if(_gameState == PongTypes::INITIALIZING && !_arenaDrawn)
     {
         _arenaDrawn=true;

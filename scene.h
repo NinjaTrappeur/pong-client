@@ -166,6 +166,11 @@ private:
     PongTypes::E_GameState _gameState;
 
     /*!
+     * \brief Identifiant du joueur local.
+     */
+    qint32 _playerId;
+
+    /*!
      * \brief Methode auxilere qui permet de generer les objets graphiques representant les raquettes.
      */
     void _drawBats();

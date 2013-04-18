@@ -11,8 +11,6 @@ const double Arena::_renderLenght = 600;
 
 Arena::Arena(int nbPlayers): _nbPlayers(nbPlayers)
 {
-    if(_nbPlayers==2)
-        _nbPlayers=4;
     _drawSide();
 }
 
@@ -24,7 +22,8 @@ void Arena::paint(QPainter *painter)
         {
             painter->drawLine(_arenaLines[0]);
             painter->drawLine(_arenaLines[1]);
-            //painter->drawLine(_arenaLines[2]);
+            if(i%2==1)
+                painter->drawLine(_arenaLines[2]);
             painter->rotate(360/4);
         }
     }
@@ -39,8 +38,6 @@ void Arena::paint(QPainter *painter)
             painter->rotate(360/_nbPlayers);
         }
     }
-
-    painter->translate(-_renderWidth/2,_renderLenght/2);
 }
 
 void Arena::_drawSide()
@@ -68,12 +65,16 @@ void Arena::_drawSide()
     //Generation des droites
     QLine l1(a,f1);
     QLine l2(f2,b);
-    //QLine l3(QPoint(0,0), c);
 
     //Ajout des droites dans le vecteur
     _arenaLines.push_back(l1);
     _arenaLines.push_back(l2);
-    // _arenaLines.push_back(l3);
+
+    //On ferme les cages inutilisees lorsqu'il n'y a que 2 joueurs
+    if(_nbPlayers==2){
+        QLine l3(f1, f2);
+        _arenaLines.push_back(l3);
+    }
 
     //Calcul de la position initiale de la raquette du joueur local
     const double batLength = x/6;

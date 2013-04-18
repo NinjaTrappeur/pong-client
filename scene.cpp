@@ -11,7 +11,8 @@ Scene::Scene(QWidget *parent):
     _errorMessage(new QErrorMessage()),
     _dx(0),
     _centralText("En attente du serveur..."),
-    _serverSync(_dx, _dxMutex, _otherPlayersBatVector, _ball, _errorMessage, _gameState, _centralText)
+    _playerId(0),
+    _serverSync(_dx, _dxMutex, _otherPlayersBatVector, _ball, _errorMessage, _gameState, _centralText, _playerId)
 {
     //Initialisation GUI
 

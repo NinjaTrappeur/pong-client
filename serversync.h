@@ -24,7 +24,7 @@ class ServerSync : public QObject
 {
     Q_OBJECT
 public:
-    explicit ServerSync(qreal& dx, QMutex &dxMutex,  QVector<Bat>& bats, QPointF& ball, QErrorMessage* errorMessage, PongTypes::E_GameState& gamestate, QString& _centralText);
+    explicit ServerSync(qreal& dx, QMutex &dxMutex,  QVector<Bat>& bats, QPointF& ball, QErrorMessage* errorMessage, PongTypes::E_GameState& gamestate, QString& _centralText, qint32& playerId);
     virtual ~ServerSync();
 
 private:
@@ -87,6 +87,11 @@ private:
      * \brief Datastream associe a la socket TCP.
      */
     QDataStream _stream;
+
+    /*!
+     * \brief Identifiant du joueur local.
+     */
+    qint32& _playerId;
 
     bool _arenaDrawn;
 
