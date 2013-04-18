@@ -3,7 +3,6 @@
 
 #include <cmath>
 #include <QPointF>
-#include <QDebug>
 
 const double Arena::_renderWidth = 600;
 

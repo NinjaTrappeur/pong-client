@@ -1,7 +1,6 @@
 #include "serversync.h"
 
 #include <QApplication>
-#include <QDebug>
 
 #include "mathutils.h"
 
@@ -100,7 +99,6 @@ void ServerSync::_parseServeurCommunicator(ServeurCommunicator &serveurCommunica
     else
         angle=id*(360/nbPlayers);
     QVector<Bat> otherPlayersVector(serveurCommunicator.batVector().size());
-    qDebug()<<"Vecteur "<<MathUtils::rotateBat(serveurCommunicator.batVector()[0], angle).getPoints()[0].y()<<endl;
     for(qint32 i=0;i<serveurCommunicator.batVector().size();++i)
     {
         otherPlayersVector[i]=MathUtils::rotateBat( serveurCommunicator.batVector()[i], angle);
