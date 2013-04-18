@@ -3,9 +3,7 @@
 #include <QApplication>
 #include <QDebug>
 
-
-#include "serveurcommunicator.h"
-#include "clientcommunicator.h"
+#include "mathutils.h"
 
 ServerSync::ServerSync(qreal &dx, QMutex& dxMutex, QVector<Bat> &bats, QPointF &ball, QErrorMessage *errorMessage, PongTypes::E_GameState& gameState, QString& centraltext, qint32 &playerId) :
     _dx(dx),
@@ -59,10 +57,7 @@ void ServerSync::startSync()
     _stream.resetStatus();
     ServeurCommunicator serveurCommunicator;
     _stream>>serveurCommunicator;
-    _otherPlayersVector = serveurCommunicator.batVector();
-    _ball = serveurCommunicator.ball();
-    _gameState = serveurCommunicator.gameState();
-    _playerId = serveurCommunicator.playerId();
+    _parseServeurCommunicator(serveurCommunicator);
     if(_gameState == PongTypes::INITIALIZING && !_arenaDrawn)
     {
         _arenaDrawn=true;
@@ -94,4 +89,25 @@ void ServerSync::connectToHost()
 void ServerSync::changeSocketState(QAbstractSocket::SocketState state)
 {
     _centralText= QString("En attente du serveur...\n") + QString("Etat de la socket: ") + QString::number(state);
+}
+
+void ServerSync::_parseServeurCommunicator(ServeurCommunicator &serveurCommunicator)
+{
+    qint32 nbPlayers = serveurCommunicator.batVector().size()+1;
+    qint32 angle=0, id=serveurCommunicator.playerId();
+    if(nbPlayers==2 && id==1)
+        angle=180;
+    else
+        angle=id*(360/nbPlayers);
+    QVector<Bat> otherPlayersVector(serveurCommunicator.batVector().size());
+    qDebug()<<"Vecteur "<<MathUtils::rotateBat(serveurCommunicator.batVector()[0], angle).getPoints()[0].y()<<endl;
+    for(qint32 i=0;i<serveurCommunicator.batVector().size();++i)
+    {
+        otherPlayersVector[i]=MathUtils::rotateBat( serveurCommunicator.batVector()[i], angle);
+
+    }
+    _otherPlayersVector = otherPlayersVector;
+    _ball = MathUtils::rotatePoint(serveurCommunicator.ball(), angle);
+    _gameState = serveurCommunicator.gameState();
+    _playerId = serveurCommunicator.playerId();
 }

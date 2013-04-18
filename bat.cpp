@@ -10,8 +10,8 @@ Bat::Bat(const Bat& bat):_id(bat._id), _point(bat._point)
 
 Bat::Bat(const QPointF &point1, const QPointF &point2, quint32 id): _point(2),_id(id)
 {
-    _point.push_back(point1);
-    _point.push_back(point2);
+    _point[0]=point1;
+    _point[1]=point2;
 }
 
 Bat::Bat(const QVector<QPointF> &points, quint32 id): _point(points), _id(id)

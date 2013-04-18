@@ -1,4 +1,5 @@
 #include "mathutils.h"
+#include <QDebug>
 
 const double MathUtils::_pi = 3.141592653589793238462643383279;
 
@@ -13,5 +14,24 @@ double MathUtils::degreeToRadian(double degree)
 
 double MathUtils::radianToDegree(double radian)
 {
-    return((radian*_pi)/180);
+    return((radian*180)/_pi);
+}
+
+QPointF MathUtils::rotatePoint(const QPointF &point, qint32 angle)
+{
+    QPointF newPoint(point.x()*::cos(MathUtils::degreeToRadian(angle))+
+                     point.y()*::sin(MathUtils::degreeToRadian(angle)),
+                     point.y()*::cos(MathUtils::degreeToRadian(angle))-
+                     point.x()*::sin(MathUtils::degreeToRadian(angle)));
+    return newPoint;
+}
+
+Bat MathUtils::rotateBat(Bat &bat, qint32 angle)
+{
+    qDebug()<<bat.getPoints()[0].x()<<endl;
+    Bat newBat(MathUtils::rotatePoint(bat.getPoints()[0],angle),
+            MathUtils::rotatePoint(bat.getPoints()[1], angle),
+            bat.getId());
+    qDebug()<<"newbat "<<newBat.getPoints()[0].x()<<endl;
+    return newBat;
 }

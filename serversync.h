@@ -13,6 +13,7 @@
 
 #include "bat.h"
 #include "PongTypes.hpp"
+#include "serveurcommunicator.h"
 
 
 /*!
@@ -89,11 +90,22 @@ private:
     QDataStream _stream;
 
     /*!
+     * \brief True si l'arene est deja dessinee
+     */
+    bool _arenaDrawn;
+
+    /*!
      * \brief Identifiant du joueur local.
      */
     qint32& _playerId;
 
-    bool _arenaDrawn;
+
+    /*!
+     * \brief Fonction parsant et appliquant une rotation sur les donnees
+     *  envoyees par le serveur comunicator
+     * \param com Serveur communicator a parser
+     */
+    void _parseServeurCommunicator(ServeurCommunicator& serveurCommunicator);
 
 signals:
     void error(QString error);

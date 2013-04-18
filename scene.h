@@ -156,6 +156,11 @@ private:
     QString _centralText;
 
     /*!
+     * \brief Identifiant du joueur local.
+     */
+    qint32 _playerId;
+
+    /*!
      * \brief Objet realisant les operations reseau. Sera lance dans un fil d'execution different.
      */
     ServerSync _serverSync;
@@ -165,10 +170,7 @@ private:
      */
     PongTypes::E_GameState _gameState;
 
-    /*!
-     * \brief Identifiant du joueur local.
-     */
-    qint32 _playerId;
+
 
     /*!
      * \brief Methode auxilere qui permet de generer les objets graphiques representant les raquettes.
