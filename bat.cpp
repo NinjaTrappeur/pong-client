@@ -3,6 +3,11 @@ Bat::Bat():_point(2),_id(0)
 {
 }
 
+Bat::Bat(const Bat& bat):_id(bat._id), _point(bat._point)
+{
+}
+
+
 Bat::Bat(const QPointF &point1, const QPointF &point2, quint32 id): _point(2),_id(id)
 {
     _point.push_back(point1);

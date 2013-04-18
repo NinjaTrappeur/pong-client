@@ -19,6 +19,7 @@ void RenderLabel::paintEvent(QPaintEvent *event)
         QPainter painter;
         painter.begin(this);
         painter.setRenderHint(QPainter::Antialiasing);
+        painter.translate(600/2,600/2);
         _scene->paint(&painter);
         painter.end();
     }

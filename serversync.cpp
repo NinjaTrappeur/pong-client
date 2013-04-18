@@ -1,6 +1,7 @@
 #include "serversync.h"
 
 #include <QApplication>
+#include <QDebug>
 
 
 #include "serveurcommunicator.h"
@@ -85,8 +86,6 @@ void ServerSync::connectToHost()
         _socket->connectToHost(_adress, _port);
     else
         _socket->connectToHost(_host, _port);
-
-
 }
 
 

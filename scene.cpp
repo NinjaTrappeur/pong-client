@@ -33,10 +33,9 @@ Scene::~Scene()
 void Scene::paint(QPainter *painter)
 {
     painter->setPen(_whitePen);
-    painter->drawText(QRect(QPoint(250,250), QPoint(350,350)),_centralText);
+    painter->drawText(QRect(QPoint(-50,-50), QPoint(50,50)),_centralText);
     if(_arena!=NULL)
     {
-        painter->setPen(_whitePen);
         for(int i=0;i<_graphicsBatVector.size();++i)
         {
             painter->drawLine(_graphicsBatVector[i]);
@@ -135,8 +134,8 @@ void Scene::movePlayerBatToLeft(float pos)
         {
             actualPosition[0].setX(actualPosition[0].x()-pos);
             actualPosition[1].setX(actualPosition[1].x()-pos);
-            _playerBat.moveBat(actualPosition[0], actualPosition[1]);
             _dxMutex.lock();
+            _playerBat.moveBat(actualPosition[0], actualPosition[1]);
             _dx-=pos;
             _dxMutex.unlock();
             _drawBats();
@@ -155,8 +154,8 @@ void Scene::movePlayerBatToRight(float pos)
         {
             actualPosition[0].setX(actualPosition[0].x()+pos);
             actualPosition[1].setX(actualPosition[1].x()+pos);
-            _playerBat.moveBat(actualPosition[0], actualPosition[1]);
             _dxMutex.lock();
+            _playerBat.moveBat(actualPosition[0], actualPosition[1]);
             _dx+=pos;
             _dxMutex.unlock();
             _drawBats();

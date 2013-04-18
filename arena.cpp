@@ -3,6 +3,7 @@
 
 #include <cmath>
 #include <QPointF>
+#include <QDebug>
 
 const double Arena::_renderWidth = 600;
 
@@ -17,8 +18,6 @@ Arena::Arena(int nbPlayers): _nbPlayers(nbPlayers)
 
 void Arena::paint(QPainter *painter)
 {
-    painter->translate(_renderWidth/2,_renderLenght/2);
-
     if(_nbPlayers==2)
     {
         for(int i=0; i<4; ++i)
@@ -63,8 +62,8 @@ void Arena::_drawSide()
     //QPoint c(0,h);
     QPoint f1(-(x/4),h);
     QPoint f2((x/4),h);
-    _leftBatLimit = radius-(x/2);
-    _rightBatLimit = radius+(x/2);
+    _leftBatLimit = -(x/2);
+    _rightBatLimit = (x/2);
 
     //Generation des droites
     QLine l1(a,f1);
@@ -78,9 +77,9 @@ void Arena::_drawSide()
 
     //Calcul de la position initiale de la raquette du joueur local
     const double batLength = x/6;
-    QPointF leftPoint(-(batLength/2)+radius,(radius+h)-20);
-    QPointF rightPoint((batLength/2)+radius,(radius+h)-20);
-    _playerBat=Bat(leftPoint,rightPoint,0);
+    QPointF leftPoint(-(batLength/2),h-20);
+    QPointF rightPoint((batLength/2),h-20);
+    _playerBat.moveBat(leftPoint,rightPoint);
 }
 
 Bat Arena::playerBat() const

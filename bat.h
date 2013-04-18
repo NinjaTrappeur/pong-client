@@ -27,6 +27,8 @@ public:
      */
     Bat();
 
+    Bat(const Bat& bat);
+
     /*!
      * \brief Constructeur
      *
