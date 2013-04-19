@@ -180,7 +180,7 @@ void Scene::movePlayerBat(qreal pos)
             actualPosition[1].setX(pos + spaceBetweenPoints/2);
             _dxMutex.lock();
             _playerBat.moveBat(actualPosition[0], actualPosition[1]);
-            _dx-=dx;
+            _dx+=dx;
             _dxMutex.unlock();
             _drawBats();
         }

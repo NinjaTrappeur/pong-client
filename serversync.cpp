@@ -97,7 +97,7 @@ void ServerSync::_parseServeurCommunicator(ServeurCommunicator &serveurCommunica
     if(nbPlayers==2 && id==1)
         angle=180;
     else
-        angle=id*(360/nbPlayers);
+        angle=-(id*(360/nbPlayers));
     QVector<Bat> otherPlayersVector(serveurCommunicator.batVector().size());
     for(qint32 i=0;i<serveurCommunicator.batVector().size();++i)
     {
