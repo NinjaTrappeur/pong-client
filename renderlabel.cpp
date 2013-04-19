@@ -5,6 +5,7 @@ RenderLabel::RenderLabel(QWidget *parent):
 {
     _scene= new Scene(this);
     setFocusPolicy(Qt::StrongFocus);
+    setMouseTracking(true);
 }
 
 RenderLabel::~RenderLabel()
@@ -42,4 +43,9 @@ void RenderLabel::keyPressEvent(QKeyEvent *ev)
         _scene->movePlayerBatToLeft(5);
         break;
     }
+}
+
+void RenderLabel::mouseMoveEvent(QMouseEvent *ev)
+{
+    _scene->movePlayerBat(ev->x()-300);
 }

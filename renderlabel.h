@@ -38,6 +38,12 @@ public:
      */
     void keyPressEvent(QKeyEvent *ev);
 
+    /*!
+     * \brief Methode appelee chaque fois que la souris est deplacee. Un traitement associe permet de deplacer la raquette.
+     * \param ev Evenement contenant les informations necessaires au traitement.
+     */
+    virtual void mouseMoveEvent(QMouseEvent *ev);
+
 private:
 
     /*!

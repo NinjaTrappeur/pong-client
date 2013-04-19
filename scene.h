@@ -103,6 +103,12 @@ public:
      * \param pos Distance a laquelle on veut decaler la raquette.
      */
     void movePlayerBatToLeft(float pos);
+
+    /*!
+     * \brief Deplace la raquette du joueur a une certaine position
+     * \param pos Position ou deplacer la raquette du joueur.
+     */
+    void movePlayerBat(qreal pos);
 private:
     /*!
      * \brief Stylo blanc utilise pour dessiner les raquettes et les balles.

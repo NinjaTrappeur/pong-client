@@ -164,6 +164,29 @@ void Scene::movePlayerBatToRight(float pos)
     }
 }
 
+void Scene::movePlayerBat(qreal pos)
+{
+    if(_arena!=NULL)
+    {
+        QVector<QPointF> actualPosition;
+        actualPosition= _playerBat.getPoints();
+        qreal spaceBetweenPoints, dx;
+        spaceBetweenPoints=actualPosition[1].x()-actualPosition[0].x();
+        if( pos - (spaceBetweenPoints/2) > _arena->leftBatLimit() &&
+                pos + (spaceBetweenPoints/2) < _arena->rightBatLimit())
+        {
+            dx = (pos - spaceBetweenPoints/2) - actualPosition[0].x() ;
+            actualPosition[0].setX(pos - spaceBetweenPoints/2);
+            actualPosition[1].setX(pos + spaceBetweenPoints/2);
+            _dxMutex.lock();
+            _playerBat.moveBat(actualPosition[0], actualPosition[1]);
+            _dx-=dx;
+            _dxMutex.unlock();
+            _drawBats();
+        }
+    }
+}
+
 void Scene::initializeArena()
 {
     _arena = new Arena(_otherPlayersBatVector.size()+1);
