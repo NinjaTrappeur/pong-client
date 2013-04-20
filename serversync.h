@@ -111,6 +111,7 @@ signals:
     void error(QString error);
     void readyToBuildArena();
     void connectToHostSignal();
+    void newBatsPosition();
     
 public slots:
 

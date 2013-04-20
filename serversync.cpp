@@ -1,6 +1,7 @@
 #include "serversync.h"
 
 #include <QApplication>
+#include <QDebug>
 
 #include "mathutils.h"
 
@@ -66,10 +67,13 @@ void ServerSync::startSync()
         _centralText= QString::number(serveurCommunicator.downCounter());
     else
         _centralText="";
+    emit newBatsPosition();
 
 
     _stream.resetStatus();
     _dxMutex.lock();
+    if(_dx!=0)
+        qDebug()<<_dx<<endl;
     _stream<<_dx;
     _dx=0;
     _dxMutex.unlock();

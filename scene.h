@@ -189,6 +189,11 @@ public slots:
      * \brief Cree l'arene et place la raquette du joueur a sa position initiale.
      */
     void initializeArena();
+
+    /*!
+     * \brief Permet au serversync de rafraichir la position des raquettes.
+     */
+    void drawBats();
 };
 
 #endif // SCENE_H

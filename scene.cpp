@@ -22,6 +22,7 @@ Scene::Scene(QWidget *parent):
 
     //Initialisation reseau
     connect(&_serverSync,SIGNAL(readyToBuildArena()), this, SLOT(initializeArena()));
+    connect(&_serverSync, SIGNAL(newBatsPosition()), this, SLOT(drawBats()));
 }
 
 Scene::~Scene()
@@ -191,5 +192,10 @@ void Scene::initializeArena()
 {
     _arena = new Arena(_otherPlayersBatVector.size()+1);
     _playerBat=_arena->playerBat();
+    _drawBats();
+}
+
+void Scene::drawBats()
+{
     _drawBats();
 }
