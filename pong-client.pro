@@ -1,9 +1,3 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2013-03-26T14:36:24
-#
-#-------------------------------------------------
-
 QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -11,31 +5,35 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = pong-client
 TEMPLATE = app
 
+DEPENDPATH += . headers src
+INCLUDEPATH += . headers
 
-SOURCES += main.cpp\
-        mainwindow.cpp \
-    renderlabel.cpp \
-    scene.cpp \
-    bat.cpp \
-    jobcannotbedone.cpp \
-    arena.cpp \
-    mathutils.cpp \
-    serveurcommunicator.cpp \
-    GameState.cpp \
-    Lockable.cpp \
-    serversync.cpp
+UI_HEADERS_DIR += ui
 
-HEADERS  += mainwindow.h \
-    renderlabel.h \
-    scene.h \
-    bat.h \
-    jobcannotbedone.h \
-    arena.h \
-    mathutils.h \
-    serveurcommunicator.h \
-    GameState.hpp \
-    PongTypes.hpp \
-    Lockable.hpp \
-    serversync.h
+SOURCES += src/main.cpp\
+        src/mainwindow.cpp \
+    src/renderlabel.cpp \
+    src/scene.cpp \
+    src/bat.cpp \
+    src/jobcannotbedone.cpp \
+    src/arena.cpp \
+    src/mathutils.cpp \
+    src/serveurcommunicator.cpp \
+    src/GameState.cpp \
+    src/Lockable.cpp \
+    src/serversync.cpp
 
-FORMS    += mainwindow.ui
+HEADERS  += headers/mainwindow.h \
+    headers/renderlabel.h \
+    headers/scene.h \
+    headers/bat.h \
+    headers/jobcannotbedone.h \
+    headers/arena.h \
+    headers/mathutils.h \
+    headers/serveurcommunicator.h \
+    headers/GameState.hpp \
+    headers/PongTypes.hpp \
+    headers/Lockable.hpp \
+    headers/serversync.h
+
+FORMS    += ui/mainwindow.ui
