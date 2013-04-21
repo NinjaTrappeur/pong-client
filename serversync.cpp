@@ -1,12 +1,11 @@
 #include "serversync.h"
 
 #include <QApplication>
-#include <QDebug>
 
 #include "mathutils.h"
 
-ServerSync::ServerSync(qreal &dx, QMutex& dxMutex, QVector<Bat> &bats, QPointF &ball, QErrorMessage *errorMessage, PongTypes::E_GameState& gameState, QString& centraltext, qint32 &playerId) :
-    _dx(dx),
+ServerSync::ServerSync(Bat &playerBat, QMutex& dxMutex, QVector<Bat> &bats, QPointF &ball, QErrorMessage *errorMessage, PongTypes::E_GameState& gameState, QString& centraltext, qint32 &playerId) :
+    _playerBat(playerBat),
     _dxMutex(dxMutex),
     _otherPlayersVector(bats),
     _ball(ball),
@@ -71,11 +70,14 @@ void ServerSync::startSync()
 
 
     _stream.resetStatus();
+    qint32 angle;
+    if( (_otherPlayersVector.size()+1) == 2 && _playerId==1)
+        angle=180;
+    else
+        angle=-(_playerId*(360/(_otherPlayersVector.size()+1)));
+    Bat playerBat=MathUtils::rotateBat( _playerBat, angle);
     _dxMutex.lock();
-    if(_dx!=0)
-        qDebug()<<_dx<<endl;
-    _stream<<_dx;
-    _dx=0;
+    _stream<<playerBat;
     _dxMutex.unlock();
 }
 

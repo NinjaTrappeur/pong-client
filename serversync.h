@@ -25,7 +25,7 @@ class ServerSync : public QObject
 {
     Q_OBJECT
 public:
-    explicit ServerSync(qreal& dx, QMutex &dxMutex,  QVector<Bat>& bats, QPointF& ball, QErrorMessage* errorMessage, PongTypes::E_GameState& gamestate, QString& _centralText, qint32& playerId);
+    explicit ServerSync(Bat& playerBat, QMutex &dxMutex,  QVector<Bat>& bats, QPointF& ball, QErrorMessage* errorMessage, PongTypes::E_GameState& gamestate, QString& _centralText, qint32& playerId);
     virtual ~ServerSync();
 
 private:
@@ -33,7 +33,7 @@ private:
      * \brief Difference entre la derniere position de la raquette du joueur envoyee au serveur et
      *  la position actuelle de la raquette du joueur.
      */
-    qreal& _dx;
+    Bat& _playerBat;
 
     /*!
      * \brief Mutex permettant de verouiller _dx.
