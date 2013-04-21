@@ -3,14 +3,18 @@
 RenderLabel::RenderLabel(QWidget *parent):
     QLabel(parent)
 {
-    _scene= new Scene(this);
-    setFocusPolicy(Qt::StrongFocus);
-    setMouseTracking(true);
 }
 
 RenderLabel::~RenderLabel()
 {
     delete _scene;
+}
+
+void RenderLabel::startGame()
+{
+    _scene= new Scene(this);
+    setFocusPolicy(Qt::StrongFocus);
+    setMouseTracking(true);
 }
 
 void RenderLabel::paintEvent(QPaintEvent *event)

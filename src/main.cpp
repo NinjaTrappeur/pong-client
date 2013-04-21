@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "lobby.h"
 
 #include <QApplication>
 #include <iostream>
@@ -34,9 +35,10 @@ int main(int argc, char *argv[])
     if(correctParameter)
     {
     QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
 
+    MainWindow w;
+    Lobby lobby(&w);
+    lobby.show();
 
     return a.exec();
     }

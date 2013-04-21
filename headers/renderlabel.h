@@ -60,6 +60,11 @@ public slots:
      *  de rafraichir la position des differents objets du jeu regulierement.
      */
     void animate();
+
+    /*!
+     * \brief Lance une partie.
+     */
+    void startGame();
 };
 
 #endif // RENDERLABEL_H
