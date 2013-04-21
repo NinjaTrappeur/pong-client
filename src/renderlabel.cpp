@@ -10,9 +10,9 @@ RenderLabel::~RenderLabel()
     delete _scene;
 }
 
-void RenderLabel::startGame()
+void RenderLabel::startGame(QString address, qint64 port)
 {
-    _scene= new Scene(this);
+    _scene= new Scene(this, address, port);
     setFocusPolicy(Qt::StrongFocus);
     setMouseTracking(true);
 }

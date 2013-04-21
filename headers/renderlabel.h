@@ -64,7 +64,7 @@ public slots:
     /*!
      * \brief Lance une partie.
      */
-    void startGame();
+    void startGame(QString address, qint64 port);
 };
 
 #endif // RENDERLABEL_H

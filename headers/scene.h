@@ -29,7 +29,7 @@ public:
     /*!
      * \brief Constructeur de la scene.
      */
-    Scene(QWidget *parent);
+    Scene(QWidget *parent, QString serverAddress, qint64 serverPort);
 
     /*!
      * \brief Destructeur.

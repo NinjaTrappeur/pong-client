@@ -4,7 +4,12 @@
 
 #include "mathutils.h"
 
-ServerSync::ServerSync(Bat &playerBat, QMutex& dxMutex, QVector<Bat> &bats, QPointF &ball, QErrorMessage *errorMessage, PongTypes::E_GameState& gameState, QString& centraltext, qint32 &playerId) :
+ServerSync::ServerSync(QString& serverAddress, qint64 serverPort,
+                       Bat &playerBat, QMutex& dxMutex, QVector<Bat> &bats,
+                       QPointF &ball, QErrorMessage *errorMessage, PongTypes::E_GameState& gameState,
+                       QString& centraltext, qint32 &playerId) :
+    _adress(serverAddress),
+    _port(serverPort),
     _playerBat(playerBat),
     _dxMutex(dxMutex),
     _otherPlayersVector(bats),
@@ -17,17 +22,6 @@ ServerSync::ServerSync(Bat &playerBat, QMutex& dxMutex, QVector<Bat> &bats, QPoi
     _arenaDrawn(false),
     _playerId(playerId)
 {
-    //Recuperation des parametres de connection
-
-    for(int i=1; i<QApplication::arguments().size(); i+=2)
-    {
-        if(QApplication::arguments().at(i)=="-p")
-            _port=QApplication::arguments().at(i+1).toInt();
-        else if(QApplication::arguments().at(i)=="-h")
-            _host=QApplication::arguments().at(i+1);
-        else if(QApplication::arguments().at(i)=="-a")
-            _adress=QApplication::arguments().at(i+1);
-    }
 
     _errorMessage->accept();
 
@@ -83,11 +77,7 @@ void ServerSync::startSync()
 
 void ServerSync::connectToHost()
 {
-
-    if(_host=="")
-        _socket->connectToHost(_adress, _port);
-    else
-        _socket->connectToHost(_host, _port);
+    _socket->connectToHost(_adress, _port);
 }
 
 

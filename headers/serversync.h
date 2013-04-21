@@ -25,10 +25,23 @@ class ServerSync : public QObject
 {
     Q_OBJECT
 public:
-    explicit ServerSync(Bat& playerBat, QMutex &dxMutex,  QVector<Bat>& bats, QPointF& ball, QErrorMessage* errorMessage, PongTypes::E_GameState& gamestate, QString& _centralText, qint32& playerId);
+    explicit ServerSync(QString& serverAddress, qint64 serverPort, Bat& playerBat,
+                        QMutex &dxMutex,  QVector<Bat>& bats, QPointF& ball,
+                        QErrorMessage* errorMessage, PongTypes::E_GameState& gamestate,
+                        QString& _centralText, qint32& playerId);
     virtual ~ServerSync();
 
 private:
+    /*!
+     * \brief Adresse ipv4 du serveur
+     */
+    QHostAddress _adress;
+
+    /*!
+     * \brief Port d'ecoute du serveur
+     */
+    quint64 _port;
+
     /*!
      * \brief Difference entre la derniere position de la raquette du joueur envoyee au serveur et
      *  la position actuelle de la raquette du joueur.
@@ -58,21 +71,6 @@ private:
      * \brief Fenetre pour les messages d'erreur.
      */
     QErrorMessage* _errorMessage;
-
-    /*!
-     * \brief Port d'ecoute du serveur
-     */
-    quint16 _port;
-
-    /*!
-     * \brief Adresse ipv4 du serveur
-     */
-    QHostAddress _adress;
-
-    /*!
-     * \brief Nom du serveur
-     */
-    QString _host;
 
     /*!
      * \brief Etat de la partie
