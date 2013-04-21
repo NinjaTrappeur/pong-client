@@ -74,7 +74,7 @@ void ServerSync::startSync()
     if( (_otherPlayersVector.size()+1) == 2 && _playerId==1)
         angle=180;
     else
-        angle=-(_playerId*(360/(_otherPlayersVector.size()+1)));
+        angle=(_playerId*(360/(_otherPlayersVector.size()+1)));
     Bat playerBat=MathUtils::rotateBat( _playerBat, angle);
     _dxMutex.lock();
     _stream<<playerBat;
