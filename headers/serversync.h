@@ -85,11 +85,6 @@ private:
     QString& _centralText;
 
     /*!
-     * \brief Datastream associe a la socket TCP.
-     */
-    QDataStream _stream;
-
-    /*!
      * \brief True si l'arene est deja dessinee
      */
     bool _arenaDrawn;

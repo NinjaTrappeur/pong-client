@@ -2,6 +2,7 @@
 
 #include <QApplication>
 #include <QTimer>
+#include <QByteArray>
 
 #include "mathutils.h"
 
@@ -14,7 +15,6 @@ ServerSync::ServerSync(Bat &playerBat, QMutex& dxMutex, QVector<Bat> &bats, QPoi
     _errorMessage(errorMessage),
     _gameState(gameState),
     _centralText(centraltext),
-    _stream(_socket),
     _arenaDrawn(false),
     _playerId(playerId)
 {
@@ -54,9 +54,16 @@ void ServerSync::handleSocketError(QAbstractSocket::SocketError errorCode)
 
 void ServerSync::startSync()
 {
-    _stream.resetStatus();
+    qint32 size;
+    QDataStream socketStream(_socket);
+    QByteArray byteArray;
+    QDataStream byteArrayStream(&byteArray, QIODevice::ReadWrite);
     ServeurCommunicator serveurCommunicator;
-    _stream>>serveurCommunicator;
+
+    socketStream>>size;
+    if(_socket->bytesAvailable()>=size)
+        socketStream>>byteArray;
+    byteArrayStream>>serveurCommunicator;
     _parseServeurCommunicator(serveurCommunicator);
     if(_gameState == PongTypes::INITIALIZING && !_arenaDrawn)
     {
@@ -68,20 +75,24 @@ void ServerSync::startSync()
     else
         _centralText="";
     emit newBatsPosition();
-    QTimer::singleShot(1,this,SLOT(emitSync()));
+    emitSync();
 }
 
 void ServerSync::emitSync(){
-    _stream.resetStatus();
+    QDataStream socketStream(_socket);
     qint32 angle;
+    QByteArray send;
+    QDataStream stream(&send, QIODevice::ReadWrite);
+
     if( (_otherPlayersVector.size()+1) == 2 && _playerId==1)
         angle=180;
     else
         angle=(_playerId*(360/(_otherPlayersVector.size()+1)));
     Bat playerBat=MathUtils::rotateBat( _playerBat, angle);
     _dxMutex.lock();
-    _stream<<playerBat;
+    stream << playerBat;
     _dxMutex.unlock();
+    socketStream<<send.size()<<send;
 }
 
 void ServerSync::connectToHost()
