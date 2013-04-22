@@ -26,7 +26,7 @@ private:
     QUdpSocket _udpSocket;
     QHostAddress _multicastAddress;
     bool _clientRegistered;
-    qint64 _id;
+    QString _id;
 
     void _startNetworkConnection();
 
