@@ -115,6 +115,7 @@ signals:
     
 public slots:
 
+    void emitSync();
 
     /*!
      * \brief Slot qui lance la scrutation de la socket

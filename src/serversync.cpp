@@ -1,6 +1,7 @@
 #include "serversync.h"
 
 #include <QApplication>
+#include <QTimer>
 
 #include "mathutils.h"
 
@@ -67,8 +68,10 @@ void ServerSync::startSync()
     else
         _centralText="";
     emit newBatsPosition();
+    QTimer::singleShot(1,this,SLOT(emitSync()));
+}
 
-
+void ServerSync::emitSync(){
     _stream.resetStatus();
     qint32 angle;
     if( (_otherPlayersVector.size()+1) == 2 && _playerId==1)
