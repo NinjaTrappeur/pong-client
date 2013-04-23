@@ -16,7 +16,8 @@ ServerSync::ServerSync(Bat &playerBat, QMutex& dxMutex, QVector<Bat> &bats, QPoi
     _gameState(gameState),
     _centralText(centraltext),
     _arenaDrawn(false),
-    _playerId(playerId)
+    _playerId(playerId),
+    _sizeRead(false)
 {
     //Recuperation des parametres de connection
 
@@ -60,9 +61,16 @@ void ServerSync::startSync()
     QDataStream byteArrayStream(&byteArray, QIODevice::ReadWrite);
     ServeurCommunicator serveurCommunicator;
 
-    socketStream>>size;
-    if(_socket->bytesAvailable()>=size)
+    if(_socket->bytesAvailable()>=sizeof(qint32) && !_sizeRead)
+    {
+        socketStream>>size;
+        _sizeRead=true;
+    }
+    if(_socket->bytesAvailable()>=size && _sizeRead)
+    {
         socketStream>>byteArray;
+        _sizeRead=false;
+    }
     byteArrayStream>>serveurCommunicator;
     _parseServeurCommunicator(serveurCommunicator);
     if(_gameState == PongTypes::INITIALIZING && !_arenaDrawn)
