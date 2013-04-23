@@ -1,5 +1,6 @@
 #include "serveurcommunicator.h"
 
+#include <QDebug>
 ServeurCommunicator::ServeurCommunicator(QObject *parent) :
     QObject(parent)
 {
@@ -27,6 +28,7 @@ void ServeurCommunicator::operator<<(QDataStream& in)
 {
     qint32 vectorSize, nbPlayers, loserIndex, gameState;
     in >> _ball >> _playerId >> vectorSize >> nbPlayers >> loserIndex >> gameState >> _downCounter;
+    qDebug()<<vectorSize<<endl;
     for(int i=0;i<vectorSize;++i)
     {
         Bat bat;
