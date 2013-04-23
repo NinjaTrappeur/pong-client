@@ -96,6 +96,8 @@ private:
 
     bool _sizeRead;
 
+    qint32 _size;
+
 
     /*!
      * \brief Fonction parsant et appliquant une rotation sur les donnees

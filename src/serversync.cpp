@@ -17,7 +17,8 @@ ServerSync::ServerSync(Bat &playerBat, QMutex& dxMutex, QVector<Bat> &bats, QPoi
     _centralText(centraltext),
     _arenaDrawn(false),
     _playerId(playerId),
-    _sizeRead(false)
+    _sizeRead(false),
+    _size(0)
 {
     //Recuperation des parametres de connection
 
@@ -55,7 +56,6 @@ void ServerSync::handleSocketError(QAbstractSocket::SocketError errorCode)
 
 void ServerSync::startSync()
 {
-    qint32 size;
     QDataStream socketStream(_socket);
     QByteArray byteArray;
     QDataStream byteArrayStream(&byteArray, QIODevice::ReadWrite);
@@ -63,10 +63,10 @@ void ServerSync::startSync()
 
     if(_socket->bytesAvailable()>=sizeof(qint32) && !_sizeRead)
     {
-        socketStream>>size;
+        socketStream>>_size;
         _sizeRead=true;
     }
-    if(_socket->bytesAvailable()>=size && _sizeRead)
+    if(_socket->bytesAvailable()>=_size && _sizeRead)
     {
         socketStream>>byteArray;
         _sizeRead=false;
