@@ -21,7 +21,8 @@ SOURCES += src/main.cpp\
     src/serveurcommunicator.cpp \
     src/GameState.cpp \
     src/Lockable.cpp \
-    src/serversync.cpp
+    src/serversync.cpp \
+    src/lobby.cpp
 
 HEADERS  += headers/mainwindow.h \
     headers/renderlabel.h \
@@ -34,6 +35,8 @@ HEADERS  += headers/mainwindow.h \
     headers/GameState.hpp \
     headers/PongTypes.hpp \
     headers/Lockable.hpp \
-    headers/serversync.h
+    headers/serversync.h \
+    headers/lobby.h
 
-FORMS    += ui/mainwindow.ui
+FORMS    += ui/mainwindow.ui \
+    ui/lobby.ui
