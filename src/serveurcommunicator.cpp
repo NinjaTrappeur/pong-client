@@ -18,7 +18,7 @@ ServeurCommunicator::ServeurCommunicator(QVector<Bat> batVector, QPointF ball, P
 
 void ServeurCommunicator::operator>>(QDataStream& out)const
 {
-    out << _playerId << qint16(_batVector.size())<< qint16(_loserIndex) << qint16(_gameState) << _downCounter;
+    out << _playerId << qint32(_batVector.size())<< qint32(_loserIndex) << qint32(_gameState) << _downCounter;
     for(int i=0;i<_batVector.size();++i)
         out<<_batVector[i];
 }

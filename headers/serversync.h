@@ -94,10 +94,6 @@ private:
      */
     qint32& _playerId;
 
-    bool _sizeRead;
-
-    qint32 _size;
-
 
     /*!
      * \brief Fonction parsant et appliquant une rotation sur les donnees

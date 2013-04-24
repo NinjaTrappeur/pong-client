@@ -16,9 +16,7 @@ ServerSync::ServerSync(Bat &playerBat, QMutex& dxMutex, QVector<Bat> &bats, QPoi
     _gameState(gameState),
     _centralText(centraltext),
     _arenaDrawn(false),
-    _playerId(playerId),
-    _sizeRead(false),
-    _size(0)
+    _playerId(playerId)
 {
     //Recuperation des parametres de connection
 
@@ -61,18 +59,11 @@ void ServerSync::startSync()
     QDataStream byteArrayStream(&byteArray, QIODevice::ReadWrite);
     ServeurCommunicator serveurCommunicator;
 
-    if(_socket->bytesAvailable()>=sizeof(qint32) && !_sizeRead)
-    {
-        socketStream>>_size;
-        _sizeRead=true;
-    }
-    if(_socket->bytesAvailable()>=_size && _sizeRead)
-    {
-        socketStream>>byteArray;
-        _sizeRead=false;
-    }
-    byteArrayStream>>serveurCommunicator;
+    socketStream >> byteArray;
+    byteArrayStream >> serveurCommunicator;
+
     _parseServeurCommunicator(serveurCommunicator);
+
     if(_gameState == PongTypes::INITIALIZING && !_arenaDrawn)
     {
         _arenaDrawn=true;
@@ -88,19 +79,21 @@ void ServerSync::startSync()
 
 void ServerSync::emitSync(){
     QDataStream socketStream(_socket);
+    QByteArray byteArray;
+    QDataStream byteArrayStream(&byteArray, QIODevice::ReadWrite);
+
     qint32 angle;
-    QByteArray send;
-    QDataStream stream(&send, QIODevice::ReadWrite);
 
     if( (_otherPlayersVector.size()+1) == 2 && _playerId==1)
         angle=180;
     else
         angle=(_playerId*(360/(_otherPlayersVector.size()+1)));
     Bat playerBat=MathUtils::rotateBat( _playerBat, angle);
+
     _dxMutex.lock();
-    stream << playerBat;
+    byteArrayStream << playerBat;
+    socketStream << byteArray;
     _dxMutex.unlock();
-    socketStream<<send.size()<<send;
 }
 
 void ServerSync::connectToHost()
