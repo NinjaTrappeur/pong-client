@@ -1,9 +1,9 @@
 #include "renderlabel.h"
 
 RenderLabel::RenderLabel(QWidget *parent):
-    QLabel(parent)
+    QLabel(parent),
+    _scene(NULL)
 {
-    _scene= new Scene(this);
     setFocusPolicy(Qt::StrongFocus);
     setMouseTracking(true);
 }
@@ -48,4 +48,9 @@ void RenderLabel::keyPressEvent(QKeyEvent *ev)
 void RenderLabel::mouseMoveEvent(QMouseEvent *ev)
 {
     _scene->movePlayerBat(ev->x()-300);
+}
+
+void RenderLabel::startGame()
+{
+    _scene= new Scene(this);
 }
