@@ -30,6 +30,11 @@ private:
      * \brief Interface dessinee dans qtdesigner. Contient entre autres renderlabel.
      */
     Ui::MainWindow *_ui;
+
+public slots:
+    void startGame(QString,qint16);
+signals:
+    void startRender(QString,qint16);
 };
 
 #endif // MAINWINDOW_H

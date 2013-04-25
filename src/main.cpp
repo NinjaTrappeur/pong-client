@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     MainWindow w;
     Lobby lobby;
+    QObject::connect(&lobby, SIGNAL(startGame(QString,qint16)), &w, SLOT(startGame(QString,qint16)));
     lobby.show();
 
 

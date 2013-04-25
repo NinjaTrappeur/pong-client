@@ -61,7 +61,7 @@ public slots:
      */
     void animate();
 
-    void startGame();
+    void startGame(QString hostAddress, qint16 port);
 };
 
 #endif // RENDERLABEL_H

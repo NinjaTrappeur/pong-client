@@ -3,8 +3,9 @@
 #include <QBrush>
 #include <QPen>
 #include <QColor>
+#include <QApplication>
 
-Scene::Scene(QWidget *parent):
+Scene::Scene(QWidget *parent, QHostAddress address, qint16 port):
     QWidget(parent),
     _whitePen(QColor(255,255,255)),
     _arena(NULL),
@@ -12,7 +13,7 @@ Scene::Scene(QWidget *parent):
     _dx(0),
     _centralText("En attente du serveur..."),
     _playerId(0),
-    _serverSync(_playerBat, _dxMutex, _otherPlayersBatVector, _ball, _errorMessage, _gameState, _centralText, _playerId)
+    _serverSync(_playerBat, _dxMutex, _otherPlayersBatVector, _ball, _errorMessage, _gameState, port, address, _centralText, _playerId)
 {
     //Initialisation GUI
 
@@ -21,6 +22,7 @@ Scene::Scene(QWidget *parent):
     _whitePen.setCapStyle(Qt::SquareCap);
 
     //Initialisation reseau
+    connect(_errorMessage, SIGNAL(accepted()), qApp, SLOT(quit()));
     connect(&_serverSync,SIGNAL(readyToBuildArena()), this, SLOT(initializeArena()));
     connect(&_serverSync, SIGNAL(newBatsPosition()), this, SLOT(drawBats()));
 }

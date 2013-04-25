@@ -50,7 +50,7 @@ void RenderLabel::mouseMoveEvent(QMouseEvent *ev)
     _scene->movePlayerBat(ev->x()-300);
 }
 
-void RenderLabel::startGame()
+void RenderLabel::startGame(QString hostAddress, qint16 port)
 {
-    _scene= new Scene(this);
+    _scene= new Scene(this, QHostAddress(hostAddress), port);
 }

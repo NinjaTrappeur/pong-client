@@ -35,8 +35,10 @@ private:
 signals:
     void lobbyServerFound();
     void serverLost();
+    void startGame(QString,qint16);
 
 public slots:
+    void parseDirectConnection();
     void processDatagram();
     void readServerSync();
     void announce();

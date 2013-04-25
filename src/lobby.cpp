@@ -14,9 +14,11 @@ Lobby::Lobby(QWidget *parent) :
 {
     _ui->setupUi(this);
     _ui->label->setText("Vous ne vous êtes pas encore annoncé.");
+    connect(_ui->connectButton, SIGNAL(clicked()), this, SLOT(parseDirectConnection()));
     connect(_ui->quitButton, SIGNAL(clicked()), this , SLOT(close()));
     connect(_ui->announceButton, SIGNAL(clicked()), this, SLOT(announce()));
     connect(&_udpSocket, SIGNAL(readyRead()), this, SLOT(processDatagram()));
+    connect(this, SIGNAL(serverLost()), this, SLOT(resetGlobalState()));
     _id.setNum(QApplication::applicationPid());
     _startNetworkConnection();
 }
@@ -107,4 +109,12 @@ void Lobby::resetGlobalState()
     _udpSocket.joinMulticastGroup(_multicastAddress);
     _ui->label->setText("Déconnecté du serveur. Veuillez vous reconnecter!");
     _ui->announceButton->setEnabled(true);
+}
+
+void Lobby::parseDirectConnection()
+{
+    QString address = _ui->ipServer->text();
+    qint16 port = _ui->portServer->text().toInt();
+    emit(startGame(address,port));
+    this->close();
 }

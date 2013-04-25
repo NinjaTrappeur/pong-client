@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _ui->setupUi(this);
 
     QTimer *timer = new QTimer(this);
+    connect(this, SIGNAL(startRender(QString,qint16)), _ui->label, SLOT(startGame(QString,qint16)));
     connect(timer, SIGNAL(timeout()), _ui->label, SLOT(animate()));
     timer->start(17);
 }
@@ -29,4 +30,10 @@ Ui::MainWindow *MainWindow::ui() const
 void MainWindow::setUi(Ui::MainWindow *ui)
 {
     _ui = ui;
+}
+
+void MainWindow::startGame(QString address, qint16 port)
+{
+    this->show();
+    emit(startRender(address,port));
 }

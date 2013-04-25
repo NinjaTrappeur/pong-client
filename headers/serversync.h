@@ -25,7 +25,8 @@ class ServerSync : public QObject
 {
     Q_OBJECT
 public:
-    explicit ServerSync(Bat& playerBat, QMutex &dxMutex,  QVector<Bat>& bats, QPointF& ball, QErrorMessage* errorMessage, PongTypes::E_GameState& gamestate, QString& _centralText, qint32& playerId);
+    explicit ServerSync(Bat& playerBat, QMutex &dxMutex,  QVector<Bat>& bats, QPointF& ball, QErrorMessage* errorMessage, PongTypes::E_GameState& gamestate,
+                        qint16 port, QHostAddress address, QString& _centralText, qint32& playerId);
     virtual ~ServerSync();
 
 private:
@@ -62,7 +63,7 @@ private:
     /*!
      * \brief Port d'ecoute du serveur
      */
-    quint16 _port;
+    qint16 _port;
 
     /*!
      * \brief Adresse ipv4 du serveur

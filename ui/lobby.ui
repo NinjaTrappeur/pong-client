@@ -14,6 +14,13 @@
    <string>Lobby pong multijoueur</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="4" column="2">
+    <widget class="QLineEdit" name="ipServer">
+     <property name="text">
+      <string>127.0.0.1</string>
+     </property>
+    </widget>
+   </item>
    <item row="0" column="1" colspan="2">
     <widget class="QLabel" name="label">
      <property name="text">
@@ -35,6 +42,51 @@
     <widget class="QPushButton" name="quitButton">
      <property name="text">
       <string>Quitter</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="QLineEdit" name="portServer">
+     <property name="text">
+      <string>6666</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Ip serveur</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Port serveur</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" colspan="2">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1" colspan="2">
+    <widget class="QPushButton" name="connectButton">
+     <property name="text">
+      <string>Connection directe au serveur</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1" colspan="2">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>Connection directe au serveur</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </item>
