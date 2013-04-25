@@ -88,6 +88,7 @@ void Lobby::readServerSync()
         _udpSocket.readDatagram(datagram.data(), datagram.size());
         str=datagram.data();
         strList=str.split(" ");
+        qDebug()<<str<<endl;
         if(strList[0]=="SYNC" && strList[1]==_id)
         {
             _packetsEmited = 0;
@@ -98,7 +99,7 @@ void Lobby::readServerSync()
 void Lobby::synchroniseWithServer()
 {
     if(_packetsEmited<8)
-        QTimer::singleShot(100,this,SLOT(acknowledgeServer()));
+        QTimer::singleShot(1000,this,SLOT(acknowledgeServer()));
     else
         emit(serverLost());
 }
