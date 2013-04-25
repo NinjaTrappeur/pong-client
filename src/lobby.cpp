@@ -63,9 +63,11 @@ void Lobby::processDatagram()
 void Lobby::announce()
 {
     _ui->connectButton->setEnabled(false);
-    QString str = QString("HELLO ") + _id + QString(" ") + QString::number(_localPort) + QString(" ") + QNetworkInterface::allAddresses()[2].toString();
+    QString str = QString("HELLO ") + _id + QString(" ") + QString::number(_localPort) + QString(" ") +
+            _findLocalAddress();
     QByteArray datagram(str.toStdString().c_str());
     _udpSocket.writeDatagram(datagram,_multicastAddress,6665);
+    qDebug()<<_findLocalAddress()<<endl;
 }
 
 void Lobby::acknowledgeServer()
@@ -120,4 +122,16 @@ void Lobby::parseDirectConnection()
     qint16 port = _ui->portServer->text().toInt();
     emit(startGame(address,port));
     this->close();
+}
+
+QString Lobby::_findLocalAddress()
+{
+    QString string;
+    for(int i=0;i<QNetworkInterface::allAddresses().size();++i)
+       {
+        string = QNetworkInterface::allAddresses()[i].toString();
+        if(string.startsWith("10")||string.startsWith("192")||string.startsWith("172"))
+            return string;
+    }
+    return "";
 }

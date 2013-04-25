@@ -21,7 +21,7 @@ public:
     
 private:
     void _startNetworkConnection();
-
+    QString _findLocalAddress();
 
     Ui::Lobby *_ui;
     QUdpSocket _udpSocket;
