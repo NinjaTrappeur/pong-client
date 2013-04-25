@@ -19,7 +19,7 @@ public:
      * \brief Constructeur
      * \param nbPlayers Nombre de joueurs dans la partie.
      */
-    Arena(int nbPlayers);
+    Arena(QVector<QLine>& batVector);
 
     /*!
      * \brief Peint l'arene.
@@ -43,9 +43,12 @@ public:
     void setRightBatLimit(double rightBatLimit);
 
 protected:
+
     /*!
      * \brief Nombre de joueurs dans la partie.
      */
+    QVector<QLine>& _batVector;
+
     int _nbPlayers;
 
     /*!
@@ -82,6 +85,7 @@ protected:
      * \brief Position butoir du cote gauche de la batte du joueur local.
      */
     double _rightBatLimit;
+
 };
 
 #endif // ARENA_H

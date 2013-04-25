@@ -192,9 +192,9 @@ void Scene::movePlayerBat(qreal pos)
 
 void Scene::initializeArena()
 {
-    _arena = new Arena(_otherPlayersBatVector.size()+1);
-    _playerBat=_arena->playerBat();
     _drawBats();
+    _arena = new Arena(_graphicsBatVector);
+    _playerBat=_arena->playerBat();
 }
 
 void Scene::drawBats()

@@ -3,12 +3,13 @@
 
 #include <cmath>
 #include <QPointF>
+#include <QDebug>
 
 const double Arena::_renderWidth = 600;
 
 const double Arena::_renderLenght = 600;
 
-Arena::Arena(int nbPlayers): _nbPlayers(nbPlayers)
+Arena::Arena(QVector<QLine> &batVector):_batVector(batVector), _nbPlayers(batVector.size())
 {
     _drawSide();
 }
@@ -23,6 +24,8 @@ void Arena::paint(QPainter *painter)
             painter->drawLine(_arenaLines[1]);
             if(i%2==1)
                 painter->drawLine(_arenaLines[2]);
+            if(i%2==0 && _batVector[i/2].p1()==_batVector[i/2].p2())
+                painter->drawLine(_arenaLines[2]);
             painter->rotate(360/4);
         }
     }
@@ -33,7 +36,8 @@ void Arena::paint(QPainter *painter)
         {
             painter->drawLine(_arenaLines[0]);
             painter->drawLine(_arenaLines[1]);
-            //painter->drawLine(_arenaLines[2]);
+            if(_batVector[i].p1()==_batVector[i].p2())
+                painter->drawLine(_arenaLines[2]);
             painter->rotate(360/_nbPlayers);
         }
     }
@@ -70,10 +74,8 @@ void Arena::_drawSide()
     _arenaLines.push_back(l2);
 
     //On ferme les cages inutilisees lorsqu'il n'y a que 2 joueurs
-    if(_nbPlayers==2){
-        QLine l3(f1, f2);
-        _arenaLines.push_back(l3);
-    }
+    QLine l3(f1, f2);
+    _arenaLines.push_back(l3);
 
     //Calcul de la position initiale de la raquette du joueur local
     const double batLength = x/6;
