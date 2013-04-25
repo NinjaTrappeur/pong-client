@@ -1,7 +1,6 @@
 #include "headers/lobby.h"
 #include "ui_lobby.h"
 
-#include <QDebug>
 #include <QTimer>
 
 Lobby::Lobby(QWidget *parent) :
@@ -67,7 +66,6 @@ void Lobby::announce()
             _findLocalAddress();
     QByteArray datagram(str.toStdString().c_str());
     _udpSocket.writeDatagram(datagram,_multicastAddress,6665);
-    qDebug()<<_findLocalAddress()<<endl;
 }
 
 void Lobby::acknowledgeServer()
@@ -90,10 +88,16 @@ void Lobby::readServerSync()
         _udpSocket.readDatagram(datagram.data(), datagram.size());
         str=datagram.data();
         strList=str.split(" ");
-        qDebug()<<str<<endl;
         if(strList[0]=="SYNC" && strList[1]==_id)
         {
             _packetsEmited = 0;
+        }
+        else if(strList[0]=="GO")
+        {
+            _serverPort=strList[1].toInt();
+            _serverAddress=QHostAddress(strList[2].right(strList[2].length()-1));
+            disconnect(&_udpSocket, SIGNAL(readyRead()), this, SLOT(readServerSync()));
+            emit(startGame(_serverAddress.toString(),_serverPort));
         }
     }
 }
@@ -101,7 +105,7 @@ void Lobby::readServerSync()
 void Lobby::synchroniseWithServer()
 {
     if(_packetsEmited<8)
-        QTimer::singleShot(1000,this,SLOT(acknowledgeServer()));
+        QTimer::singleShot(100,this,SLOT(acknowledgeServer()));
     else
         emit(serverLost());
 }
