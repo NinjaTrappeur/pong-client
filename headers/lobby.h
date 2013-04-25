@@ -27,9 +27,11 @@ private:
     QUdpSocket _udpSocket;
     QHostAddress _multicastAddress;
     QHostAddress _serverAddress;
+    QHostAddress _lobbyServerAddress;
     QString _id;
     qint16 _localPort;
     qint16 _serverPort;
+    qint16 _lobbyServerPort;
     qint16 _packetsEmited;
 
 signals:

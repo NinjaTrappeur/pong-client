@@ -49,8 +49,8 @@ void Lobby::processDatagram()
         {
             _ui->label->setText("Enregistré sur le serveur.\n En attente du début de partie.");
             _ui->announceButton->setEnabled(false);
-            _serverAddress=strList[3];
-            _serverPort=strList[2].toInt();
+            _lobbyServerAddress=QHostAddress(strList[3]);
+            _lobbyServerPort=strList[2].toInt();
             _udpSocket.leaveMulticastGroup(_multicastAddress);
             disconnect(&_udpSocket, SIGNAL(readyRead()), this, SLOT(processDatagram()));
             connect(&_udpSocket, SIGNAL(readyRead()), this, SLOT(readServerSync()));
@@ -62,16 +62,17 @@ void Lobby::processDatagram()
 
 void Lobby::announce()
 {
-    QString str = QString("HELLO ") + _id + QString(_localPort) + QNetworkInterface::allAddresses()[2].toString();
+    _ui->connectButton->setEnabled(false);
+    QString str = QString("HELLO ") + _id + QString(" ") + QString::number(_localPort) + QString(" ") + QNetworkInterface::allAddresses()[2].toString();
     QByteArray datagram(str.toStdString().c_str());
     _udpSocket.writeDatagram(datagram,_multicastAddress,6665);
 }
 
 void Lobby::acknowledgeServer()
 {
-    QString str = "ACK" + _id;
+    QString str = "ACK " + _id;
     QByteArray datagram(str.toStdString().c_str());
-    _udpSocket.writeDatagram(datagram, QHostAddress(_serverAddress),_serverPort);
+    _udpSocket.writeDatagram(datagram, _lobbyServerAddress,_lobbyServerPort);
     _packetsEmited++;
     synchroniseWithServer();
 }
@@ -109,6 +110,7 @@ void Lobby::resetGlobalState()
     _udpSocket.joinMulticastGroup(_multicastAddress);
     _ui->label->setText("Déconnecté du serveur. Veuillez vous reconnecter!");
     _ui->announceButton->setEnabled(true);
+    _ui->connectButton->setEnabled(true);
 }
 
 void Lobby::parseDirectConnection()
