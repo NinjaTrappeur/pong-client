@@ -3,6 +3,7 @@
 
 #include <QPointF>
 #include <math.h>
+#include <QLine>
 
 #include "bat.h"
 
@@ -51,6 +52,8 @@ public:
      * \return Raquette sur laquelle est appliquee une rotation de angle
      */
     static Bat rotateBat(Bat &bat, qint32 angle);
+
+    static QLine rotateQLine(QLine &line, qint32 angle);
 };
 
 #endif // MATHUTILS_H

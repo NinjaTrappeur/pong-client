@@ -9,7 +9,10 @@ const double Arena::_renderWidth = 600;
 
 const double Arena::_renderLenght = 600;
 
-Arena::Arena(QVector<QLine> &batVector, bool &gameOver):_batVector(batVector), _nbPlayers(batVector.size()), _playerGameOver(gameOver)
+Arena::Arena(QVector<QLine> &batVector, bool &gameOver, qint32 &playerId):_batVector(batVector),
+    _nbPlayers(batVector.size()),
+    _playerGameOver(gameOver),
+    _playerId(playerId)
 {
     _drawSide();
 }
@@ -30,18 +33,20 @@ void Arena::paint(QPainter *painter)
 
     else
     {
-        if(!_playerGameOver)
+
+        for(int i=0; i<_nbPlayers; ++i)
         {
-            for(int i=0; i<_nbPlayers; ++i)
+            qint32 angle=-(_playerId*(360/_nbPlayers));
+            painter->drawLine(_arenaLines[0]);
+            painter->drawLine(_arenaLines[1]);
+            if(i==0 && _playerGameOver)
+                painter->drawLine(_arenaLines[2]);
+            else if(_batVector[i].p1()==_batVector[i].p2() && i!=0)
             {
-                painter->drawLine(_arenaLines[0]);
-                painter->drawLine(_arenaLines[1]);
-                if(_batVector[i].p1()==_batVector[i].p2())
-                    painter->drawLine(_arenaLines[2]);
-                if(i==0 && _playerGameOver)
-                    painter->drawLine(_arenaLines[2]);
-                painter->rotate(360/_nbPlayers);
+                QLine rotateArenaLine=MathUtils::rotateQLine(_arenaLines[2],angle+(360/_nbPlayers*i));
+                painter->drawLine(rotateArenaLine);
             }
+            painter->rotate(360/_nbPlayers);
         }
     }
 }

@@ -109,14 +109,6 @@ void Scene::_drawBats()
     if(_graphicsBatVector.size()>0)
         _graphicsBatVector.clear();
     QVector<QPointF> points;
-    for(int i=0; i<_otherPlayersBatVector.size(); ++i)
-    {
-        points=_otherPlayersBatVector[i].getPoints();
-        QLine bat(QPoint(points[0].x(), points[0].y()),
-                    QPoint(points[1].x(), points[1].y()));
-        _graphicsBatVector.push_back(bat);
-    }
-
     points=_playerBat.getPoints();
     QLine playerGraphicBat(QPoint(400,400), QPoint(400,400));
     if(!_gameOverLocalPlayer)
@@ -125,6 +117,14 @@ void Scene::_drawBats()
                 QPoint(points[1].x(), points[1].y()));
     }
         _graphicsBatVector.push_back(playerGraphicBat);
+
+    for(int i=0; i<_otherPlayersBatVector.size(); ++i)
+    {
+        points=_otherPlayersBatVector[i].getPoints();
+        QLine bat(QPoint(points[0].x(), points[0].y()),
+                    QPoint(points[1].x(), points[1].y()));
+        _graphicsBatVector.push_back(bat);
+    }
 }
 
 void Scene::setPlayerBat(QPointF &pos1, QPointF &pos2)
@@ -198,7 +198,7 @@ void Scene::movePlayerBat(qreal pos)
 void Scene::initializeArena()
 {
     _drawBats();
-    _arena = new Arena(_graphicsBatVector, _gameOverLocalPlayer);
+    _arena = new Arena(_graphicsBatVector, _gameOverLocalPlayer, _playerId);
     _playerBat=_arena->playerBat();
 }
 

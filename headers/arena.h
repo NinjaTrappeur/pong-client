@@ -19,7 +19,7 @@ public:
      * \brief Constructeur
      * \param nbPlayers Nombre de joueurs dans la partie.
      */
-    Arena(QVector<QLine>& batVector, bool& gameOver);
+    Arena(QVector<QLine>& batVector, bool& gameOver, qint32& playerId);
 
     /*!
      * \brief Peint l'arene.
@@ -94,6 +94,10 @@ protected:
      */
     bool& _playerGameOver;
 
+    /*!
+     * \brief ID du joueur.
+     */
+    qint32& _playerId;
 };
 
 #endif // ARENA_H

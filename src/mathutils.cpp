@@ -32,3 +32,11 @@ Bat MathUtils::rotateBat(Bat &bat, qint32 angle)
             bat.getId());
     return newBat;
 }
+
+QLine MathUtils::rotateQLine(QLine &line, qint32 angle)
+{
+    QLine newLine(MathUtils::rotatePoint(line.p1(), angle).toPoint(),
+               MathUtils::rotatePoint(line.p2(), angle).toPoint());
+    return newLine;
+}
+
