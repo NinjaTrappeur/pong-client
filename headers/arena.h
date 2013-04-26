@@ -19,7 +19,7 @@ public:
      * \brief Constructeur
      * \param nbPlayers Nombre de joueurs dans la partie.
      */
-    Arena(QVector<QLine>& batVector);
+    Arena(QVector<QLine>& batVector, bool& gameOver);
 
     /*!
      * \brief Peint l'arene.
@@ -49,6 +49,9 @@ protected:
      */
     QVector<QLine>& _batVector;
 
+    /*!
+     * \brief Nombre de joueurs dans la partie.
+     */
     int _nbPlayers;
 
     /*!
@@ -85,6 +88,11 @@ protected:
      * \brief Position butoir du cote gauche de la batte du joueur local.
      */
     double _rightBatLimit;
+
+    /*!
+     * \brief Vrai si le joueur local a perdu.
+     */
+    bool& _playerGameOver;
 
 };
 

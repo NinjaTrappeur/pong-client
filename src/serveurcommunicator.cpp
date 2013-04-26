@@ -27,7 +27,7 @@ void ServeurCommunicator::operator>>(QDataStream& out)const
 void ServeurCommunicator::operator<<(QDataStream& in)
 {
     qint32 vectorSize, nbPlayers, loserIndex, gameState;
-    in >> _ball >> _playerId >> vectorSize >> nbPlayers >> loserIndex >> gameState >> _downCounter;
+    in >> _ball >> _playerId >> vectorSize >> nbPlayers >> loserIndex >> gameState >> _gameOverPlayer >> _downCounter;
     for(int i=0;i<vectorSize;++i)
     {
         Bat bat;
@@ -109,4 +109,14 @@ qint32 ServeurCommunicator::playerId() const
 void ServeurCommunicator::setPlayerId(const qint32 &playerId)
 {
     _playerId = playerId;
+}
+
+bool ServeurCommunicator::gameOverPlayer() const
+{
+    return _gameOverPlayer;
+}
+
+void ServeurCommunicator::setGameOverPlayer(bool gameOverPlayer)
+{
+    _gameOverPlayer = gameOverPlayer;
 }

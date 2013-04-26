@@ -56,6 +56,9 @@ public:
     qint32 playerId() const;
     void setPlayerId(const qint32 &playerId);
 
+    bool gameOverPlayer() const;
+    void setGameOverPlayer(bool gameOverPlayer);
+
 private:
 
     /*!
@@ -82,6 +85,11 @@ private:
      * \brief Numero du joueur local
      */
     qint32 _playerId;
+
+    /*!
+     * \brief Vrai si le joueur local a perdu la partie.
+     */
+    bool _gameOverPlayer;
 
     /*!
      * \brief Decompte avant la partie.

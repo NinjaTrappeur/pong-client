@@ -167,6 +167,11 @@ private:
     qint32 _playerId;
 
     /*!
+     * \brief Vrai si le joueur local a perdu.
+     */
+    bool _gameOverLocalPlayer;
+
+    /*!
      * \brief Objet realisant les operations reseau. Sera lance dans un fil d'execution different.
      */
     ServerSync _serverSync;

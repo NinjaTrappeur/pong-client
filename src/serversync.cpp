@@ -6,7 +6,7 @@
 
 #include "mathutils.h"
 
-ServerSync::ServerSync(Bat &playerBat, QMutex& dxMutex, QVector<Bat> &bats, QPointF &ball, QErrorMessage *errorMessage, PongTypes::E_GameState& gameState, qint16 port, QHostAddress address, QString& centraltext, qint32 &playerId) :
+ServerSync::ServerSync(Bat &playerBat, QMutex& dxMutex, QVector<Bat> &bats, QPointF &ball, QErrorMessage *errorMessage, PongTypes::E_GameState& gameState, qint16 port, QHostAddress address, QString& centraltext, qint32 &playerId, bool &gameOver) :
     _playerBat(playerBat),
     _dxMutex(dxMutex),
     _otherPlayersVector(bats),
@@ -18,7 +18,8 @@ ServerSync::ServerSync(Bat &playerBat, QMutex& dxMutex, QVector<Bat> &bats, QPoi
     _gameState(gameState),
     _centralText(centraltext),
     _arenaDrawn(false),
-    _playerId(playerId)
+    _playerId(playerId),
+    _gameoverLocalPlayer(gameOver)
 {
     //Recuperation des parametres de connection
     _errorMessage->accept();
@@ -116,4 +117,5 @@ void ServerSync::_parseServeurCommunicator(ServeurCommunicator &serveurCommunica
     _ball = MathUtils::rotatePoint(serveurCommunicator.ball(), angle);
     _gameState = serveurCommunicator.gameState();
     _playerId = serveurCommunicator.playerId();
+    _gameoverLocalPlayer = serveurCommunicator.gameOverPlayer();
 }

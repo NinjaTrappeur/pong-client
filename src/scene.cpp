@@ -13,7 +13,8 @@ Scene::Scene(QWidget *parent, QHostAddress address, qint16 port):
     _dx(0),
     _centralText("En attente du serveur..."),
     _playerId(0),
-    _serverSync(_playerBat, _dxMutex, _otherPlayersBatVector, _ball, _errorMessage, _gameState, port, address, _centralText, _playerId)
+    _gameOverLocalPlayer(false),
+    _serverSync(_playerBat, _dxMutex, _otherPlayersBatVector, _ball, _errorMessage, _gameState, port, address, _centralText, _playerId, _gameOverLocalPlayer)
 {
     //Initialisation GUI
 
@@ -117,9 +118,13 @@ void Scene::_drawBats()
     }
 
     points=_playerBat.getPoints();
-    QLine playerGraphicBat(QPoint(points[0].x(), points[0].y()),
-            QPoint(points[1].x(), points[1].y()));
-    _graphicsBatVector.push_back(playerGraphicBat);
+    QLine playerGraphicBat(QPoint(400,400), QPoint(400,400));
+    if(!_gameOverLocalPlayer)
+    {
+        playerGraphicBat.setPoints(QPoint(points[0].x(), points[0].y()),
+                QPoint(points[1].x(), points[1].y()));
+    }
+        _graphicsBatVector.push_back(playerGraphicBat);
 }
 
 void Scene::setPlayerBat(QPointF &pos1, QPointF &pos2)
@@ -193,7 +198,7 @@ void Scene::movePlayerBat(qreal pos)
 void Scene::initializeArena()
 {
     _drawBats();
-    _arena = new Arena(_graphicsBatVector);
+    _arena = new Arena(_graphicsBatVector, _gameOverLocalPlayer);
     _playerBat=_arena->playerBat();
 }
 

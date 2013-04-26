@@ -26,7 +26,7 @@ class ServerSync : public QObject
     Q_OBJECT
 public:
     explicit ServerSync(Bat& playerBat, QMutex &dxMutex,  QVector<Bat>& bats, QPointF& ball, QErrorMessage* errorMessage, PongTypes::E_GameState& gamestate,
-                        qint16 port, QHostAddress address, QString& _centralText, qint32& playerId);
+                        qint16 port, QHostAddress address, QString& _centralText, qint32& playerId, bool& gameOver);
     virtual ~ServerSync();
 
 private:
@@ -94,6 +94,11 @@ private:
      * \brief Identifiant du joueur local.
      */
     qint32& _playerId;
+
+    /*!
+     * \brief Vrai si le joueur local a perdu.
+     */
+    bool& _gameoverLocalPlayer;
 
 
     /*!
