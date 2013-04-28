@@ -1,0 +1,5 @@
+<map id="Scene::Scene" name="Scene::Scene">
+<area shape="rect" id="node2" href="$class_scene.html#a1267debaa2b6dea3a9815294a76e3875" title="Cree l&#39;arene et place la raquette du joueur a sa position initiale." alt="" coords="158,5,306,32"/>
+<area shape="rect" id="node4" href="$class_scene.html#aa5c8c0be136ecd09f8808340ad7bce54" title="Permet au serversync de rafraichir la position des raquettes." alt="" coords="171,56,293,83"/>
+<area shape="rect" id="node3" href="$class_arena.html#a8f9b07a06df2e14d2ffae16b8af0cbcc" title="Donne la raquette du joueur local dans sa position initiale." alt="" coords="355,5,474,32"/>
+</map>

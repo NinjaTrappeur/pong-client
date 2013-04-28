@@ -1,6 +1,10 @@
 <map id="Bat::moveBat" name="Bat::moveBat">
-<area shape="rect" id="node2" href="$class_scene.html#affdf0a4ea7826069d9f2848954257f5b" title="Change la position de la raquette du joueur local." alt="" coords="182,5,325,32"/>
-<area shape="rect" id="node3" href="$class_scene.html#a7b8dda8b2ce2cfd1ad288e32e3768983" title="Deplace la raquette du joueur local vers la gauche." alt="" coords="159,56,347,83"/>
-<area shape="rect" id="node5" href="$class_scene.html#aa041279e61d6436d56d7bff14ae5086a" title="Deplace la raquette du joueur local vers la droite." alt="" coords="155,107,351,133"/>
-<area shape="rect" id="node4" href="$class_render_label.html#aa92cde202282f72c881f7f8278677563" title="methode appelee chaque fois qu&#39;une touche du clavier est appuyee. C&#39;est dans cette methode qu&#39;est ass..." alt="" coords="400,81,589,108"/>
+<area shape="rect" id="node2" href="$class_arena.html#a8692d318f9338a08dc53b9f8df4b122a" title="Cree les lignes representant une face de l&#39;arene." alt="" coords="191,5,315,32"/>
+<area shape="rect" id="node4" href="$class_scene.html#affdf0a4ea7826069d9f2848954257f5b" title="Change la position de la raquette du joueur local." alt="" coords="182,56,325,83"/>
+<area shape="rect" id="node5" href="$class_scene.html#a7b8dda8b2ce2cfd1ad288e32e3768983" title="Deplace la raquette du joueur local vers la gauche." alt="" coords="159,107,347,133"/>
+<area shape="rect" id="node7" href="$class_scene.html#aa041279e61d6436d56d7bff14ae5086a" title="Deplace la raquette du joueur local vers la droite." alt="" coords="155,157,352,184"/>
+<area shape="rect" id="node8" href="$class_scene.html#aced559a9c601fdfc59fa00be30647be3" title="Deplace la raquette du joueur a une certaine position." alt="" coords="176,208,331,235"/>
+<area shape="rect" id="node3" href="$class_arena.html#aeb0bccafab4644c7adfe97105f6c3341" title="Constructeur." alt="" coords="452,5,551,32"/>
+<area shape="rect" id="node6" href="$class_render_label.html#aa92cde202282f72c881f7f8278677563" title="methode appelee chaque fois qu&#39;une touche du clavier est appuyee. C&#39;est dans cette methode qu&#39;est ass..." alt="" coords="407,132,596,159"/>
+<area shape="rect" id="node9" href="$class_render_label.html#a6091048166e9d45b108e3504697d5725" title="Methode appelee chaque fois que la souris est deplacee. Un traitement associe permet de deplacer la r..." alt="" coords="400,208,603,235"/>
 </map>

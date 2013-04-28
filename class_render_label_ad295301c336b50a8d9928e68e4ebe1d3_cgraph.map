@@ -1,4 +1,7 @@
 <map id="RenderLabel::paintEvent" name="RenderLabel::paintEvent">
 <area shape="rect" id="node2" href="$class_scene.html#ac9b5b406cdc8a8e139d6b34d7144b2ff" title="Methode appellee par le renderlabel qui est associe a cette scene. Le but principal de cette methode ..." alt="" coords="217,5,311,32"/>
 <area shape="rect" id="node3" href="$class_arena.html#a29503f9588a77acb6bf80ad786f26864" title="Peint l&#39;arene." alt="" coords="361,5,453,32"/>
+<area shape="rect" id="node4" href="$class_math_utils.html#ae4e2be02fee9c62f69687d5ddbf189aa" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;une ligne." alt="" coords="501,5,653,32"/>
+<area shape="rect" id="node5" href="$class_math_utils.html#ad128736a4c78d37b7abe4250464fb33f" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;un point." alt="" coords="702,5,850,32"/>
+<area shape="rect" id="node6" href="$class_math_utils.html#ab23e0083b4f08cec721ea34f8ad5a949" title="Fonction de conversion d&#39;un angle en degres vers un angle en radian." alt="" coords="899,5,1077,32"/>
 </map>

@@ -1,0 +1,15 @@
+<map id="ServerSync::ServerSync" name="ServerSync::ServerSync">
+<area shape="rect" id="node2" href="$class_server_sync.html#a9a33a79dffdfae2b3996e7c02016c787" title="ServerSync::connectToHost\lSignal" alt="" coords="217,5,399,46"/>
+<area shape="rect" id="node3" href="$class_server_sync.html#a0328327983c266430f8bc8d912bf24d4" title="Connecte la socket au serveur." alt="" coords="217,71,399,97"/>
+<area shape="rect" id="node4" href="$class_server_sync.html#ac2f8be821778b52080d28e1ec5dad374" title="ServerSync::error" alt="" coords="484,121,607,148"/>
+<area shape="rect" id="node5" href="$class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot qui lance la scrutation de la socket." alt="" coords="232,239,384,265"/>
+<area shape="rect" id="node14" href="$class_server_sync.html#adb929257b6b1e01d70332ae97980e8ce" title="Slot permettant de recuperer les erreurs generes par le socket." alt="" coords="221,173,395,214"/>
+<area shape="rect" id="node6" href="$class_server_sync.html#a02675a3a233c9611d398390c6324103d" title="ServerSync::readyToBuild\lArena" alt="" coords="460,173,631,214"/>
+<area shape="rect" id="node7" href="$class_server_sync.html#ae9d2097934837614bc005a490986165d" title="ServerSync::newBatsPosition" alt="" coords="449,239,642,265"/>
+<area shape="rect" id="node8" href="$class_server_sync.html#a1e9e88fcacf5228f0c0cecda05fef8e4" title="Envoie la position de la raquette locale au serveur." alt="" coords="470,289,621,316"/>
+<area shape="rect" id="node9" href="$class_math_utils.html#aed0e07c97605dbbd72db710fec08a476" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;une raquette." alt="" coords="691,289,829,316"/>
+<area shape="rect" id="node10" href="$class_math_utils.html#ad128736a4c78d37b7abe4250464fb33f" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;un point." alt="" coords="878,239,1026,265"/>
+<area shape="rect" id="node12" href="$class_bat.html#a342c17de57ed3d4e9f150cab3b536cf2" title="Accesseur des extremites." alt="" coords="899,289,1005,316"/>
+<area shape="rect" id="node13" href="$class_bat.html#aee775783427016e3fc9d2cfc7ffa964a" title="Accesseur de ID." alt="" coords="913,340,991,367"/>
+<area shape="rect" id="node11" href="$class_math_utils.html#ab23e0083b4f08cec721ea34f8ad5a949" title="Fonction de conversion d&#39;un angle en degres vers un angle en radian." alt="" coords="1075,239,1253,265"/>
+</map>

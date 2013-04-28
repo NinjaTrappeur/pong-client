@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Pong client: Référence de la classe Scene</title>
+<title>Client pong: Référence de la classe Scene</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Pong client
+   <div id="projectname">Client pong
    </div>
   </td>
  </tr>
@@ -100,15 +100,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 Graphe d'héritage de Scene:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_scene__inherit__graph.png" border="0" usemap="#_scene_inherit__map" alt="Inheritance graph"/></div>
-<map name="_scene_inherit__map" id="_scene_inherit__map">
-</map>
 <center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 <div class="dynheader">
 Graphe de collaboration de Scene:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_scene__coll__graph.png" border="0" usemap="#_scene_coll__map" alt="Collaboration graph"/></div>
-<map name="_scene_coll__map" id="_scene_coll__map">
-</map>
 <center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
@@ -116,12 +112,15 @@ Connecteurs publics</h2></td></tr>
 <tr class="memitem:a1267debaa2b6dea3a9815294a76e3875"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a1267debaa2b6dea3a9815294a76e3875">initializeArena</a> ()</td></tr>
 <tr class="memdesc:a1267debaa2b6dea3a9815294a76e3875"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cree l'arene et place la raquette du joueur a sa position initiale.  <a href="#a1267debaa2b6dea3a9815294a76e3875">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a1267debaa2b6dea3a9815294a76e3875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5c8c0be136ecd09f8808340ad7bce54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#aa5c8c0be136ecd09f8808340ad7bce54">drawBats</a> ()</td></tr>
+<tr class="memdesc:aa5c8c0be136ecd09f8808340ad7bce54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet au serversync de rafraichir la position des raquettes.  <a href="#aa5c8c0be136ecd09f8808340ad7bce54">Plus de détails...</a><br/></td></tr>
+<tr class="separator:aa5c8c0be136ecd09f8808340ad7bce54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a9d64fe204705958fb184a7bf80adad6a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a9d64fe204705958fb184a7bf80adad6a">Scene</a> (QWidget *parent)</td></tr>
-<tr class="memdesc:a9d64fe204705958fb184a7bf80adad6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la scene.  <a href="#a9d64fe204705958fb184a7bf80adad6a">Plus de détails...</a><br/></td></tr>
-<tr class="separator:a9d64fe204705958fb184a7bf80adad6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a854af31927815579d0c3eb931090625c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a854af31927815579d0c3eb931090625c">Scene</a> (QWidget *parent, QHostAddress address, qint16 port)</td></tr>
+<tr class="memdesc:a854af31927815579d0c3eb931090625c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la scene.  <a href="#a854af31927815579d0c3eb931090625c">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a854af31927815579d0c3eb931090625c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b8cec2e32546713915f8c6303c951f1"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">~Scene</a> ()</td></tr>
 <tr class="memdesc:a3b8cec2e32546713915f8c6303c951f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur.  <a href="#a3b8cec2e32546713915f8c6303c951f1">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a3b8cec2e32546713915f8c6303c951f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,11 +151,14 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a7b8dda8b2ce2cfd1ad288e32e3768983"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a7b8dda8b2ce2cfd1ad288e32e3768983">movePlayerBatToLeft</a> (float pos)</td></tr>
 <tr class="memdesc:a7b8dda8b2ce2cfd1ad288e32e3768983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deplace la raquette du joueur local vers la gauche.  <a href="#a7b8dda8b2ce2cfd1ad288e32e3768983">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a7b8dda8b2ce2cfd1ad288e32e3768983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aced559a9c601fdfc59fa00be30647be3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#aced559a9c601fdfc59fa00be30647be3">movePlayerBat</a> (qreal pos)</td></tr>
+<tr class="memdesc:aced559a9c601fdfc59fa00be30647be3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deplace la raquette du joueur a une certaine position.  <a href="#aced559a9c601fdfc59fa00be30647be3">Plus de détails...</a><br/></td></tr>
+<tr class="separator:aced559a9c601fdfc59fa00be30647be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe <a class="el" href="class_scene.html" title="Classe Scene. Classe contenant les objets (la balle et les raquettes) qu&#39;il faudra afficher a l&#39;ecran...">Scene</a>. Classe contenant les objets (la balle et les raquettes) qu'il faudra afficher a l'ecran. </p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
-<a class="anchor" id="a9d64fe204705958fb184a7bf80adad6a"></a>
+<a class="anchor" id="a854af31927815579d0c3eb931090625c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -164,8 +166,24 @@ Fonctions membres publiques</h2></td></tr>
           <td class="memname">Scene::Scene </td>
           <td>(</td>
           <td class="paramtype">QWidget *&#160;</td>
-          <td class="paramname"><em>parent</em></td><td>)</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">QHostAddress&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">qint16&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -175,9 +193,9 @@ Fonctions membres publiques</h2></td></tr>
 <p><div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="class_scene_a9d64fe204705958fb184a7bf80adad6a_cgraph.png" border="0" usemap="#class_scene_a9d64fe204705958fb184a7bf80adad6a_cgraph" alt=""/></div>
-<map name="class_scene_a9d64fe204705958fb184a7bf80adad6a_cgraph" id="class_scene_a9d64fe204705958fb184a7bf80adad6a_cgraph">
-<area shape="rect" id="node2" href="class_scene.html#a1267debaa2b6dea3a9815294a76e3875" title="Cree l&#39;arene et place la raquette du joueur a sa position initiale." alt="" coords="158,5,306,32"/><area shape="rect" id="node3" href="class_arena.html#a8f9b07a06df2e14d2ffae16b8af0cbcc" title="Donne la raquette du joueur local dans sa position initiale." alt="" coords="355,5,474,32"/></map>
+<div class="center"><img src="class_scene_a854af31927815579d0c3eb931090625c_cgraph.png" border="0" usemap="#class_scene_a854af31927815579d0c3eb931090625c_cgraph" alt=""/></div>
+<map name="class_scene_a854af31927815579d0c3eb931090625c_cgraph" id="class_scene_a854af31927815579d0c3eb931090625c_cgraph">
+<area shape="rect" id="node2" href="class_scene.html#a1267debaa2b6dea3a9815294a76e3875" title="Cree l&#39;arene et place la raquette du joueur a sa position initiale." alt="" coords="158,5,306,32"/><area shape="rect" id="node4" href="class_scene.html#aa5c8c0be136ecd09f8808340ad7bce54" title="Permet au serversync de rafraichir la position des raquettes." alt="" coords="171,56,293,83"/><area shape="rect" id="node3" href="class_arena.html#a8f9b07a06df2e14d2ffae16b8af0cbcc" title="Donne la raquette du joueur local dans sa position initiale." alt="" coords="355,5,474,32"/></map>
 </div>
 </p>
 
@@ -257,6 +275,40 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 </div>
 </div>
+<a class="anchor" id="aa5c8c0be136ecd09f8808340ad7bce54"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::drawBats </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Permet au serversync de rafraichir la position des raquettes. </p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scene_aa5c8c0be136ecd09f8808340ad7bce54_icgraph.png" border="0" usemap="#class_scene_aa5c8c0be136ecd09f8808340ad7bce54_icgraph" alt=""/></div>
+<map name="class_scene_aa5c8c0be136ecd09f8808340ad7bce54_icgraph" id="class_scene_aa5c8c0be136ecd09f8808340ad7bce54_icgraph">
+<area shape="rect" id="node2" href="class_scene.html#a854af31927815579d0c3eb931090625c" title="Constructeur de la scene." alt="" coords="176,5,280,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a1267debaa2b6dea3a9815294a76e3875"></a>
 <div class="memitem">
 <div class="memproto">
@@ -294,7 +346,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="class_scene_a1267debaa2b6dea3a9815294a76e3875_icgraph.png" border="0" usemap="#class_scene_a1267debaa2b6dea3a9815294a76e3875_icgraph" alt=""/></div>
 <map name="class_scene_a1267debaa2b6dea3a9815294a76e3875_icgraph" id="class_scene_a1267debaa2b6dea3a9815294a76e3875_icgraph">
-<area shape="rect" id="node2" href="class_scene.html#a9d64fe204705958fb184a7bf80adad6a" title="Constructeur de la scene." alt="" coords="203,5,307,32"/></map>
+<area shape="rect" id="node2" href="class_scene.html#a854af31927815579d0c3eb931090625c" title="Constructeur de la scene." alt="" coords="203,5,307,32"/></map>
 </div>
 </p>
 
@@ -398,6 +450,48 @@ Voici le graphe des appelants de cette fonction :</div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="aced559a9c601fdfc59fa00be30647be3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::movePlayerBat </td>
+          <td>(</td>
+          <td class="paramtype">qreal&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deplace la raquette du joueur a une certaine position. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Position ou deplacer la raquette du joueur. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scene_aced559a9c601fdfc59fa00be30647be3_cgraph.png" border="0" usemap="#class_scene_aced559a9c601fdfc59fa00be30647be3_cgraph" alt=""/></div>
+<map name="class_scene_aced559a9c601fdfc59fa00be30647be3_cgraph" id="class_scene_aced559a9c601fdfc59fa00be30647be3_cgraph">
+<area shape="rect" id="node2" href="class_bat.html#a342c17de57ed3d4e9f150cab3b536cf2" title="Accesseur des extremites." alt="" coords="225,5,330,32"/><area shape="rect" id="node3" href="class_arena.html#aa29bc761f4801ae768052ed33d345d6b" title="Arena::leftBatLimit" alt="" coords="213,56,342,83"/><area shape="rect" id="node4" href="class_arena.html#a4db47777f555438a174e2b1f48da3e81" title="Arena::rightBatLimit" alt="" coords="209,107,346,133"/><area shape="rect" id="node5" href="class_bat.html#a56df005cb71165fac854b840c9fcd1fe" title="Met a jour la position de la raquette." alt="" coords="227,157,327,184"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scene_aced559a9c601fdfc59fa00be30647be3_icgraph.png" border="0" usemap="#class_scene_aced559a9c601fdfc59fa00be30647be3_icgraph" alt=""/></div>
+<map name="class_scene_aced559a9c601fdfc59fa00be30647be3_icgraph" id="class_scene_aced559a9c601fdfc59fa00be30647be3_icgraph">
+<area shape="rect" id="node2" href="class_render_label.html#a6091048166e9d45b108e3504697d5725" title="Methode appelee chaque fois que la souris est deplacee. Un traitement associe permet de deplacer la r..." alt="" coords="208,5,411,32"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -512,7 +606,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="class_scene_ac9b5b406cdc8a8e139d6b34d7144b2ff_cgraph.png" border="0" usemap="#class_scene_ac9b5b406cdc8a8e139d6b34d7144b2ff_cgraph" alt=""/></div>
 <map name="class_scene_ac9b5b406cdc8a8e139d6b34d7144b2ff_cgraph" id="class_scene_ac9b5b406cdc8a8e139d6b34d7144b2ff_cgraph">
-<area shape="rect" id="node2" href="class_arena.html#a29503f9588a77acb6bf80ad786f26864" title="Peint l&#39;arene." alt="" coords="150,5,242,32"/></map>
+<area shape="rect" id="node2" href="class_arena.html#a29503f9588a77acb6bf80ad786f26864" title="Peint l&#39;arene." alt="" coords="150,5,242,32"/><area shape="rect" id="node3" href="class_math_utils.html#ae4e2be02fee9c62f69687d5ddbf189aa" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;une ligne." alt="" coords="291,5,443,32"/><area shape="rect" id="node4" href="class_math_utils.html#ad128736a4c78d37b7abe4250464fb33f" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;un point." alt="" coords="491,5,639,32"/><area shape="rect" id="node5" href="class_math_utils.html#ab23e0083b4f08cec721ea34f8ad5a949" title="Fonction de conversion d&#39;un angle en degres vers un angle en radian." alt="" coords="689,5,866,32"/></map>
 </div>
 </p>
 
@@ -572,13 +666,13 @@ Voici le graphe d'appel pour cette fonction :</div>
 </div>
 </div>
 <hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
-<li><a class="el" href="scene_8h_source.html">scene.h</a></li>
-<li><a class="el" href="scene_8cpp.html">scene.cpp</a></li>
+<li>headers/<a class="el" href="scene_8h_source.html">scene.h</a></li>
+<li>src/<a class="el" href="scene_8cpp.html">scene.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 15 2013 18:09:41 pour Pong client par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Avril 28 2013 08:42:44 pour Client pong par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

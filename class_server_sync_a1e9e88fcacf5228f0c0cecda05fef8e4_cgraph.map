@@ -1,0 +1,7 @@
+<map id="ServerSync::emitSync" name="ServerSync::emitSync">
+<area shape="rect" id="node2" href="$class_math_utils.html#aed0e07c97605dbbd72db710fec08a476" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;une raquette." alt="" coords="205,56,344,83"/>
+<area shape="rect" id="node3" href="$class_math_utils.html#ad128736a4c78d37b7abe4250464fb33f" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;un point." alt="" coords="393,5,541,32"/>
+<area shape="rect" id="node5" href="$class_bat.html#a342c17de57ed3d4e9f150cab3b536cf2" title="Accesseur des extremites." alt="" coords="414,56,519,83"/>
+<area shape="rect" id="node6" href="$class_bat.html#aee775783427016e3fc9d2cfc7ffa964a" title="Accesseur de ID." alt="" coords="427,107,506,133"/>
+<area shape="rect" id="node4" href="$class_math_utils.html#ab23e0083b4f08cec721ea34f8ad5a949" title="Fonction de conversion d&#39;un angle en degres vers un angle en radian." alt="" coords="590,5,767,32"/>
+</map>

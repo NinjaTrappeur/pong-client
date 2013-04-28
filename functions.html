@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Pong client: Membres de classe</title>
+<title>Client pong: Membres de classe</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Pong client
+   <div id="projectname">Client pong
    </div>
   </td>
  </tr>
@@ -124,6 +124,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>_arenaLines
 : <a class="el" href="class_arena.html#acc9592452075111cbb2a882aa7c5c984">Arena</a>
 </li>
+<li>_batVector
+: <a class="el" href="class_arena.html#a79787198dc096871df6b22cd8de1c231">Arena</a>
+</li>
 <li>_drawSide()
 : <a class="el" href="class_arena.html#a8692d318f9338a08dc53b9f8df4b122a">Arena</a>
 </li>
@@ -138,6 +141,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </li>
 <li>_playerBat
 : <a class="el" href="class_arena.html#a28af2b5176025a7884d1469b22718c00">Arena</a>
+</li>
+<li>_playerGameOver
+: <a class="el" href="class_arena.html#ae0704707b3e6dbb047faa61e4ae43892">Arena</a>
+</li>
+<li>_playerId
+: <a class="el" href="class_arena.html#afb3663d54a5a56869c162cd86aaf282b">Arena</a>
 </li>
 <li>_renderLenght
 : <a class="el" href="class_arena.html#a154e32e14633f7d270bb14b8d55ad4b5">Arena</a>
@@ -155,6 +164,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>ACCEPTED
 : <a class="el" href="struct_pong_types.html#af1faca08111e25b181ebf427348d4461af1ccdee85abf6bc532eae2fc1e7bf2d1">PongTypes</a>
 </li>
+<li>acknowledgeServer()
+: <a class="el" href="class_lobby.html#ab78707335c5fba9a7313010792eb614c">Lobby</a>
+</li>
 <li>addBall()
 : <a class="el" href="class_scene.html#a9e54805f67972f9af36fb221bf34e957">Scene</a>
 </li>
@@ -164,8 +176,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>animate()
 : <a class="el" href="class_render_label.html#a3b56e2e3c095933dbf9cecbddaf1e668">RenderLabel</a>
 </li>
+<li>announce()
+: <a class="el" href="class_lobby.html#a8c33b6bb103c1a2f8c3e6c375e78cb0c">Lobby</a>
+</li>
 <li>Arena()
-: <a class="el" href="class_arena.html#a856a7f2b834a7dc039b26574e967583c">Arena</a>
+: <a class="el" href="class_arena.html#aeb0bccafab4644c7adfe97105f6c3341">Arena</a>
 </li>
 </ul>
 
@@ -218,6 +233,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>downCounter()
 : <a class="el" href="class_serveur_communicator.html#a77bfbf285c9c23f0fbb044063eb16e33">ServeurCommunicator</a>
 </li>
+<li>drawBats()
+: <a class="el" href="class_scene.html#aa5c8c0be136ecd09f8808340ad7bce54">Scene</a>
+</li>
 <li>dx()
 : <a class="el" href="class_client_communicator.html#a4b7b655bc06416afeefacafacda0d6f7">ClientCommunicator</a>
 </li>
@@ -234,11 +252,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>E_PlayerState
 : <a class="el" href="struct_pong_types.html#af1faca08111e25b181ebf427348d4461">PongTypes</a>
 </li>
+<li>emitSync()
+: <a class="el" href="class_server_sync.html#a1e9e88fcacf5228f0c0cecda05fef8e4">ServerSync</a>
+</li>
 <li>error()
 : <a class="el" href="class_server_sync.html#ac2f8be821778b52080d28e1ec5dad374">ServerSync</a>
 </li>
-<li>EXITED
-: <a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058af89a9adde08202393b08f1b2636c3439">PongTypes</a>
+<li>EXIT_REQUESTED
+: <a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058af46681efd0e228149cdc0be8a6e49c6c">PongTypes</a>
 </li>
 </ul>
 
@@ -246,6 +267,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
 <li>GAMEOVER
 : <a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058a83a1bb6015f65d77705a3184083fdc23">PongTypes</a>
+</li>
+<li>gameOverPlayer()
+: <a class="el" href="class_serveur_communicator.html#a6131abbe787c19326bbed650ca7f2c00">ServeurCommunicator</a>
 </li>
 <li>GameState()
 : <a class="el" href="class_game_state.html#a4fa0a2bf50315c4a35a3890a0adcee5c">GameState</a>
@@ -300,6 +324,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>leftBatLimit()
 : <a class="el" href="class_arena.html#aa29bc761f4801ae768052ed33d345d6b">Arena</a>
 </li>
+<li>Lobby()
+: <a class="el" href="class_lobby.html#a1b4232be6e174b4de8e5eae0b5775deb">Lobby</a>
+</li>
+<li>lobbyServerFound()
+: <a class="el" href="class_lobby.html#a825c754b67c618b17abed1dbe570278a">Lobby</a>
+</li>
 <li>lock()
 : <a class="el" href="class_lockable.html#a141549f6fcc5b02ff61632c8894b8429">Lockable</a>
 </li>
@@ -317,12 +347,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>MathUtils()
 : <a class="el" href="class_math_utils.html#adb7f329cecc1ea0f4ef2492b9a9486a3">MathUtils</a>
 </li>
+<li>mouseMoveEvent()
+: <a class="el" href="class_render_label.html#a6091048166e9d45b108e3504697d5725">RenderLabel</a>
+</li>
 <li>moveBall()
 : <a class="el" href="class_scene.html#a4c06d7424067e4fef63610b6b626dc97">Scene</a>
 </li>
 <li>moveBat()
-: <a class="el" href="class_bat.html#a56df005cb71165fac854b840c9fcd1fe">Bat</a>
+: <a class="el" href="class_scene.html#a303908da446626650e05c0acc90fbd37">Scene</a>
+, <a class="el" href="class_bat.html#a56df005cb71165fac854b840c9fcd1fe">Bat</a>
 , <a class="el" href="class_scene.html#a55b5d76d8725d7eec1cfb7c0d3cfa8d7">Scene</a>
+</li>
+<li>movePlayerBat()
+: <a class="el" href="class_scene.html#aced559a9c601fdfc59fa00be30647be3">Scene</a>
 </li>
 <li>movePlayerBatToLeft()
 : <a class="el" href="class_scene.html#a7b8dda8b2ce2cfd1ad288e32e3768983">Scene</a>
@@ -336,6 +373,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
 <li>nbPlayers()
 : <a class="el" href="class_serveur_communicator.html#aa67a9a0ecdaba580e2059759bf61bff4">ServeurCommunicator</a>
+</li>
+<li>newBatsPosition()
+: <a class="el" href="class_server_sync.html#ae9d2097934837614bc005a490986165d">ServerSync</a>
 </li>
 <li>NOPARTY
 : <a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058ac7723cc3115dd24b7c887183cc3d2346">PongTypes</a>
@@ -369,14 +409,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>paintEvent()
 : <a class="el" href="class_render_label.html#ad295301c336b50a8d9928e68e4ebe1d3">RenderLabel</a>
 </li>
+<li>parseDirectConnection()
+: <a class="el" href="class_lobby.html#a77df0f19bcaa9a3279eb823d563233ea">Lobby</a>
+</li>
 <li>PAUSED
 : <a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058a436b73ade7ee96733f046f15dab1373e">PongTypes</a>
 </li>
 <li>playerBat()
 : <a class="el" href="class_arena.html#a8f9b07a06df2e14d2ffae16b8af0cbcc">Arena</a>
 </li>
+<li>playerId()
+: <a class="el" href="class_serveur_communicator.html#afada7ff50c921ca7ba5d9a64bc768156">ServeurCommunicator</a>
+</li>
 <li>PLAYING
 : <a class="el" href="struct_pong_types.html#af1faca08111e25b181ebf427348d4461adcee6c2e3ada1cc688037ffcc7088820">PongTypes</a>
+</li>
+<li>processDatagram()
+: <a class="el" href="class_lobby.html#a8619c4b5d173304cf1db00375a4443bd">Lobby</a>
 </li>
 </ul>
 
@@ -384,6 +433,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
 <li>radianToDegree()
 : <a class="el" href="class_math_utils.html#ade3fda53154652c3ed4d460afcc111fa">MathUtils</a>
+</li>
+<li>readServerSync()
+: <a class="el" href="class_lobby.html#afd791afecf40f85f0e8eb1863140984a">Lobby</a>
 </li>
 <li>READY
 : <a class="el" href="struct_pong_types.html#af1faca08111e25b181ebf427348d4461a1772c809f188234c60a528be3fd9165b">PongTypes</a>
@@ -394,6 +446,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>RenderLabel()
 : <a class="el" href="class_render_label.html#a8952fafe7d6a9b9e855fad26ddd8fb0b">RenderLabel</a>
 </li>
+<li>RESET_REQUESTED
+: <a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058a6880af2651c4037c9005b40bd748d30d">PongTypes</a>
+</li>
+<li>resetGlobalState()
+: <a class="el" href="class_lobby.html#a0afe9897edd057adc9b5aa1e0d5a5d20">Lobby</a>
+</li>
 <li>RIGHT
 : <a class="el" href="struct_pong_types.html#af83d3698c790331b01c4744137a8c9d1aeed2dc3ebd5061ffc7aba07a4f1d8314">PongTypes</a>
 </li>
@@ -403,6 +461,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>RND_DIR
 : <a class="el" href="struct_pong_types.html#af83d3698c790331b01c4744137a8c9d1a13949beaaeadc12efb22213e647f08ff">PongTypes</a>
 </li>
+<li>rotateBat()
+: <a class="el" href="class_math_utils.html#aed0e07c97605dbbd72db710fec08a476">MathUtils</a>
+</li>
+<li>rotatePoint()
+: <a class="el" href="class_math_utils.html#ad128736a4c78d37b7abe4250464fb33f">MathUtils</a>
+</li>
+<li>rotateQLine()
+: <a class="el" href="class_math_utils.html#ae4e2be02fee9c62f69687d5ddbf189aa">MathUtils</a>
+</li>
 <li>RUNNING
 : <a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058ab4d2c4806bd8324b7f56786c993858f1">PongTypes</a>
 </li>
@@ -411,13 +478,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
 <li>Scene()
-: <a class="el" href="class_scene.html#a9d64fe204705958fb184a7bf80adad6a">Scene</a>
+: <a class="el" href="class_scene.html#a854af31927815579d0c3eb931090625c">Scene</a>
+</li>
+<li>serverLost()
+: <a class="el" href="class_lobby.html#a1b13acc09049102772ff8d120c6c41b0">Lobby</a>
 </li>
 <li>ServerSync()
-: <a class="el" href="class_server_sync.html#a2a02788e49486d2fd16af2abfcd02a87">ServerSync</a>
+: <a class="el" href="class_server_sync.html#a0dfb117949f1bb80040c645dfeb85fcb">ServerSync</a>
 </li>
 <li>ServeurCommunicator()
-: <a class="el" href="class_serveur_communicator.html#a57517a60dd1f1b353a3076857a61a616">ServeurCommunicator</a>
+: <a class="el" href="class_serveur_communicator.html#a2760cdc0f2f5bad11d2be6455aaede1c">ServeurCommunicator</a>
 </li>
 <li>setBall()
 : <a class="el" href="class_serveur_communicator.html#a77be17876c0111c3701cebc6e25289a7">ServeurCommunicator</a>
@@ -436,6 +506,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </li>
 <li>setGameOver()
 : <a class="el" href="class_game_state.html#a74fb5606dcc7dc7b62584be5256176fa">GameState</a>
+</li>
+<li>setGameOverPlayer()
+: <a class="el" href="class_serveur_communicator.html#ac63e945d010b06b40254a4769606b839">ServeurCommunicator</a>
 </li>
 <li>setGameState()
 : <a class="el" href="class_serveur_communicator.html#a2218db0d8fb84d49c5893f0a5705f9e0">ServeurCommunicator</a>
@@ -462,6 +535,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 : <a class="el" href="class_arena.html#af93c40a5fe8b12505420c8c1534db3dd">Arena</a>
 , <a class="el" href="class_scene.html#affdf0a4ea7826069d9f2848954257f5b">Scene</a>
 </li>
+<li>setPlayerId()
+: <a class="el" href="class_serveur_communicator.html#a3e81182ecede3d6e24b2b9b83d8e1ad9">ServeurCommunicator</a>
+</li>
 <li>setRightBatLimit()
 : <a class="el" href="class_arena.html#ada7aa4b43f29a4fc76a353ca3e61b8a9">Arena</a>
 </li>
@@ -471,11 +547,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>setUi()
 : <a class="el" href="class_main_window.html#a43012ac20a828f72ce258d05782f936e">MainWindow</a>
 </li>
+<li>SOCKET_ERROR
+: <a class="el" href="struct_pong_types.html#af1faca08111e25b181ebf427348d4461a4cefe814ee31a453fa8b766c26a15017">PongTypes</a>
+</li>
+<li>START_REQUESTED
+: <a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058a0a1aaa5a4cc9e6f2fe41a3c06dcdbd87">PongTypes</a>
+</li>
+<li>startGame()
+: <a class="el" href="class_render_label.html#a77522d1037bcdb6105670e4063263704">RenderLabel</a>
+, <a class="el" href="class_main_window.html#a5d0608d2d7b39731f98e29bbf4630a78">MainWindow</a>
+, <a class="el" href="class_lobby.html#aeac3dc23166b6e8b2d9554628ecaec04">Lobby</a>
+</li>
+<li>startRender()
+: <a class="el" href="class_main_window.html#a1ee7a8500ccdb3ff9d38b5b6887afac6">MainWindow</a>
+</li>
 <li>startSync()
 : <a class="el" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50">ServerSync</a>
 </li>
 <li>state()
 : <a class="el" href="class_game_state.html#ade3c6a6ca26649a850c523db14f62666">GameState</a>
+</li>
+<li>STATE_ERROR
+: <a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058a6dc9c789637d6be332c0a03508c7762b">PongTypes</a>
+</li>
+<li>synchroniseWithServer()
+: <a class="el" href="class_lobby.html#a58fcaad97f73eb17d10e7e15de1222a7">Lobby</a>
 </li>
 </ul>
 
@@ -497,8 +593,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>WAITING
 : <a class="el" href="struct_pong_types.html#af1faca08111e25b181ebf427348d4461a270c80aabe343ba6ef2b72e57791e35e">PongTypes</a>
 </li>
-<li>WAITING_PLAYERS
-: <a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058a31c6b2cd0d6cb7e80ae4315c989df84e">PongTypes</a>
+<li>WAITING_SERVER
+: <a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058a23e4ded405e6172dd6e9864b0e1ecd03">PongTypes</a>
 </li>
 </ul>
 
@@ -506,6 +602,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <h3><a class="anchor" id="index_0x7e"></a>- ~ -</h3><ul>
 <li>~JobCannotBeDone()
 : <a class="el" href="class_job_cannot_be_done.html#aa9f5ebea19ea5b181be351e882b501b6">JobCannotBeDone</a>
+</li>
+<li>~Lobby()
+: <a class="el" href="class_lobby.html#adcd640fd732073c1761edcc874fb89a8">Lobby</a>
 </li>
 <li>~MainWindow()
 : <a class="el" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">MainWindow</a>
@@ -523,7 +622,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 15 2013 18:09:41 pour Pong client par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Avril 28 2013 08:42:44 pour Client pong par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

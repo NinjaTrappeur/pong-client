@@ -1,5 +1,5 @@
 <map id="Arena::playerBat" name="Arena::playerBat">
 <area shape="rect" id="node2" href="$class_arena.html#af93c40a5fe8b12505420c8c1534db3dd" title="Arena::setPlayerBat" alt="" coords="179,5,317,32"/>
 <area shape="rect" id="node3" href="$class_scene.html#a1267debaa2b6dea3a9815294a76e3875" title="Cree l&#39;arene et place la raquette du joueur a sa position initiale." alt="" coords="174,56,322,83"/>
-<area shape="rect" id="node4" href="$class_scene.html#a9d64fe204705958fb184a7bf80adad6a" title="Constructeur de la scene." alt="" coords="371,56,475,83"/>
+<area shape="rect" id="node4" href="$class_scene.html#a854af31927815579d0c3eb931090625c" title="Constructeur de la scene." alt="" coords="371,56,475,83"/>
 </map>

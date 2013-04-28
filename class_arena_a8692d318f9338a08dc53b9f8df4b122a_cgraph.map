@@ -1,3 +1,4 @@
 <map id="Arena::_drawSide" name="Arena::_drawSide">
-<area shape="rect" id="node2" href="$class_math_utils.html#ab23e0083b4f08cec721ea34f8ad5a949" title="Fonction de conversion d&#39;un angle en degres vers un angle en radian." alt="" coords="179,5,355,32"/>
+<area shape="rect" id="node2" href="$class_math_utils.html#ab23e0083b4f08cec721ea34f8ad5a949" title="Fonction de conversion d&#39;un angle en degres vers un angle en radian." alt="" coords="179,5,357,32"/>
+<area shape="rect" id="node3" href="$class_bat.html#a56df005cb71165fac854b840c9fcd1fe" title="Met a jour la position de la raquette." alt="" coords="218,56,318,83"/>
 </map>

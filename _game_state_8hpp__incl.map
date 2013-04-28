@@ -1,4 +1,4 @@
-<map id="GameState.hpp" name="GameState.hpp">
+<map id="headers/GameState.hpp" name="headers/GameState.hpp">
 <area shape="rect" id="node2" href="$_pong_types_8hpp.html" title="PongTypes.hpp" alt="" coords="5,80,115,107"/>
 <area shape="rect" id="node3" href="$_lockable_8hpp.html" title="Lockable.hpp" alt="" coords="140,80,239,107"/>
 </map>

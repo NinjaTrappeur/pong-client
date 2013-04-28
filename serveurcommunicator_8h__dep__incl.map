@@ -1,4 +1,10 @@
-<map id="serveurcommunicator.h" name="serveurcommunicator.h">
-<area shape="rect" id="node2" href="$serversync_8cpp.html" title="serversync.cpp" alt="" coords="5,80,115,107"/>
-<area shape="rect" id="node3" href="$serveurcommunicator_8cpp.html" title="serveurcommunicator.cpp" alt="" coords="139,80,308,107"/>
+<map id="headers/serveurcommunicator.h" name="headers/serveurcommunicator.h">
+<area shape="rect" id="node2" href="$serversync_8h.html" title="headers/serversync.h" alt="" coords="246,80,391,107"/>
+<area shape="rect" id="node9" href="$serveurcommunicator_8cpp.html" title="src/serveurcommunicator.cpp" alt="" coords="415,80,605,107"/>
+<area shape="rect" id="node3" href="$scene_8h.html" title="headers/scene.h" alt="" coords="186,155,304,181"/>
+<area shape="rect" id="node8" href="$serversync_8cpp.html" title="src/serversync.cpp" alt="" coords="328,155,457,181"/>
+<area shape="rect" id="node4" href="$renderlabel_8h.html" title="headers/renderlabel.h" alt="" coords="5,229,152,256"/>
+<area shape="rect" id="node6" href="$mainwindow_8cpp.html" title="src/mainwindow.cpp" alt="" coords="176,229,315,256"/>
+<area shape="rect" id="node7" href="$scene_8cpp.html" title="src/scene.cpp" alt="" coords="339,229,443,256"/>
+<area shape="rect" id="node5" href="$renderlabel_8cpp.html" title="src/renderlabel.cpp" alt="" coords="13,304,144,331"/>
 </map>

@@ -1,4 +1,13 @@
 <map id="MathUtils::degreeToRadian" name="MathUtils::degreeToRadian">
-<area shape="rect" id="node2" href="$class_arena.html#a8692d318f9338a08dc53b9f8df4b122a" title="Cree les lignes representant une face de l&#39;arene." alt="" coords="230,5,354,32"/>
-<area shape="rect" id="node3" href="$class_arena.html#a856a7f2b834a7dc039b26574e967583c" title="Constructeur." alt="" coords="403,5,501,32"/>
+<area shape="rect" id="node2" href="$class_arena.html#a8692d318f9338a08dc53b9f8df4b122a" title="Cree les lignes representant une face de l&#39;arene." alt="" coords="245,5,369,32"/>
+<area shape="rect" id="node4" href="$class_math_utils.html#ad128736a4c78d37b7abe4250464fb33f" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;un point." alt="" coords="233,56,381,83"/>
+<area shape="rect" id="node3" href="$class_arena.html#aeb0bccafab4644c7adfe97105f6c3341" title="Constructeur." alt="" coords="456,5,555,32"/>
+<area shape="rect" id="node5" href="$class_math_utils.html#aed0e07c97605dbbd72db710fec08a476" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;une raquette." alt="" coords="436,56,575,83"/>
+<area shape="rect" id="node9" href="$class_math_utils.html#ae4e2be02fee9c62f69687d5ddbf189aa" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;une ligne." alt="" coords="429,107,581,133"/>
+<area shape="rect" id="node6" href="$class_server_sync.html#a1e9e88fcacf5228f0c0cecda05fef8e4" title="Envoie la position de la raquette locale au serveur." alt="" coords="630,56,781,83"/>
+<area shape="rect" id="node7" href="$class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot qui lance la scrutation de la socket." alt="" coords="829,56,981,83"/>
+<area shape="rect" id="node8" href="$class_server_sync.html#a0dfb117949f1bb80040c645dfeb85fcb" title="ServerSync::ServerSync" alt="" coords="1029,56,1192,83"/>
+<area shape="rect" id="node10" href="$class_arena.html#a29503f9588a77acb6bf80ad786f26864" title="Peint l&#39;arene." alt="" coords="659,107,751,133"/>
+<area shape="rect" id="node11" href="$class_scene.html#ac9b5b406cdc8a8e139d6b34d7144b2ff" title="Methode appellee par le renderlabel qui est associe a cette scene. Le but principal de cette methode ..." alt="" coords="858,107,953,133"/>
+<area shape="rect" id="node12" href="$class_render_label.html#ad295301c336b50a8d9928e68e4ebe1d3" title="Methode appelee chaque fois que le widget sera dessine. Cette methode contiendra toutes les actions q..." alt="" coords="1029,107,1192,133"/>
 </map>

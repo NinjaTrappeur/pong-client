@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Pong client: Liste des membres</title>
+<title>Client pong: Liste des membres</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Pong client
+   <div id="projectname">Client pong
    </div>
   </td>
  </tr>
@@ -93,16 +93,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <tr class="even"><td class="entry"><a class="el" href="class_server_sync.html#a676d992c9bd4dd853a6009eb9b64e652">changeSocketState</a>(QAbstractSocket::SocketState state)</td><td class="entry"><a class="el" href="class_server_sync.html">ServerSync</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_server_sync.html#a0328327983c266430f8bc8d912bf24d4">connectToHost</a>()</td><td class="entry"><a class="el" href="class_server_sync.html">ServerSync</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_server_sync.html#a9a33a79dffdfae2b3996e7c02016c787">connectToHostSignal</a>()</td><td class="entry"><a class="el" href="class_server_sync.html">ServerSync</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_server_sync.html#ac2f8be821778b52080d28e1ec5dad374">error</a>(QString error)</td><td class="entry"><a class="el" href="class_server_sync.html">ServerSync</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_server_sync.html#adb929257b6b1e01d70332ae97980e8ce">handleSocketError</a>(QAbstractSocket::SocketError errorCode)</td><td class="entry"><a class="el" href="class_server_sync.html">ServerSync</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_server_sync.html#a1e9e88fcacf5228f0c0cecda05fef8e4">emitSync</a>()</td><td class="entry"><a class="el" href="class_server_sync.html">ServerSync</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_server_sync.html#ac2f8be821778b52080d28e1ec5dad374">error</a>(QString error)</td><td class="entry"><a class="el" href="class_server_sync.html">ServerSync</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_server_sync.html#adb929257b6b1e01d70332ae97980e8ce">handleSocketError</a>(QAbstractSocket::SocketError errorCode)</td><td class="entry"><a class="el" href="class_server_sync.html">ServerSync</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_server_sync.html#ae9d2097934837614bc005a490986165d">newBatsPosition</a>()</td><td class="entry"><a class="el" href="class_server_sync.html">ServerSync</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_server_sync.html#a02675a3a233c9611d398390c6324103d">readyToBuildArena</a>()</td><td class="entry"><a class="el" href="class_server_sync.html">ServerSync</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_server_sync.html#a2a02788e49486d2fd16af2abfcd02a87">ServerSync</a>(qreal &amp;dx, QMutex &amp;dxMutex, QVector&lt; Bat &gt; &amp;bats, QPointF &amp;ball, QErrorMessage *errorMessage, PongTypes::E_GameState &amp;gamestate, QString &amp;_centralText)</td><td class="entry"><a class="el" href="class_server_sync.html">ServerSync</a></td><td class="entry"><span class="mlabel">explicit</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_server_sync.html#a0dfb117949f1bb80040c645dfeb85fcb">ServerSync</a>(Bat &amp;playerBat, QMutex &amp;dxMutex, QVector&lt; Bat &gt; &amp;bats, QPointF &amp;ball, QErrorMessage *errorMessage, PongTypes::E_GameState &amp;gamestate, qint16 port, QHostAddress address, QString &amp;_centralText, qint32 &amp;playerId, bool &amp;gameOver)</td><td class="entry"><a class="el" href="class_server_sync.html">ServerSync</a></td><td class="entry"><span class="mlabel">explicit</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50">startSync</a>()</td><td class="entry"><a class="el" href="class_server_sync.html">ServerSync</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_server_sync.html#a67e799811cd50a22a8cc2253927fe36d">~ServerSync</a>()</td><td class="entry"><a class="el" href="class_server_sync.html">ServerSync</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 15 2013 18:09:41 pour Pong client par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Avril 28 2013 08:42:44 pour Client pong par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

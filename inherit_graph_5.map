@@ -1,3 +1,4 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node2" href="$class_main_window.html" title="Classe MainWindow." alt="" coords="160,5,256,32"/>
+<area shape="rect" id="node1" href="$class_lockable.html" title="Lockable" alt="" coords="5,5,80,32"/>
+<area shape="rect" id="node2" href="$class_game_state.html" title="GameState" alt="" coords="128,5,216,32"/>
 </map>

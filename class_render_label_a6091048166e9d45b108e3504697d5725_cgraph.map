@@ -1,0 +1,7 @@
+<map id="RenderLabel::mouseMoveEvent" name="RenderLabel::mouseMoveEvent">
+<area shape="rect" id="node2" href="$class_scene.html#aced559a9c601fdfc59fa00be30647be3" title="Deplace la raquette du joueur a une certaine position." alt="" coords="256,81,411,108"/>
+<area shape="rect" id="node3" href="$class_bat.html#a342c17de57ed3d4e9f150cab3b536cf2" title="Accesseur des extremites." alt="" coords="475,5,581,32"/>
+<area shape="rect" id="node4" href="$class_arena.html#aa29bc761f4801ae768052ed33d345d6b" title="Arena::leftBatLimit" alt="" coords="463,56,593,83"/>
+<area shape="rect" id="node5" href="$class_arena.html#a4db47777f555438a174e2b1f48da3e81" title="Arena::rightBatLimit" alt="" coords="459,107,597,133"/>
+<area shape="rect" id="node6" href="$class_bat.html#a56df005cb71165fac854b840c9fcd1fe" title="Met a jour la position de la raquette." alt="" coords="478,157,578,184"/>
+</map>

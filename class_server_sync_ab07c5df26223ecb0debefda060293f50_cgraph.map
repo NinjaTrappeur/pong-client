@@ -1,3 +1,10 @@
 <map id="ServerSync::startSync" name="ServerSync::startSync">
-<area shape="rect" id="node2" href="$class_server_sync.html#a02675a3a233c9611d398390c6324103d" title="ServerSync::readyToBuild\lArena" alt="" coords="206,5,375,46"/>
+<area shape="rect" id="node2" href="$class_server_sync.html#a02675a3a233c9611d398390c6324103d" title="ServerSync::readyToBuild\lArena" alt="" coords="217,5,388,46"/>
+<area shape="rect" id="node3" href="$class_server_sync.html#ae9d2097934837614bc005a490986165d" title="ServerSync::newBatsPosition" alt="" coords="206,71,399,97"/>
+<area shape="rect" id="node4" href="$class_server_sync.html#a1e9e88fcacf5228f0c0cecda05fef8e4" title="Envoie la position de la raquette locale au serveur." alt="" coords="227,121,378,148"/>
+<area shape="rect" id="node5" href="$class_math_utils.html#aed0e07c97605dbbd72db710fec08a476" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;une raquette." alt="" coords="448,121,587,148"/>
+<area shape="rect" id="node6" href="$class_math_utils.html#ad128736a4c78d37b7abe4250464fb33f" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;un point." alt="" coords="635,71,783,97"/>
+<area shape="rect" id="node8" href="$class_bat.html#a342c17de57ed3d4e9f150cab3b536cf2" title="Accesseur des extremites." alt="" coords="657,121,762,148"/>
+<area shape="rect" id="node9" href="$class_bat.html#aee775783427016e3fc9d2cfc7ffa964a" title="Accesseur de ID." alt="" coords="670,172,749,199"/>
+<area shape="rect" id="node7" href="$class_math_utils.html#ab23e0083b4f08cec721ea34f8ad5a949" title="Fonction de conversion d&#39;un angle en degres vers un angle en radian." alt="" coords="833,71,1010,97"/>
 </map>

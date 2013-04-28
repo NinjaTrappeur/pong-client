@@ -1,0 +1,5 @@
+<map id="MathUtils::rotateBat" name="MathUtils::rotateBat">
+<area shape="rect" id="node2" href="$class_server_sync.html#a1e9e88fcacf5228f0c0cecda05fef8e4" title="Envoie la position de la raquette locale au serveur." alt="" coords="193,5,343,32"/>
+<area shape="rect" id="node3" href="$class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot qui lance la scrutation de la socket." alt="" coords="392,5,544,32"/>
+<area shape="rect" id="node4" href="$class_server_sync.html#a0dfb117949f1bb80040c645dfeb85fcb" title="ServerSync::ServerSync" alt="" coords="592,5,755,32"/>
+</map>

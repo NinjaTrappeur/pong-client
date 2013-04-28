@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Pong client:  Fichier source de arena.h</title>
+<title>Client pong:  Fichier source de headers/arena.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Pong client
+   <div id="projectname">Client pong
    </div>
   </td>
  </tr>
@@ -65,7 +65,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
       <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
     </ul>
   </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -80,6 +79,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">arena.h</div>  </div>
@@ -98,7 +102,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="class_arena.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_arena.html" title="Classe representant l&#39;arene dans laquelle va se derouler le jeu de pong.">Arena</a></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_arena.html#a856a7f2b834a7dc039b26574e967583c" title="Constructeur.">Arena</a>(<span class="keywordtype">int</span> nbPlayers);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_arena.html#aeb0bccafab4644c7adfe97105f6c3341" title="Constructeur.">Arena</a>(QVector&lt;QLine&gt;&amp; batVector, <span class="keywordtype">bool</span>&amp; gameOver, qint32&amp; playerId);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_arena.html#a29503f9588a77acb6bf80ad786f26864" title="Peint l&#39;arene.">paint</a>(QPainter* painter);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
@@ -112,28 +116,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_arena.html#ada7aa4b43f29a4fc76a353ca3e61b8a9">setRightBatLimit</a>(<span class="keywordtype">double</span> rightBatLimit);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="class_arena.html#a3ac3af2389112c1894e689eb079f4266">   49</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_arena.html#a3ac3af2389112c1894e689eb079f4266" title="Nombre de joueurs dans la partie.">_nbPlayers</a>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="class_arena.html#acc9592452075111cbb2a882aa7c5c984">   54</a></span>&#160;    QVector&lt;QLine&gt; <a class="code" href="class_arena.html#acc9592452075111cbb2a882aa7c5c984" title="Lignes représentant l&#39;arene.">_arenaLines</a>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_arena.html#a8692d318f9338a08dc53b9f8df4b122a" title="Cree les lignes representant une face de l&#39;arene.">_drawSide</a>();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="class_arena.html#a97c364721385845a968097a9c97add8a">   64</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="class_arena.html#a97c364721385845a968097a9c97add8a" title="Largeur de la fenetre de rendu.">_renderWidth</a>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="class_arena.html#a154e32e14633f7d270bb14b8d55ad4b5">   69</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="class_arena.html#a154e32e14633f7d270bb14b8d55ad4b5" title="Longueur de la fenetre de rendu.">_renderLenght</a>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="class_arena.html#a28af2b5176025a7884d1469b22718c00">   74</a></span>&#160;    <a class="code" href="class_bat.html" title="Classe représentant les raquettes.">Bat</a> <a class="code" href="class_arena.html#a28af2b5176025a7884d1469b22718c00" title="Raquette du joueur dans sa position initiale.">_playerBat</a>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="code" href="class_arena.html#a3d516c9165c0b57a014495a0fd082082">   79</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_arena.html#a3d516c9165c0b57a014495a0fd082082" title="Position butoir du cote gauche de la batte du joueur local.">_leftBatLimit</a>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="code" href="class_arena.html#a64f70b90e8903cfc01d5c27707602572">   84</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_arena.html#a64f70b90e8903cfc01d5c27707602572" title="Position butoir du cote gauche de la batte du joueur local.">_rightBatLimit</a>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="class_arena.html#a79787198dc096871df6b22cd8de1c231">   50</a></span>&#160;    QVector&lt;QLine&gt;&amp; <a class="code" href="class_arena.html#a79787198dc096871df6b22cd8de1c231" title="Nombre de joueurs dans la partie.">_batVector</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="class_arena.html#a3ac3af2389112c1894e689eb079f4266">   55</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_arena.html#a3ac3af2389112c1894e689eb079f4266" title="Nombre de joueurs dans la partie.">_nbPlayers</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="code" href="class_arena.html#acc9592452075111cbb2a882aa7c5c984">   60</a></span>&#160;    QVector&lt;QLine&gt; <a class="code" href="class_arena.html#acc9592452075111cbb2a882aa7c5c984" title="Lignes représentant l&#39;arene.">_arenaLines</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_arena.html#a8692d318f9338a08dc53b9f8df4b122a" title="Cree les lignes representant une face de l&#39;arene.">_drawSide</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="class_arena.html#a97c364721385845a968097a9c97add8a">   70</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="class_arena.html#a97c364721385845a968097a9c97add8a" title="Largeur de la fenetre de rendu.">_renderWidth</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="code" href="class_arena.html#a154e32e14633f7d270bb14b8d55ad4b5">   75</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="class_arena.html#a154e32e14633f7d270bb14b8d55ad4b5" title="Longueur de la fenetre de rendu.">_renderLenght</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="code" href="class_arena.html#a28af2b5176025a7884d1469b22718c00">   80</a></span>&#160;    <a class="code" href="class_bat.html" title="Classe représentant les raquettes.">Bat</a> <a class="code" href="class_arena.html#a28af2b5176025a7884d1469b22718c00" title="Raquette du joueur dans sa position initiale.">_playerBat</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="code" href="class_arena.html#a3d516c9165c0b57a014495a0fd082082">   85</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_arena.html#a3d516c9165c0b57a014495a0fd082082" title="Position butoir du cote gauche de la batte du joueur local.">_leftBatLimit</a>;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif // ARENA_H</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="code" href="class_arena.html#a64f70b90e8903cfc01d5c27707602572">   90</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_arena.html#a64f70b90e8903cfc01d5c27707602572" title="Position butoir du cote gauche de la batte du joueur local.">_rightBatLimit</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="code" href="class_arena.html#ae0704707b3e6dbb047faa61e4ae43892">   95</a></span>&#160;    <span class="keywordtype">bool</span>&amp; <a class="code" href="class_arena.html#ae0704707b3e6dbb047faa61e4ae43892" title="Vrai si le joueur local a perdu.">_playerGameOver</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="code" href="class_arena.html#afb3663d54a5a56869c162cd86aaf282b">  100</a></span>&#160;    qint32&amp; <a class="code" href="class_arena.html#afb3663d54a5a56869c162cd86aaf282b" title="ID du joueur.">_playerId</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif // ARENA_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 15 2013 18:09:41 pour Pong client par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Avril 28 2013 08:42:43 pour Client pong par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

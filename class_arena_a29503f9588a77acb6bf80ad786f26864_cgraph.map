@@ -1,0 +1,5 @@
+<map id="Arena::paint" name="Arena::paint">
+<area shape="rect" id="node2" href="$class_math_utils.html#ae4e2be02fee9c62f69687d5ddbf189aa" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;une ligne." alt="" coords="147,5,299,32"/>
+<area shape="rect" id="node3" href="$class_math_utils.html#ad128736a4c78d37b7abe4250464fb33f" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;un point." alt="" coords="347,5,495,32"/>
+<area shape="rect" id="node4" href="$class_math_utils.html#ab23e0083b4f08cec721ea34f8ad5a949" title="Fonction de conversion d&#39;un angle en degres vers un angle en radian." alt="" coords="545,5,722,32"/>
+</map>

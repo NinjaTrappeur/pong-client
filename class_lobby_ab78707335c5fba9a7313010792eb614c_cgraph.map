@@ -1,0 +1,4 @@
+<map id="Lobby::acknowledgeServer" name="Lobby::acknowledgeServer">
+<area shape="rect" id="node2" href="$class_lobby.html#a58fcaad97f73eb17d10e7e15de1222a7" title="Envoie un paquet UDP au serveur." alt="" coords="230,5,429,32"/>
+<area shape="rect" id="node3" href="$class_lobby.html#a1b13acc09049102772ff8d120c6c41b0" title="Emit lorsque la synchro avec le lobby est perdue." alt="" coords="478,5,602,32"/>
+</map>

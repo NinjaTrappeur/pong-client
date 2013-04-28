@@ -1,0 +1,6 @@
+<map id="Lobby::acknowledgeServer" name="Lobby::acknowledgeServer">
+<area shape="rect" id="node2" href="$class_lobby.html#a58fcaad97f73eb17d10e7e15de1222a7" title="Envoie un paquet UDP au serveur." alt="" coords="230,5,429,32"/>
+<area shape="rect" id="node3" href="$class_lobby.html#a8619c4b5d173304cf1db00375a4443bd" title="Analyse les datagrames reçus via le canal multicast." alt="" coords="478,5,645,32"/>
+<area shape="rect" id="node4" href="$class_lobby.html#a1b4232be6e174b4de8e5eae0b5775deb" title="Lobby::Lobby" alt="" coords="905,5,1005,32"/>
+<area shape="rect" id="node5" href="$class_lobby.html#a0afe9897edd057adc9b5aa1e0d5a5d20" title="Remet le lobby dans son état initial." alt="" coords="693,31,856,57"/>
+</map>

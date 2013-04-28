@@ -1,4 +1,7 @@
-<map id="serversync.h" name="serversync.h">
-<area shape="rect" id="node10" href="$bat_8h.html" title="Fichier de la classe représentant les raquettes." alt="" coords="151,80,201,107"/>
-<area shape="rect" id="node12" href="$_pong_types_8hpp.html" title="PongTypes.hpp" alt="" coords="977,80,1087,107"/>
+<map id="headers/serversync.h" name="headers/serversync.h">
+<area shape="rect" id="node10" href="$bat_8h.html" title="Fichier de la classe représentant les raquettes." alt="" coords="555,155,606,181"/>
+<area shape="rect" id="node12" href="$_pong_types_8hpp.html" title="PongTypes.hpp" alt="" coords="1076,229,1186,256"/>
+<area shape="rect" id="node13" href="$serveurcommunicator_8h.html" title="serveurcommunicator.h" alt="" coords="750,80,903,107"/>
+<area shape="rect" id="node15" href="$_game_state_8hpp.html" title="GameState.hpp" alt="" coords="980,155,1092,181"/>
+<area shape="rect" id="node16" href="$_lockable_8hpp.html" title="Lockable.hpp" alt="" coords="952,229,1051,256"/>
 </map>

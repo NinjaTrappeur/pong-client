@@ -1,0 +1,7 @@
+<map id="Lobby::startGame" name="Lobby::startGame">
+<area shape="rect" id="node2" href="$class_lobby.html#afd791afecf40f85f0e8eb1863140984a" title="Analyse les datagrames venant du serveur en unicast." alt="" coords="182,56,338,83"/>
+<area shape="rect" id="node6" href="$class_lobby.html#a77df0f19bcaa9a3279eb823d563233ea" title="Permet de parser les paramètres dans le cas d&#39;une connection directe au serveur de jeu (sans passer p..." alt="" coords="387,107,583,133"/>
+<area shape="rect" id="node3" href="$class_lobby.html#a8619c4b5d173304cf1db00375a4443bd" title="Analyse les datagrames reçus via le canal multicast." alt="" coords="402,5,569,32"/>
+<area shape="rect" id="node5" href="$class_lobby.html#a0afe9897edd057adc9b5aa1e0d5a5d20" title="Remet le lobby dans son état initial." alt="" coords="632,56,795,83"/>
+<area shape="rect" id="node4" href="$class_lobby.html#a1b4232be6e174b4de8e5eae0b5775deb" title="Lobby::Lobby" alt="" coords="843,56,943,83"/>
+</map>

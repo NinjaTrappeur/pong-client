@@ -1,5 +1,5 @@
-<map id="arena.cpp" name="arena.cpp">
-<area shape="rect" id="node2" href="$arena_8h.html" title="arena.h" alt="" coords="159,80,224,107"/>
-<area shape="rect" id="node10" href="$mathutils_8h.html" title="mathutils.h" alt="" coords="249,80,335,107"/>
+<map id="src/arena.cpp" name="src/arena.cpp">
+<area shape="rect" id="node2" href="$arena_8h.html" title="arena.h" alt="" coords="195,80,260,107"/>
+<area shape="rect" id="node10" href="$mathutils_8h.html" title="mathutils.h" alt="" coords="357,80,443,107"/>
 <area shape="rect" id="node7" href="$bat_8h.html" title="Fichier de la classe représentant les raquettes." alt="" coords="312,155,363,181"/>
 </map>

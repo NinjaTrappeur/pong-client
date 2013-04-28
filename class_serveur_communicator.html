@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Pong client: Référence de la classe ServeurCommunicator</title>
+<title>Client pong: Référence de la classe ServeurCommunicator</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Pong client
+   <div id="projectname">Client pong
    </div>
   </td>
  </tr>
@@ -111,7 +111,7 @@ Graphe de collaboration de ServeurCommunicator:</div>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a2760cdc0f2f5bad11d2be6455aaede1c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serveur_communicator.html#a2760cdc0f2f5bad11d2be6455aaede1c">ServeurCommunicator</a> (QObject *parent=0)</td></tr>
 <tr class="separator:a2760cdc0f2f5bad11d2be6455aaede1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57517a60dd1f1b353a3076857a61a616"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serveur_communicator.html#a57517a60dd1f1b353a3076857a61a616">ServeurCommunicator</a> (QVector&lt; <a class="el" href="class_bat.html">Bat</a> &gt; <a class="el" href="class_serveur_communicator.html#aab1ffa1c31e32a71cca9d58903bfc770">batVector</a>, QPointF <a class="el" href="class_serveur_communicator.html#a37732e75524ae08a919ab90583a4c72c">ball</a>, <a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058">PongTypes::E_GameState</a> <a class="el" href="class_serveur_communicator.html#a75c44fb41affb5656ca3dad3ee65c8df">gameState</a>, qint32 <a class="el" href="class_serveur_communicator.html#a74d11da45fff09a365fda483126f22ba">loserIndex</a>, qint32 playerId, QObject *parent=0)</td></tr>
+<tr class="memitem:a57517a60dd1f1b353a3076857a61a616"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serveur_communicator.html#a57517a60dd1f1b353a3076857a61a616">ServeurCommunicator</a> (QVector&lt; <a class="el" href="class_bat.html">Bat</a> &gt; <a class="el" href="class_serveur_communicator.html#aab1ffa1c31e32a71cca9d58903bfc770">batVector</a>, QPointF <a class="el" href="class_serveur_communicator.html#a37732e75524ae08a919ab90583a4c72c">ball</a>, <a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058">PongTypes::E_GameState</a> <a class="el" href="class_serveur_communicator.html#a75c44fb41affb5656ca3dad3ee65c8df">gameState</a>, qint32 <a class="el" href="class_serveur_communicator.html#a74d11da45fff09a365fda483126f22ba">loserIndex</a>, qint32 <a class="el" href="class_serveur_communicator.html#afada7ff50c921ca7ba5d9a64bc768156">playerId</a>, QObject *parent=0)</td></tr>
 <tr class="separator:a57517a60dd1f1b353a3076857a61a616"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3168e18ceb6e6c9ce65e72d354ccd342"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serveur_communicator.html#a3168e18ceb6e6c9ce65e72d354ccd342">operator&gt;&gt;</a> (QDataStream &amp;out) const </td></tr>
 <tr class="memdesc:a3168e18ceb6e6c9ce65e72d354ccd342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition du flux sortant pour cette classe. Permet d'envoyer la classe dans une socket de maniere aisee.  <a href="#a3168e18ceb6e6c9ce65e72d354ccd342">Plus de détails...</a><br/></td></tr>
@@ -143,6 +143,14 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="separator:a77bfbf285c9c23f0fbb044063eb16e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b520cb169688e622adf9f18b5fea66d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serveur_communicator.html#a2b520cb169688e622adf9f18b5fea66d">setDownCounter</a> (const qint32 &amp;<a class="el" href="class_serveur_communicator.html#a77bfbf285c9c23f0fbb044063eb16e33">downCounter</a>)</td></tr>
 <tr class="separator:a2b520cb169688e622adf9f18b5fea66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afada7ff50c921ca7ba5d9a64bc768156"><td class="memItemLeft" align="right" valign="top">qint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serveur_communicator.html#afada7ff50c921ca7ba5d9a64bc768156">playerId</a> () const </td></tr>
+<tr class="separator:afada7ff50c921ca7ba5d9a64bc768156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e81182ecede3d6e24b2b9b83d8e1ad9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serveur_communicator.html#a3e81182ecede3d6e24b2b9b83d8e1ad9">setPlayerId</a> (const qint32 &amp;<a class="el" href="class_serveur_communicator.html#afada7ff50c921ca7ba5d9a64bc768156">playerId</a>)</td></tr>
+<tr class="separator:a3e81182ecede3d6e24b2b9b83d8e1ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6131abbe787c19326bbed650ca7f2c00"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serveur_communicator.html#a6131abbe787c19326bbed650ca7f2c00">gameOverPlayer</a> () const </td></tr>
+<tr class="separator:a6131abbe787c19326bbed650ca7f2c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac63e945d010b06b40254a4769606b839"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serveur_communicator.html#ac63e945d010b06b40254a4769606b839">setGameOverPlayer</a> (bool <a class="el" href="class_serveur_communicator.html#a6131abbe787c19326bbed650ca7f2c00">gameOverPlayer</a>)</td></tr>
+<tr class="separator:ac63e945d010b06b40254a4769606b839"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Amis</h2></td></tr>
@@ -301,6 +309,30 @@ Voici le graphe des appelants de cette fonction :</div>
 
 </div>
 </div>
+<a class="anchor" id="a6131abbe787c19326bbed650ca7f2c00"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ServeurCommunicator::gameOverPlayer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_serveur_communicator_a6131abbe787c19326bbed650ca7f2c00_icgraph.png" border="0" usemap="#class_serveur_communicator_a6131abbe787c19326bbed650ca7f2c00_icgraph" alt=""/></div>
+<map name="class_serveur_communicator_a6131abbe787c19326bbed650ca7f2c00_icgraph" id="class_serveur_communicator_a6131abbe787c19326bbed650ca7f2c00_icgraph">
+<area shape="rect" id="node2" href="class_serveur_communicator.html#ac63e945d010b06b40254a4769606b839" title="ServeurCommunicator\l::setGameOverPlayer" alt="" coords="203,5,352,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a75c44fb41affb5656ca3dad3ee65c8df"></a>
 <div class="memitem">
 <div class="memproto">
@@ -430,6 +462,30 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 </div>
 </div>
+<a class="anchor" id="afada7ff50c921ca7ba5d9a64bc768156"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">qint32 ServeurCommunicator::playerId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_serveur_communicator_afada7ff50c921ca7ba5d9a64bc768156_icgraph.png" border="0" usemap="#class_serveur_communicator_afada7ff50c921ca7ba5d9a64bc768156_icgraph" alt=""/></div>
+<map name="class_serveur_communicator_afada7ff50c921ca7ba5d9a64bc768156_icgraph" id="class_serveur_communicator_afada7ff50c921ca7ba5d9a64bc768156_icgraph">
+<area shape="rect" id="node2" href="class_serveur_communicator.html#a3e81182ecede3d6e24b2b9b83d8e1ad9" title="ServeurCommunicator\l::setPlayerId" alt="" coords="203,5,352,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a77be17876c0111c3701cebc6e25289a7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -505,6 +561,31 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 </div>
 </div>
+<a class="anchor" id="ac63e945d010b06b40254a4769606b839"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ServeurCommunicator::setGameOverPlayer </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>gameOverPlayer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_serveur_communicator_ac63e945d010b06b40254a4769606b839_cgraph.png" border="0" usemap="#class_serveur_communicator_ac63e945d010b06b40254a4769606b839_cgraph" alt=""/></div>
+<map name="class_serveur_communicator_ac63e945d010b06b40254a4769606b839_cgraph" id="class_serveur_communicator_ac63e945d010b06b40254a4769606b839_cgraph">
+<area shape="rect" id="node2" href="class_serveur_communicator.html#a6131abbe787c19326bbed650ca7f2c00" title="ServeurCommunicator\l::gameOverPlayer" alt="" coords="203,5,352,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a2218db0d8fb84d49c5893f0a5705f9e0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -568,6 +649,31 @@ Voici le graphe d'appel pour cette fonction :</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3e81182ecede3d6e24b2b9b83d8e1ad9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ServeurCommunicator::setPlayerId </td>
+          <td>(</td>
+          <td class="paramtype">const qint32 &amp;&#160;</td>
+          <td class="paramname"><em>playerId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_serveur_communicator_a3e81182ecede3d6e24b2b9b83d8e1ad9_cgraph.png" border="0" usemap="#class_serveur_communicator_a3e81182ecede3d6e24b2b9b83d8e1ad9_cgraph" alt=""/></div>
+<map name="class_serveur_communicator_a3e81182ecede3d6e24b2b9b83d8e1ad9_cgraph" id="class_serveur_communicator_a3e81182ecede3d6e24b2b9b83d8e1ad9_cgraph">
+<area shape="rect" id="node2" href="class_serveur_communicator.html#afada7ff50c921ca7ba5d9a64bc768156" title="ServeurCommunicator\l::playerId" alt="" coords="203,5,352,46"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -641,13 +747,13 @@ Voici le graphe d'appel pour cette fonction :</div>
 </div>
 </div>
 <hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
-<li><a class="el" href="serveurcommunicator_8h_source.html">serveurcommunicator.h</a></li>
-<li><a class="el" href="serveurcommunicator_8cpp.html">serveurcommunicator.cpp</a></li>
+<li>headers/<a class="el" href="serveurcommunicator_8h_source.html">serveurcommunicator.h</a></li>
+<li>src/<a class="el" href="serveurcommunicator_8cpp.html">serveurcommunicator.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 15 2013 18:09:41 pour Pong client par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Avril 28 2013 08:42:44 pour Client pong par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

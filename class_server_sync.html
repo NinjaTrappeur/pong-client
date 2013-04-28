@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Pong client: Référence de la classe ServerSync</title>
+<title>Client pong: Référence de la classe ServerSync</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Pong client
+   <div id="projectname">Client pong
    </div>
   </td>
  </tr>
@@ -110,6 +110,9 @@ Graphe de collaboration de ServerSync:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Connecteurs publics</h2></td></tr>
+<tr class="memitem:a1e9e88fcacf5228f0c0cecda05fef8e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sync.html#a1e9e88fcacf5228f0c0cecda05fef8e4">emitSync</a> ()</td></tr>
+<tr class="memdesc:a1e9e88fcacf5228f0c0cecda05fef8e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envoie la position de la raquette locale au serveur.  <a href="#a1e9e88fcacf5228f0c0cecda05fef8e4">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a1e9e88fcacf5228f0c0cecda05fef8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab07c5df26223ecb0debefda060293f50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50">startSync</a> ()</td></tr>
 <tr class="memdesc:ab07c5df26223ecb0debefda060293f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot qui lance la scrutation de la socket.  <a href="#ab07c5df26223ecb0debefda060293f50">Plus de détails...</a><br/></td></tr>
 <tr class="separator:ab07c5df26223ecb0debefda060293f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,18 +134,20 @@ Signaux</h2></td></tr>
 <tr class="separator:a02675a3a233c9611d398390c6324103d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a33a79dffdfae2b3996e7c02016c787"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sync.html#a9a33a79dffdfae2b3996e7c02016c787">connectToHostSignal</a> ()</td></tr>
 <tr class="separator:a9a33a79dffdfae2b3996e7c02016c787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9d2097934837614bc005a490986165d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sync.html#ae9d2097934837614bc005a490986165d">newBatsPosition</a> ()</td></tr>
+<tr class="separator:ae9d2097934837614bc005a490986165d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a2a02788e49486d2fd16af2abfcd02a87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sync.html#a2a02788e49486d2fd16af2abfcd02a87">ServerSync</a> (qreal &amp;dx, QMutex &amp;dxMutex, QVector&lt; <a class="el" href="class_bat.html">Bat</a> &gt; &amp;bats, QPointF &amp;ball, QErrorMessage *errorMessage, <a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058">PongTypes::E_GameState</a> &amp;gamestate, QString &amp;_centralText)</td></tr>
-<tr class="separator:a2a02788e49486d2fd16af2abfcd02a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dfb117949f1bb80040c645dfeb85fcb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sync.html#a0dfb117949f1bb80040c645dfeb85fcb">ServerSync</a> (<a class="el" href="class_bat.html">Bat</a> &amp;playerBat, QMutex &amp;dxMutex, QVector&lt; <a class="el" href="class_bat.html">Bat</a> &gt; &amp;bats, QPointF &amp;ball, QErrorMessage *errorMessage, <a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058">PongTypes::E_GameState</a> &amp;gamestate, qint16 port, QHostAddress address, QString &amp;_centralText, qint32 &amp;playerId, bool &amp;gameOver)</td></tr>
+<tr class="separator:a0dfb117949f1bb80040c645dfeb85fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67e799811cd50a22a8cc2253927fe36d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sync.html#a67e799811cd50a22a8cc2253927fe36d">~ServerSync</a> ()</td></tr>
 <tr class="separator:a67e799811cd50a22a8cc2253927fe36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe gerant la liaison avec le serveur sur un reseau. Permet d'envoyer la position de la raquette du joueur local au serveur et de recuperer la position des autres raquettes et de la balle. Doit etre lance dans un thread a part a l'aide du slot <a class="el" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot qui lance la scrutation de la socket.">startSync()</a>. </p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
-<a class="anchor" id="a2a02788e49486d2fd16af2abfcd02a87"></a>
+<a class="anchor" id="a0dfb117949f1bb80040c645dfeb85fcb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -152,8 +157,8 @@ Fonctions membres publiques</h2></td></tr>
         <tr>
           <td class="memname">ServerSync::ServerSync </td>
           <td>(</td>
-          <td class="paramtype">qreal &amp;&#160;</td>
-          <td class="paramname"><em>dx</em>, </td>
+          <td class="paramtype"><a class="el" href="class_bat.html">Bat</a> &amp;&#160;</td>
+          <td class="paramname"><em>playerBat</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -188,8 +193,32 @@ Fonctions membres publiques</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">qint16&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QHostAddress&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">QString &amp;&#160;</td>
-          <td class="paramname"><em>_centralText</em>&#160;</td>
+          <td class="paramname"><em>_centralText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">qint32 &amp;&#160;</td>
+          <td class="paramname"><em>playerId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>gameOver</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -207,9 +236,9 @@ Fonctions membres publiques</h2></td></tr>
 <p><div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="class_server_sync_a2a02788e49486d2fd16af2abfcd02a87_cgraph.png" border="0" usemap="#class_server_sync_a2a02788e49486d2fd16af2abfcd02a87_cgraph" alt=""/></div>
-<map name="class_server_sync_a2a02788e49486d2fd16af2abfcd02a87_cgraph" id="class_server_sync_a2a02788e49486d2fd16af2abfcd02a87_cgraph">
-<area shape="rect" id="node2" href="class_server_sync.html#a9a33a79dffdfae2b3996e7c02016c787" title="ServerSync::connectToHost\lSignal" alt="" coords="216,5,397,46"/><area shape="rect" id="node3" href="class_server_sync.html#a0328327983c266430f8bc8d912bf24d4" title="Connecte la socket au serveur." alt="" coords="216,71,397,97"/><area shape="rect" id="node4" href="class_server_sync.html#ac2f8be821778b52080d28e1ec5dad374" title="ServerSync::error" alt="" coords="469,151,592,177"/><area shape="rect" id="node5" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot qui lance la scrutation de la socket." alt="" coords="231,239,383,265"/><area shape="rect" id="node7" href="class_server_sync.html#adb929257b6b1e01d70332ae97980e8ce" title="Slot permettant de recuperer les erreurs generes par le socket." alt="" coords="219,173,394,214"/><area shape="rect" id="node6" href="class_server_sync.html#a02675a3a233c9611d398390c6324103d" title="ServerSync::readyToBuild\lArena" alt="" coords="446,231,615,273"/></map>
+<div class="center"><img src="class_server_sync_a0dfb117949f1bb80040c645dfeb85fcb_cgraph.png" border="0" usemap="#class_server_sync_a0dfb117949f1bb80040c645dfeb85fcb_cgraph" alt=""/></div>
+<map name="class_server_sync_a0dfb117949f1bb80040c645dfeb85fcb_cgraph" id="class_server_sync_a0dfb117949f1bb80040c645dfeb85fcb_cgraph">
+<area shape="rect" id="node2" href="class_server_sync.html#a9a33a79dffdfae2b3996e7c02016c787" title="ServerSync::connectToHost\lSignal" alt="" coords="217,5,399,46"/><area shape="rect" id="node3" href="class_server_sync.html#a0328327983c266430f8bc8d912bf24d4" title="Connecte la socket au serveur." alt="" coords="217,71,399,97"/><area shape="rect" id="node4" href="class_server_sync.html#ac2f8be821778b52080d28e1ec5dad374" title="ServerSync::error" alt="" coords="484,121,607,148"/><area shape="rect" id="node5" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot qui lance la scrutation de la socket." alt="" coords="232,239,384,265"/><area shape="rect" id="node14" href="class_server_sync.html#adb929257b6b1e01d70332ae97980e8ce" title="Slot permettant de recuperer les erreurs generes par le socket." alt="" coords="221,173,395,214"/><area shape="rect" id="node6" href="class_server_sync.html#a02675a3a233c9611d398390c6324103d" title="ServerSync::readyToBuild\lArena" alt="" coords="460,173,631,214"/><area shape="rect" id="node7" href="class_server_sync.html#ae9d2097934837614bc005a490986165d" title="ServerSync::newBatsPosition" alt="" coords="449,239,642,265"/><area shape="rect" id="node8" href="class_server_sync.html#a1e9e88fcacf5228f0c0cecda05fef8e4" title="Envoie la position de la raquette locale au serveur." alt="" coords="470,289,621,316"/><area shape="rect" id="node9" href="class_math_utils.html#aed0e07c97605dbbd72db710fec08a476" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;une raquette." alt="" coords="691,289,829,316"/><area shape="rect" id="node10" href="class_math_utils.html#ad128736a4c78d37b7abe4250464fb33f" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;un point." alt="" coords="878,239,1026,265"/><area shape="rect" id="node12" href="class_bat.html#a342c17de57ed3d4e9f150cab3b536cf2" title="Accesseur des extremites." alt="" coords="899,289,1005,316"/><area shape="rect" id="node13" href="class_bat.html#aee775783427016e3fc9d2cfc7ffa964a" title="Accesseur de ID." alt="" coords="913,340,991,367"/><area shape="rect" id="node11" href="class_math_utils.html#ab23e0083b4f08cec721ea34f8ad5a949" title="Fonction de conversion d&#39;un angle en degres vers un angle en radian." alt="" coords="1075,239,1253,265"/></map>
 </div>
 </p>
 
@@ -293,7 +322,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="class_server_sync_a0328327983c266430f8bc8d912bf24d4_icgraph.png" border="0" usemap="#class_server_sync_a0328327983c266430f8bc8d912bf24d4_icgraph" alt=""/></div>
 <map name="class_server_sync_a0328327983c266430f8bc8d912bf24d4_icgraph" id="class_server_sync_a0328327983c266430f8bc8d912bf24d4_icgraph">
-<area shape="rect" id="node2" href="class_server_sync.html#a2a02788e49486d2fd16af2abfcd02a87" title="ServerSync::ServerSync" alt="" coords="235,5,397,32"/></map>
+<area shape="rect" id="node2" href="class_server_sync.html#a0dfb117949f1bb80040c645dfeb85fcb" title="ServerSync::ServerSync" alt="" coords="237,5,400,32"/></map>
 </div>
 </p>
 
@@ -325,7 +354,50 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="class_server_sync_a9a33a79dffdfae2b3996e7c02016c787_icgraph.png" border="0" usemap="#class_server_sync_a9a33a79dffdfae2b3996e7c02016c787_icgraph" alt=""/></div>
 <map name="class_server_sync_a9a33a79dffdfae2b3996e7c02016c787_icgraph" id="class_server_sync_a9a33a79dffdfae2b3996e7c02016c787_icgraph">
-<area shape="rect" id="node2" href="class_server_sync.html#a2a02788e49486d2fd16af2abfcd02a87" title="ServerSync::ServerSync" alt="" coords="235,12,397,39"/></map>
+<area shape="rect" id="node2" href="class_server_sync.html#a0dfb117949f1bb80040c645dfeb85fcb" title="ServerSync::ServerSync" alt="" coords="237,12,400,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1e9e88fcacf5228f0c0cecda05fef8e4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ServerSync::emitSync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Envoie la position de la raquette locale au serveur. </p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_server_sync_a1e9e88fcacf5228f0c0cecda05fef8e4_cgraph.png" border="0" usemap="#class_server_sync_a1e9e88fcacf5228f0c0cecda05fef8e4_cgraph" alt=""/></div>
+<map name="class_server_sync_a1e9e88fcacf5228f0c0cecda05fef8e4_cgraph" id="class_server_sync_a1e9e88fcacf5228f0c0cecda05fef8e4_cgraph">
+<area shape="rect" id="node2" href="class_math_utils.html#aed0e07c97605dbbd72db710fec08a476" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;une raquette." alt="" coords="205,56,344,83"/><area shape="rect" id="node3" href="class_math_utils.html#ad128736a4c78d37b7abe4250464fb33f" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;un point." alt="" coords="393,5,541,32"/><area shape="rect" id="node5" href="class_bat.html#a342c17de57ed3d4e9f150cab3b536cf2" title="Accesseur des extremites." alt="" coords="414,56,519,83"/><area shape="rect" id="node6" href="class_bat.html#aee775783427016e3fc9d2cfc7ffa964a" title="Accesseur de ID." alt="" coords="427,107,506,133"/><area shape="rect" id="node4" href="class_math_utils.html#ab23e0083b4f08cec721ea34f8ad5a949" title="Fonction de conversion d&#39;un angle en degres vers un angle en radian." alt="" coords="590,5,767,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_server_sync_a1e9e88fcacf5228f0c0cecda05fef8e4_icgraph.png" border="0" usemap="#class_server_sync_a1e9e88fcacf5228f0c0cecda05fef8e4_icgraph" alt=""/></div>
+<map name="class_server_sync_a1e9e88fcacf5228f0c0cecda05fef8e4_icgraph" id="class_server_sync_a1e9e88fcacf5228f0c0cecda05fef8e4_icgraph">
+<area shape="rect" id="node2" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot qui lance la scrutation de la socket." alt="" coords="205,5,357,32"/><area shape="rect" id="node3" href="class_server_sync.html#a0dfb117949f1bb80040c645dfeb85fcb" title="ServerSync::ServerSync" alt="" coords="405,5,568,32"/></map>
 </div>
 </p>
 
@@ -358,7 +430,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="class_server_sync_ac2f8be821778b52080d28e1ec5dad374_icgraph.png" border="0" usemap="#class_server_sync_ac2f8be821778b52080d28e1ec5dad374_icgraph" alt=""/></div>
 <map name="class_server_sync_ac2f8be821778b52080d28e1ec5dad374_icgraph" id="class_server_sync_ac2f8be821778b52080d28e1ec5dad374_icgraph">
-<area shape="rect" id="node2" href="class_server_sync.html#a2a02788e49486d2fd16af2abfcd02a87" title="ServerSync::ServerSync" alt="" coords="400,5,563,32"/><area shape="rect" id="node3" href="class_server_sync.html#adb929257b6b1e01d70332ae97980e8ce" title="Slot permettant de recuperer les erreurs generes par le socket." alt="" coords="177,27,351,69"/></map>
+<area shape="rect" id="node2" href="class_server_sync.html#a0dfb117949f1bb80040c645dfeb85fcb" title="ServerSync::ServerSync" alt="" coords="400,5,563,32"/><area shape="rect" id="node3" href="class_server_sync.html#adb929257b6b1e01d70332ae97980e8ce" title="Slot permettant de recuperer les erreurs generes par le socket." alt="" coords="177,27,351,69"/></map>
 </div>
 </p>
 
@@ -402,7 +474,39 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="class_server_sync_adb929257b6b1e01d70332ae97980e8ce_icgraph.png" border="0" usemap="#class_server_sync_adb929257b6b1e01d70332ae97980e8ce_icgraph" alt=""/></div>
 <map name="class_server_sync_adb929257b6b1e01d70332ae97980e8ce_icgraph" id="class_server_sync_adb929257b6b1e01d70332ae97980e8ce_icgraph">
-<area shape="rect" id="node2" href="class_server_sync.html#a2a02788e49486d2fd16af2abfcd02a87" title="ServerSync::ServerSync" alt="" coords="229,12,392,39"/></map>
+<area shape="rect" id="node2" href="class_server_sync.html#a0dfb117949f1bb80040c645dfeb85fcb" title="ServerSync::ServerSync" alt="" coords="229,12,392,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae9d2097934837614bc005a490986165d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ServerSync::newBatsPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_server_sync_ae9d2097934837614bc005a490986165d_icgraph.png" border="0" usemap="#class_server_sync_ae9d2097934837614bc005a490986165d_icgraph" alt=""/></div>
+<map name="class_server_sync_ae9d2097934837614bc005a490986165d_icgraph" id="class_server_sync_ae9d2097934837614bc005a490986165d_icgraph">
+<area shape="rect" id="node2" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot qui lance la scrutation de la socket." alt="" coords="248,5,400,32"/><area shape="rect" id="node3" href="class_server_sync.html#a0dfb117949f1bb80040c645dfeb85fcb" title="ServerSync::ServerSync" alt="" coords="448,5,611,32"/></map>
 </div>
 </p>
 
@@ -434,7 +538,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="class_server_sync_a02675a3a233c9611d398390c6324103d_icgraph.png" border="0" usemap="#class_server_sync_a02675a3a233c9611d398390c6324103d_icgraph" alt=""/></div>
 <map name="class_server_sync_a02675a3a233c9611d398390c6324103d_icgraph" id="class_server_sync_a02675a3a233c9611d398390c6324103d_icgraph">
-<area shape="rect" id="node2" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot qui lance la scrutation de la socket." alt="" coords="224,12,376,39"/><area shape="rect" id="node3" href="class_server_sync.html#a2a02788e49486d2fd16af2abfcd02a87" title="ServerSync::ServerSync" alt="" coords="424,12,587,39"/></map>
+<area shape="rect" id="node2" href="class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot qui lance la scrutation de la socket." alt="" coords="224,12,376,39"/><area shape="rect" id="node3" href="class_server_sync.html#a0dfb117949f1bb80040c645dfeb85fcb" title="ServerSync::ServerSync" alt="" coords="424,12,587,39"/></map>
 </div>
 </p>
 
@@ -468,7 +572,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="class_server_sync_ab07c5df26223ecb0debefda060293f50_cgraph.png" border="0" usemap="#class_server_sync_ab07c5df26223ecb0debefda060293f50_cgraph" alt=""/></div>
 <map name="class_server_sync_ab07c5df26223ecb0debefda060293f50_cgraph" id="class_server_sync_ab07c5df26223ecb0debefda060293f50_cgraph">
-<area shape="rect" id="node2" href="class_server_sync.html#a02675a3a233c9611d398390c6324103d" title="ServerSync::readyToBuild\lArena" alt="" coords="206,5,375,46"/></map>
+<area shape="rect" id="node2" href="class_server_sync.html#a02675a3a233c9611d398390c6324103d" title="ServerSync::readyToBuild\lArena" alt="" coords="217,5,388,46"/><area shape="rect" id="node3" href="class_server_sync.html#ae9d2097934837614bc005a490986165d" title="ServerSync::newBatsPosition" alt="" coords="206,71,399,97"/><area shape="rect" id="node4" href="class_server_sync.html#a1e9e88fcacf5228f0c0cecda05fef8e4" title="Envoie la position de la raquette locale au serveur." alt="" coords="227,121,378,148"/><area shape="rect" id="node5" href="class_math_utils.html#aed0e07c97605dbbd72db710fec08a476" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;une raquette." alt="" coords="448,121,587,148"/><area shape="rect" id="node6" href="class_math_utils.html#ad128736a4c78d37b7abe4250464fb33f" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;un point." alt="" coords="635,71,783,97"/><area shape="rect" id="node8" href="class_bat.html#a342c17de57ed3d4e9f150cab3b536cf2" title="Accesseur des extremites." alt="" coords="657,121,762,148"/><area shape="rect" id="node9" href="class_bat.html#aee775783427016e3fc9d2cfc7ffa964a" title="Accesseur de ID." alt="" coords="670,172,749,199"/><area shape="rect" id="node7" href="class_math_utils.html#ab23e0083b4f08cec721ea34f8ad5a949" title="Fonction de conversion d&#39;un angle en degres vers un angle en radian." alt="" coords="833,71,1010,97"/></map>
 </div>
 </p>
 
@@ -477,20 +581,20 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="class_server_sync_ab07c5df26223ecb0debefda060293f50_icgraph.png" border="0" usemap="#class_server_sync_ab07c5df26223ecb0debefda060293f50_icgraph" alt=""/></div>
 <map name="class_server_sync_ab07c5df26223ecb0debefda060293f50_icgraph" id="class_server_sync_ab07c5df26223ecb0debefda060293f50_icgraph">
-<area shape="rect" id="node2" href="class_server_sync.html#a2a02788e49486d2fd16af2abfcd02a87" title="ServerSync::ServerSync" alt="" coords="205,5,368,32"/></map>
+<area shape="rect" id="node2" href="class_server_sync.html#a0dfb117949f1bb80040c645dfeb85fcb" title="ServerSync::ServerSync" alt="" coords="205,5,368,32"/></map>
 </div>
 </p>
 
 </div>
 </div>
 <hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
-<li><a class="el" href="serversync_8h_source.html">serversync.h</a></li>
-<li><a class="el" href="serversync_8cpp.html">serversync.cpp</a></li>
+<li>headers/<a class="el" href="serversync_8h_source.html">serversync.h</a></li>
+<li>src/<a class="el" href="serversync_8cpp.html">serversync.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 15 2013 18:09:41 pour Pong client par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Avril 28 2013 08:42:44 pour Client pong par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

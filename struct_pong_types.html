@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Pong client: Référence de la structure PongTypes</title>
+<title>Client pong: Référence de la structure PongTypes</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Pong client
+   <div id="projectname">Client pong
    </div>
   </td>
  </tr>
@@ -103,19 +103,24 @@ Types publics</h2></td></tr>
 <br/>
 &#160;&#160;<a class="el" href="struct_pong_types.html#af1faca08111e25b181ebf427348d4461adcee6c2e3ada1cc688037ffcc7088820">PLAYING</a>, 
 <a class="el" href="struct_pong_types.html#af1faca08111e25b181ebf427348d4461afafc988b3a406eac0d074562f85ef7f3">DISCARDED</a>, 
-<a class="el" href="struct_pong_types.html#af1faca08111e25b181ebf427348d4461a19ec8add6a7ea6e74ce854c09e65745c">DISCONNECTED</a>
+<a class="el" href="struct_pong_types.html#af1faca08111e25b181ebf427348d4461a19ec8add6a7ea6e74ce854c09e65745c">DISCONNECTED</a>, 
+<a class="el" href="struct_pong_types.html#af1faca08111e25b181ebf427348d4461a4cefe814ee31a453fa8b766c26a15017">SOCKET_ERROR</a>
 <br/>
  }</td></tr>
 <tr class="separator:af1faca08111e25b181ebf427348d4461"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b7c2ba15872cd4ebc260d267d545058"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058">E_GameState</a> { <br/>
 &#160;&#160;<a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058ac7723cc3115dd24b7c887183cc3d2346">NOPARTY</a>, 
-<a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058a31c6b2cd0d6cb7e80ae4315c989df84e">WAITING_PLAYERS</a>, 
+<a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058a23e4ded405e6172dd6e9864b0e1ecd03">WAITING_SERVER</a>, 
+<a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058a0a1aaa5a4cc9e6f2fe41a3c06dcdbd87">START_REQUESTED</a>, 
 <a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058a5259988eeb66854fac8bb871cb4b84bb">INITIALIZING</a>, 
-<a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058ab4d2c4806bd8324b7f56786c993858f1">RUNNING</a>, 
 <br/>
-&#160;&#160;<a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058a436b73ade7ee96733f046f15dab1373e">PAUSED</a>, 
+&#160;&#160;<a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058ab4d2c4806bd8324b7f56786c993858f1">RUNNING</a>, 
+<a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058a436b73ade7ee96733f046f15dab1373e">PAUSED</a>, 
 <a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058a83a1bb6015f65d77705a3184083fdc23">GAMEOVER</a>, 
-<a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058af89a9adde08202393b08f1b2636c3439">EXITED</a>
+<a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058a6880af2651c4037c9005b40bd748d30d">RESET_REQUESTED</a>, 
+<br/>
+&#160;&#160;<a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058af46681efd0e228149cdc0be8a6e49c6c">EXIT_REQUESTED</a>, 
+<a class="el" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058a6dc9c789637d6be332c0a03508c7762b">STATE_ERROR</a>
 <br/>
  }</td></tr>
 <tr class="separator:a9b7c2ba15872cd4ebc260d267d545058"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,7 +172,9 @@ Types publics</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a9b7c2ba15872cd4ebc260d267d545058ac7723cc3115dd24b7c887183cc3d2346"></a>NOPARTY</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="a9b7c2ba15872cd4ebc260d267d545058a31c6b2cd0d6cb7e80ae4315c989df84e"></a>WAITING_PLAYERS</em>&nbsp;</td><td class="fielddoc">
+<tr><td class="fieldname"><em><a class="anchor" id="a9b7c2ba15872cd4ebc260d267d545058a23e4ded405e6172dd6e9864b0e1ecd03"></a>WAITING_SERVER</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a9b7c2ba15872cd4ebc260d267d545058a0a1aaa5a4cc9e6f2fe41a3c06dcdbd87"></a>START_REQUESTED</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a9b7c2ba15872cd4ebc260d267d545058a5259988eeb66854fac8bb871cb4b84bb"></a>INITIALIZING</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
@@ -177,7 +184,11 @@ Types publics</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a9b7c2ba15872cd4ebc260d267d545058a83a1bb6015f65d77705a3184083fdc23"></a>GAMEOVER</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="a9b7c2ba15872cd4ebc260d267d545058af89a9adde08202393b08f1b2636c3439"></a>EXITED</em>&nbsp;</td><td class="fielddoc">
+<tr><td class="fieldname"><em><a class="anchor" id="a9b7c2ba15872cd4ebc260d267d545058a6880af2651c4037c9005b40bd748d30d"></a>RESET_REQUESTED</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a9b7c2ba15872cd4ebc260d267d545058af46681efd0e228149cdc0be8a6e49c6c"></a>EXIT_REQUESTED</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a9b7c2ba15872cd4ebc260d267d545058a6dc9c789637d6be332c0a03508c7762b"></a>STATE_ERROR</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
 </table>
 
@@ -207,17 +218,19 @@ Types publics</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="af1faca08111e25b181ebf427348d4461a19ec8add6a7ea6e74ce854c09e65745c"></a>DISCONNECTED</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="af1faca08111e25b181ebf427348d4461a4cefe814ee31a453fa8b766c26a15017"></a>SOCKET_ERROR</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
 </table>
 
 </div>
 </div>
 <hr/>La documentation de cette structure a été générée à partir du fichier suivant :<ul>
-<li><a class="el" href="_pong_types_8hpp_source.html">PongTypes.hpp</a></li>
+<li>headers/<a class="el" href="_pong_types_8hpp_source.html">PongTypes.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 15 2013 18:09:41 pour Pong client par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Avril 28 2013 08:42:44 pour Client pong par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

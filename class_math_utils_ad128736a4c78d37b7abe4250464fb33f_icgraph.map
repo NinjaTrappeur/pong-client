@@ -1,0 +1,10 @@
+<map id="MathUtils::rotatePoint" name="MathUtils::rotatePoint">
+<area shape="rect" id="node2" href="$class_math_utils.html#aed0e07c97605dbbd72db710fec08a476" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;une raquette." alt="" coords="209,5,348,32"/>
+<area shape="rect" id="node6" href="$class_math_utils.html#ae4e2be02fee9c62f69687d5ddbf189aa" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;une ligne." alt="" coords="203,56,355,83"/>
+<area shape="rect" id="node3" href="$class_server_sync.html#a1e9e88fcacf5228f0c0cecda05fef8e4" title="Envoie la position de la raquette locale au serveur." alt="" coords="403,5,554,32"/>
+<area shape="rect" id="node4" href="$class_server_sync.html#ab07c5df26223ecb0debefda060293f50" title="Slot qui lance la scrutation de la socket." alt="" coords="603,5,755,32"/>
+<area shape="rect" id="node5" href="$class_server_sync.html#a0dfb117949f1bb80040c645dfeb85fcb" title="ServerSync::ServerSync" alt="" coords="803,5,965,32"/>
+<area shape="rect" id="node7" href="$class_arena.html#a29503f9588a77acb6bf80ad786f26864" title="Peint l&#39;arene." alt="" coords="433,56,525,83"/>
+<area shape="rect" id="node8" href="$class_scene.html#ac9b5b406cdc8a8e139d6b34d7144b2ff" title="Methode appellee par le renderlabel qui est associe a cette scene. Le but principal de cette methode ..." alt="" coords="631,56,726,83"/>
+<area shape="rect" id="node9" href="$class_render_label.html#ad295301c336b50a8d9928e68e4ebe1d3" title="Methode appelee chaque fois que le widget sera dessine. Cette methode contiendra toutes les actions q..." alt="" coords="803,56,965,83"/>
+</map>

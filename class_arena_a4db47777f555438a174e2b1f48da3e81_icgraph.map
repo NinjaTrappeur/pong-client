@@ -1,5 +1,7 @@
 <map id="Arena::rightBatLimit" name="Arena::rightBatLimit">
 <area shape="rect" id="node2" href="$class_arena.html#ada7aa4b43f29a4fc76a353ca3e61b8a9" title="Arena::setRightBatLimit" alt="" coords="211,5,371,32"/>
-<area shape="rect" id="node3" href="$class_scene.html#aa041279e61d6436d56d7bff14ae5086a" title="Deplace la raquette du joueur local vers la droite." alt="" coords="193,56,389,83"/>
-<area shape="rect" id="node4" href="$class_render_label.html#aa92cde202282f72c881f7f8278677563" title="methode appelee chaque fois qu&#39;une touche du clavier est appuyee. C&#39;est dans cette methode qu&#39;est ass..." alt="" coords="437,56,627,83"/>
+<area shape="rect" id="node3" href="$class_scene.html#aa041279e61d6436d56d7bff14ae5086a" title="Deplace la raquette du joueur local vers la droite." alt="" coords="192,56,389,83"/>
+<area shape="rect" id="node5" href="$class_scene.html#aced559a9c601fdfc59fa00be30647be3" title="Deplace la raquette du joueur a une certaine position." alt="" coords="213,107,368,133"/>
+<area shape="rect" id="node4" href="$class_render_label.html#aa92cde202282f72c881f7f8278677563" title="methode appelee chaque fois qu&#39;une touche du clavier est appuyee. C&#39;est dans cette methode qu&#39;est ass..." alt="" coords="444,56,633,83"/>
+<area shape="rect" id="node6" href="$class_render_label.html#a6091048166e9d45b108e3504697d5725" title="Methode appelee chaque fois que la souris est deplacee. Un traitement associe permet de deplacer la r..." alt="" coords="437,107,640,133"/>
 </map>

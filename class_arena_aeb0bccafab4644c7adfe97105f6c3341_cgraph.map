@@ -1,0 +1,5 @@
+<map id="Arena::Arena" name="Arena::Arena">
+<area shape="rect" id="node2" href="$class_arena.html#a8692d318f9338a08dc53b9f8df4b122a" title="Cree les lignes representant une face de l&#39;arene." alt="" coords="153,31,277,57"/>
+<area shape="rect" id="node3" href="$class_math_utils.html#ab23e0083b4f08cec721ea34f8ad5a949" title="Fonction de conversion d&#39;un angle en degres vers un angle en radian." alt="" coords="326,5,503,32"/>
+<area shape="rect" id="node4" href="$class_bat.html#a56df005cb71165fac854b840c9fcd1fe" title="Met a jour la position de la raquette." alt="" coords="365,56,465,83"/>
+</map>

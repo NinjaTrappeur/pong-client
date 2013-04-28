@@ -1,0 +1,5 @@
+<map id="Lobby::readServerSync" name="Lobby::readServerSync">
+<area shape="rect" id="node2" href="$class_lobby.html#a8619c4b5d173304cf1db00375a4443bd" title="Analyse les datagrames reçus via le canal multicast." alt="" coords="211,5,378,32"/>
+<area shape="rect" id="node4" href="$class_lobby.html#a0afe9897edd057adc9b5aa1e0d5a5d20" title="Remet le lobby dans son état initial." alt="" coords="427,56,589,83"/>
+<area shape="rect" id="node3" href="$class_lobby.html#a1b4232be6e174b4de8e5eae0b5775deb" title="Lobby::Lobby" alt="" coords="638,31,738,57"/>
+</map>

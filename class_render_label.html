@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Pong client: Référence de la classe RenderLabel</title>
+<title>Client pong: Référence de la classe RenderLabel</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Pong client
+   <div id="projectname">Client pong
    </div>
   </td>
  </tr>
@@ -112,6 +112,9 @@ Connecteurs publics</h2></td></tr>
 <tr class="memitem:a3b56e2e3c095933dbf9cecbddaf1e668"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_label.html#a3b56e2e3c095933dbf9cecbddaf1e668">animate</a> ()</td></tr>
 <tr class="memdesc:a3b56e2e3c095933dbf9cecbddaf1e668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot active par le timer. Ce slot est appele 60 fois par secondes. Ceci permet de rafraichir la position des differents objets du jeu regulierement.  <a href="#a3b56e2e3c095933dbf9cecbddaf1e668">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a3b56e2e3c095933dbf9cecbddaf1e668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77522d1037bcdb6105670e4063263704"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_label.html#a77522d1037bcdb6105670e4063263704">startGame</a> (QString hostAddress, qint16 port)</td></tr>
+<tr class="memdesc:a77522d1037bcdb6105670e4063263704"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot lançant le jeu.  <a href="#a77522d1037bcdb6105670e4063263704">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a77522d1037bcdb6105670e4063263704"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
@@ -126,6 +129,9 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:aa92cde202282f72c881f7f8278677563"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_label.html#aa92cde202282f72c881f7f8278677563">keyPressEvent</a> (QKeyEvent *ev)</td></tr>
 <tr class="memdesc:aa92cde202282f72c881f7f8278677563"><td class="mdescLeft">&#160;</td><td class="mdescRight">methode appelee chaque fois qu'une touche du clavier est appuyee. C'est dans cette methode qu'est associee une routine de traitement a certaines touches.  <a href="#aa92cde202282f72c881f7f8278677563">Plus de détails...</a><br/></td></tr>
 <tr class="separator:aa92cde202282f72c881f7f8278677563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6091048166e9d45b108e3504697d5725"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_render_label.html#a6091048166e9d45b108e3504697d5725">mouseMoveEvent</a> (QMouseEvent *ev)</td></tr>
+<tr class="memdesc:a6091048166e9d45b108e3504697d5725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Methode appelee chaque fois que la souris est deplacee. Un traitement associe permet de deplacer la raquette.  <a href="#a6091048166e9d45b108e3504697d5725">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a6091048166e9d45b108e3504697d5725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p><a class="el" href="class_render_label.html" title="RenderLabel: classe derivant de qlabel dans laquelle la methode paintEvent est redefinie. Cette classe represente le widget dans lequel le jeu sera dessine a l&#39;aide de qpainter.">RenderLabel</a>: classe derivant de qlabel dans laquelle la methode paintEvent est redefinie. Cette classe represente le widget dans lequel le jeu sera dessine a l'aide de qpainter. </p>
@@ -244,6 +250,47 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 </div>
 </div>
+<a class="anchor" id="a6091048166e9d45b108e3504697d5725"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderLabel::mouseMoveEvent </td>
+          <td>(</td>
+          <td class="paramtype">QMouseEvent *&#160;</td>
+          <td class="paramname"><em>ev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Methode appelee chaque fois que la souris est deplacee. Un traitement associe permet de deplacer la raquette. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ev</td><td>Evenement contenant les informations necessaires au traitement. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_render_label_a6091048166e9d45b108e3504697d5725_cgraph.png" border="0" usemap="#class_render_label_a6091048166e9d45b108e3504697d5725_cgraph" alt=""/></div>
+<map name="class_render_label_a6091048166e9d45b108e3504697d5725_cgraph" id="class_render_label_a6091048166e9d45b108e3504697d5725_cgraph">
+<area shape="rect" id="node2" href="class_scene.html#aced559a9c601fdfc59fa00be30647be3" title="Deplace la raquette du joueur a une certaine position." alt="" coords="256,81,411,108"/><area shape="rect" id="node3" href="class_bat.html#a342c17de57ed3d4e9f150cab3b536cf2" title="Accesseur des extremites." alt="" coords="475,5,581,32"/><area shape="rect" id="node4" href="class_arena.html#aa29bc761f4801ae768052ed33d345d6b" title="Arena::leftBatLimit" alt="" coords="463,56,593,83"/><area shape="rect" id="node5" href="class_arena.html#a4db47777f555438a174e2b1f48da3e81" title="Arena::rightBatLimit" alt="" coords="459,107,597,133"/><area shape="rect" id="node6" href="class_bat.html#a56df005cb71165fac854b840c9fcd1fe" title="Met a jour la position de la raquette." alt="" coords="478,157,578,184"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="ad295301c336b50a8d9928e68e4ebe1d3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -271,20 +318,63 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="class_render_label_ad295301c336b50a8d9928e68e4ebe1d3_cgraph.png" border="0" usemap="#class_render_label_ad295301c336b50a8d9928e68e4ebe1d3_cgraph" alt=""/></div>
 <map name="class_render_label_ad295301c336b50a8d9928e68e4ebe1d3_cgraph" id="class_render_label_ad295301c336b50a8d9928e68e4ebe1d3_cgraph">
-<area shape="rect" id="node2" href="class_scene.html#ac9b5b406cdc8a8e139d6b34d7144b2ff" title="Methode appellee par le renderlabel qui est associe a cette scene. Le but principal de cette methode ..." alt="" coords="217,5,311,32"/><area shape="rect" id="node3" href="class_arena.html#a29503f9588a77acb6bf80ad786f26864" title="Peint l&#39;arene." alt="" coords="361,5,453,32"/></map>
+<area shape="rect" id="node2" href="class_scene.html#ac9b5b406cdc8a8e139d6b34d7144b2ff" title="Methode appellee par le renderlabel qui est associe a cette scene. Le but principal de cette methode ..." alt="" coords="217,5,311,32"/><area shape="rect" id="node3" href="class_arena.html#a29503f9588a77acb6bf80ad786f26864" title="Peint l&#39;arene." alt="" coords="361,5,453,32"/><area shape="rect" id="node4" href="class_math_utils.html#ae4e2be02fee9c62f69687d5ddbf189aa" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;une ligne." alt="" coords="501,5,653,32"/><area shape="rect" id="node5" href="class_math_utils.html#ad128736a4c78d37b7abe4250464fb33f" title="Permet de faire une rotation de angle par rapport à l&#39;origine d&#39;un point." alt="" coords="702,5,850,32"/><area shape="rect" id="node6" href="class_math_utils.html#ab23e0083b4f08cec721ea34f8ad5a949" title="Fonction de conversion d&#39;un angle en degres vers un angle en radian." alt="" coords="899,5,1077,32"/></map>
 </div>
 </p>
 
 </div>
 </div>
+<a class="anchor" id="a77522d1037bcdb6105670e4063263704"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderLabel::startGame </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>hostAddress</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">qint16&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Slot lançant le jeu. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Addresse</td><td>IP du serveur. </td></tr>
+    <tr><td class="paramname">Port</td><td>d'écoute du serveur. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
-<li><a class="el" href="renderlabel_8h_source.html">renderlabel.h</a></li>
-<li><a class="el" href="renderlabel_8cpp.html">renderlabel.cpp</a></li>
+<li>headers/<a class="el" href="renderlabel_8h_source.html">renderlabel.h</a></li>
+<li>src/<a class="el" href="renderlabel_8cpp.html">renderlabel.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 15 2013 18:09:41 pour Pong client par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Avril 28 2013 08:42:44 pour Client pong par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

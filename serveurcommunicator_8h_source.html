@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Pong client:  Fichier source de serveurcommunicator.h</title>
+<title>Client pong:  Fichier source de headers/serveurcommunicator.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Pong client
+   <div id="projectname">Client pong
    </div>
   </td>
  </tr>
@@ -65,7 +65,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
       <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
     </ul>
   </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -80,6 +79,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">serveurcommunicator.h</div>  </div>
@@ -101,7 +105,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_serveur_communicator.html#a2760cdc0f2f5bad11d2be6455aaede1c">ServeurCommunicator</a>(QObject *parent = 0);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_serveur_communicator.html#a2760cdc0f2f5bad11d2be6455aaede1c">ServeurCommunicator</a>(QVector&lt;Bat&gt; <a class="code" href="class_serveur_communicator.html#aab1ffa1c31e32a71cca9d58903bfc770">batVector</a>, QPointF <a class="code" href="class_serveur_communicator.html#a37732e75524ae08a919ab90583a4c72c">ball</a>, <a class="code" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058">PongTypes::E_GameState</a> <a class="code" href="class_serveur_communicator.html#a75c44fb41affb5656ca3dad3ee65c8df">gameState</a>, qint32 <a class="code" href="class_serveur_communicator.html#a74d11da45fff09a365fda483126f22ba">loserIndex</a>, qint32 playerId, QObject *parent = 0);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_serveur_communicator.html#a2760cdc0f2f5bad11d2be6455aaede1c">ServeurCommunicator</a>(QVector&lt;Bat&gt; <a class="code" href="class_serveur_communicator.html#aab1ffa1c31e32a71cca9d58903bfc770">batVector</a>, QPointF <a class="code" href="class_serveur_communicator.html#a37732e75524ae08a919ab90583a4c72c">ball</a>, <a class="code" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058">PongTypes::E_GameState</a> <a class="code" href="class_serveur_communicator.html#a75c44fb41affb5656ca3dad3ee65c8df">gameState</a>, qint32 <a class="code" href="class_serveur_communicator.html#a74d11da45fff09a365fda483126f22ba">loserIndex</a>, qint32 <a class="code" href="class_serveur_communicator.html#afada7ff50c921ca7ba5d9a64bc768156">playerId</a>, QObject *parent = 0);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_serveur_communicator.html#a3168e18ceb6e6c9ce65e72d354ccd342" title="Definition du flux sortant pour cette classe. Permet d&#39;envoyer la classe dans une socket de maniere a...">operator&gt;&gt;</a>(QDataStream &amp; out)<span class="keyword">const</span>;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_serveur_communicator.html#a0c6b3534430b9d096d682f64d7611044" title="Definition du flux sortant pour cette classe. Permet de lire la classe depuis une socket de maniere a...">operator&lt;&lt;</a>(QDataStream &amp; in);</div>
@@ -127,26 +131,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    qint32 <a class="code" href="class_serveur_communicator.html#a77bfbf285c9c23f0fbb044063eb16e33">downCounter</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_serveur_communicator.html#a2b520cb169688e622adf9f18b5fea66d">setDownCounter</a>(<span class="keyword">const</span> qint32 &amp;downCounter);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    QVector&lt;Bat&gt; _batVector;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    QPointF _ball;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058">PongTypes::E_GameState</a> _gameState;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    qint32 _loserIndex;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    qint32 _playerId;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    qint32 _downCounter;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    qint32 <a class="code" href="class_serveur_communicator.html#afada7ff50c921ca7ba5d9a64bc768156">playerId</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_serveur_communicator.html#a3e81182ecede3d6e24b2b9b83d8e1ad9">setPlayerId</a>(<span class="keyword">const</span> qint32 &amp;playerId);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_serveur_communicator.html#a6131abbe787c19326bbed650ca7f2c00">gameOverPlayer</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_serveur_communicator.html#ac63e945d010b06b40254a4769606b839">setGameOverPlayer</a>(<span class="keywordtype">bool</span> gameOverPlayer);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    QVector&lt;Bat&gt; _batVector;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    QPointF _ball;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="struct_pong_types.html#a9b7c2ba15872cd4ebc260d267d545058">PongTypes::E_GameState</a> _gameState;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    qint32 _loserIndex;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    qint32 _playerId;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif // SERVEURCOMMUNICATOR_H</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">bool</span> _gameOverPlayer;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    qint32 _downCounter;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif // SERVEURCOMMUNICATOR_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 15 2013 18:09:41 pour Pong client par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Avril 28 2013 08:42:43 pour Client pong par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

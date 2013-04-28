@@ -1,0 +1,4 @@
+<map id="Lobby::synchroniseWithServer" name="Lobby::synchroniseWithServer">
+<area shape="rect" id="node2" href="$class_lobby.html#ab78707335c5fba9a7313010792eb614c" title="Envoie au serveur un acquittement." alt="" coords="253,5,429,32"/>
+<area shape="rect" id="node3" href="$class_lobby.html#a1b13acc09049102772ff8d120c6c41b0" title="Emit lorsque la synchro avec le lobby est perdue." alt="" coords="279,56,403,83"/>
+</map>

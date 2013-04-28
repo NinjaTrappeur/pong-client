@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>Pong client:  Fichier source de bat.h</title>
+<title>Client pong:  Fichier source de headers/bat.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Pong client
+   <div id="projectname">Client pong
    </div>
   </td>
  </tr>
@@ -65,7 +65,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
       <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
     </ul>
   </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -80,6 +79,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">bat.h</div>  </div>
@@ -97,35 +101,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_bat.html#ac231b3a270f82b72dace8be983a6ee6c" title="Constructeur.">Bat</a>();</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_bat.html#ac231b3a270f82b72dace8be983a6ee6c" title="Constructeur.">Bat</a>(<span class="keyword">const</span> QVector&lt;QPointF&gt;&amp; points, quint32 <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="class_bat.html#ac231b3a270f82b72dace8be983a6ee6c" title="Constructeur.">Bat</a>(<span class="keyword">const</span> QPointF&amp; point1, <span class="keyword">const</span> QPointF&amp; point2, quint32 <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_bat.html#aee775783427016e3fc9d2cfc7ffa964a" title="Accesseur de ID.">getId</a>();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_bat.html#a56df005cb71165fac854b840c9fcd1fe" title="Met a jour la position de la raquette.">moveBat</a>(QPointF&amp; pos1, QPointF&amp; pos2);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    QVector&lt;QPointF&gt; <a class="code" href="class_bat.html#a342c17de57ed3d4e9f150cab3b536cf2" title="Accesseur des extremites.">getPoints</a>();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="class_bat.html#a73302fa8d6879b52d105b4a35bb62a47" title="Definition du flux sortant pour cette classe. Permet d&#39;envoyer la classe dans une socket de maniere a...">operator&gt;&gt;</a>(QDataStream &amp; out)<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="class_bat.html#ac5d0b3c4e930a36b4559516365bf7d0f" title="Definition du flux sortant pour cette classe. Permet de lire la classe depuis une socket de maniere a...">operator&lt;&lt;</a>(QDataStream &amp; in);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;   <span class="keyword">friend</span> QDataStream &amp; <a class="code" href="class_bat.html#a73302fa8d6879b52d105b4a35bb62a47" title="Definition du flux sortant pour cette classe. Permet d&#39;envoyer la classe dans une socket de maniere a...">operator&gt;&gt;</a>(QDataStream &amp; in, <a class="code" href="class_bat.html" title="Classe représentant les raquettes.">Bat</a> &amp; bat);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;   <span class="keyword">friend</span> QDataStream &amp; <a class="code" href="class_bat.html#ac5d0b3c4e930a36b4559516365bf7d0f" title="Definition du flux sortant pour cette classe. Permet de lire la classe depuis une socket de maniere a...">operator&lt;&lt;</a>(QDataStream &amp; out, <span class="keyword">const</span> <a class="code" href="class_bat.html" title="Classe représentant les raquettes.">Bat</a> &amp; bat);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_bat.html#ac231b3a270f82b72dace8be983a6ee6c" title="Constructeur.">Bat</a>(<span class="keyword">const</span> <a class="code" href="class_bat.html" title="Classe représentant les raquettes.">Bat</a>&amp; bat);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_bat.html#ac231b3a270f82b72dace8be983a6ee6c" title="Constructeur.">Bat</a>(<span class="keyword">const</span> QVector&lt;QPointF&gt;&amp; points, quint32 <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="class_bat.html#ac231b3a270f82b72dace8be983a6ee6c" title="Constructeur.">Bat</a>(<span class="keyword">const</span> QPointF&amp; point1, <span class="keyword">const</span> QPointF&amp; point2, quint32 <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_bat.html#aee775783427016e3fc9d2cfc7ffa964a" title="Accesseur de ID.">getId</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_bat.html#a56df005cb71165fac854b840c9fcd1fe" title="Met a jour la position de la raquette.">moveBat</a>(QPointF&amp; pos1, QPointF&amp; pos2);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    QVector&lt;QPointF&gt; <a class="code" href="class_bat.html#a342c17de57ed3d4e9f150cab3b536cf2" title="Accesseur des extremites.">getPoints</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="class_bat.html#a73302fa8d6879b52d105b4a35bb62a47" title="Definition du flux sortant pour cette classe. Permet d&#39;envoyer la classe dans une socket de maniere a...">operator&gt;&gt;</a>(QDataStream &amp; out)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="class_bat.html#ac5d0b3c4e930a36b4559516365bf7d0f" title="Definition du flux sortant pour cette classe. Permet de lire la classe depuis une socket de maniere a...">operator&lt;&lt;</a>(QDataStream &amp; in);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;   <span class="keyword">friend</span> QDataStream &amp; <a class="code" href="class_bat.html#a73302fa8d6879b52d105b4a35bb62a47" title="Definition du flux sortant pour cette classe. Permet d&#39;envoyer la classe dans une socket de maniere a...">operator&gt;&gt;</a>(QDataStream &amp; in, <a class="code" href="class_bat.html" title="Classe représentant les raquettes.">Bat</a> &amp; bat);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;   <span class="keyword">friend</span> QDataStream &amp; <a class="code" href="class_bat.html#ac5d0b3c4e930a36b4559516365bf7d0f" title="Definition du flux sortant pour cette classe. Permet de lire la classe depuis une socket de maniere a...">operator&lt;&lt;</a>(QDataStream &amp; out, <span class="keyword">const</span> <a class="code" href="class_bat.html" title="Classe représentant les raquettes.">Bat</a> &amp; bat);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    QVector&lt;QPointF&gt; _point;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    qint32 _id;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif // BAT_H</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    QVector&lt;QPointF&gt; _point;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    qint32 _id;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif // BAT_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 15 2013 18:09:41 pour Pong client par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Avril 28 2013 08:42:43 pour Client pong par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
