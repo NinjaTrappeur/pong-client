@@ -61,6 +61,11 @@ public slots:
      */
     void animate();
 
+    /*!
+     * \brief Slot lançant le jeu
+     * \param Addresse IP du serveur.
+     * \param Port d'écoute du serveur.
+     */
     void startGame(QString hostAddress, qint16 port);
 };
 

@@ -116,6 +116,10 @@ signals:
     
 public slots:
 
+    /*!
+     * \brief Envoie la position de la raquette locale
+     *  au serveur.
+     */
     void emitSync();
 
     /*!

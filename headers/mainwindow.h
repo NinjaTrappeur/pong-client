@@ -32,8 +32,14 @@ private:
     Ui::MainWindow *_ui;
 
 public slots:
+    /*!
+     * \brief Slot permettant de lancer le jeu.
+     */
     void startGame(QString,qint16);
 signals:
+    /*!
+     * \brief Signal lançant le rendu du jeu.
+     */
     void startRender(QString,qint16);
 };
 

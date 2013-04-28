@@ -53,6 +53,13 @@ public:
      */
     static Bat rotateBat(Bat &bat, qint32 angle);
 
+    /*!
+     * \brief Permet de faire une rotation de angle par rapport à l'origine
+     *  d'une ligne
+     * \param line Ligne sur laquelle appliquer la rotation
+     * \param angle Angle de la rotation
+     * \return Ligne sur laquelle est appliquee une rotation de angle
+     */
     static QLine rotateQLine(QLine &line, qint32 angle);
 };
 
